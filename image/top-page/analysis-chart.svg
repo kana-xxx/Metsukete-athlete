@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
+  <g id="グループ_2080" data-name="グループ 2080" transform="translate(-1212 -1291)">
+    <path id="gray" d="M384,192c0,106.039-85.961,192-192,192S0,298.039,0,192,85.961,0,192,0,384,85.961,384,192ZM88.32,192A103.68,103.68,0,1,0,192,88.32,103.68,103.68,0,0,0,88.32,192Z" transform="translate(1212 1291)" fill="#37aad6"/>
+    <path id="red" d="M0,44.16a192,192,0,0,0,92.5,81.261,192,192,0,0,0,122.841,8.364L192.773,48.4a103.68,103.68,0,0,1-66.334-4.516A103.68,103.68,0,0,1,76.487,0Z" transform="translate(1237.725 1534.838)" fill="#8ed0ea"/>
+    <path id="yellow" d="M25.723,192a192,192,0,0,1,0-192L102.21,44.16a103.68,103.68,0,0,0,0,103.68Z" transform="translate(1212 1387)" fill="#c7e007"/>
+    <path id="yellow-2" data-name="yellow" d="M0,96A192,192,0,0,1,166.277,0V88.32a103.68,103.68,0,0,0-89.79,51.84Z" transform="translate(1237.725 1291)" fill="#575757"/>
+    <path id="yellow-3" data-name="yellow" d="M0,0A192,192,0,0,1,135.764,56.235L73.313,118.687A103.68,103.68,0,0,0,0,88.32Z" transform="translate(1404 1291)" fill="#bebebe"/>
+    <text id="_16_" data-name="16%" transform="translate(1304.826 1337.695)" fill="#fff" font-size="16" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="17">16%</tspan></text>
+    <text id="_12_" data-name="12%" transform="translate(1435.002 1331.684)" fill="#fff" font-size="16" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="17">12%</tspan></text>
+    <text id="_16_2" data-name="16%" transform="translate(1234.705 1462.797)" fill="#fff" font-size="16" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="17">16%</tspan></text>
+    <text id="_20_" data-name="20%" transform="translate(1317.289 1598.254)" fill="#fff" font-size="16" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="17">20%</tspan></text>
+    <text id="_25_" data-name="25%" transform="translate(1517.395 1492.652)" fill="#fff" font-size="16" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="17">25%</tspan></text>
+    <text id="Course_Completed" data-name="Course Completed" transform="translate(1404 1477)" fill="#343434" font-size="24" font-family="HiraginoSans-W6, Hiragino Sans"><tspan x="-72" y="0">周りから見た</tspan><tspan y="0" font-family="Helvetica-Bold, Helvetica" font-weight="700"></tspan><tspan x="-84" y="41">あなたのタイプ</tspan></text>
+  </g>
+</svg>

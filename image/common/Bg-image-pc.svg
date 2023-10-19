@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1200" viewBox="0 0 1920 1200">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_2685" data-name="長方形 2685" width="1920" height="1200" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="長方形_2613" x="79.655" y="786.618" width="800.146" height="807.146" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2678" x="352.484" y="733.593" width="800.146" height="807.146" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-2"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2614" x="-222.871" y="576.235" width="556.194" height="563.194" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-3"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2676" x="-53.836" y="448.478" width="556.194" height="563.194" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-4"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2615" x="-556.993" y="-57.191" width="733.019" height="740.019" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-5"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2675" x="-464.507" y="-218.516" width="733.019" height="740.019" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-6"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2623" x="214.26" y="-108.397" width="546.298" height="546.298" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2624" x="600.48" y="245.755" width="462.6" height="469.6" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-8"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2628" x="1310.775" y="-238.342" width="725.899" height="732.9" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-9"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2681" x="1157.215" y="-127.383" width="661.493" height="668.493" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-10"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2630" x="1157.217" y="573.998" width="560.667" height="567.667" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-11"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2632" x="1311.554" y="1019.775" width="608.447" height="615.447" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-12"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2680" x="1297.554" y="925.294" width="608.447" height="615.447" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-13"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2682" x="1715.885" y="0" width="585.491" height="592.491" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-14"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-14"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="長方形_2625" x="1808.828" y="394.455" width="492.548" height="499.548" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="9" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-15"/>
+      <feFlood flood-color="#c3c9ce"/>
+      <feComposite operator="in" in2="blur-15"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="マスクグループ_3" data-name="マスクグループ 3" clip-path="url(#clip-path)">
+    <g id="グループ_1391" data-name="グループ 1391" transform="translate(6.832)">
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2613)">
+        <rect id="長方形_2613-2" data-name="長方形 2613" width="238.027" height="890.721" rx="119" transform="translate(711.49 786.62) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2678)">
+        <g id="長方形_2678-2" data-name="長方形 2678" transform="translate(984.32 733.59) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="238.027" height="890.721" rx="119" stroke="none"/>
+          <rect x="0.5" y="0.5" width="237.027" height="889.721" rx="118.5" fill="none"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2614)">
+        <rect id="長方形_2614-2" data-name="長方形 2614" width="238.027" height="545.721" rx="119" transform="translate(165.01 576.24) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2676)">
+        <g id="長方形_2676-2" data-name="長方形 2676" transform="translate(334.05 448.48) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="238.027" height="545.721" rx="119" stroke="none"/>
+          <rect x="0.5" y="0.5" width="237.027" height="544.721" rx="118.5" fill="none"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2615)">
+        <rect id="長方形_2615-2" data-name="長方形 2615" width="274.134" height="759.683" rx="137" transform="translate(-17.82 -57.19) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2675)">
+        <g id="長方形_2675-2" data-name="長方形 2675" transform="translate(74.67 -218.52) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="274.134" height="759.683" rx="137" stroke="none"/>
+          <rect x="0.5" y="0.5" width="273.134" height="758.683" rx="136.5" fill="none"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2623)">
+        <rect id="長方形_2623-2" data-name="長方形 2623" width="183.602" height="563.523" rx="91.801" transform="translate(623.73 -108.4) rotate(45)" fill="#d4d8dc" opacity="0.7"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2624)">
+        <rect id="長方形_2624-2" data-name="長方形 2624" width="155.444" height="495.943" rx="77.722" transform="translate(953.17 245.75) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2628)">
+        <rect id="長方形_2628-2" data-name="長方形 2628" width="270.027" height="753.721" rx="135" transform="translate(1845.74 -238.34) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2681)">
+        <g id="長方形_2681-2" data-name="長方形 2681" transform="translate(1627.77 -127.38) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="270.027" height="662.637" rx="135" stroke="none"/>
+          <rect x="0.5" y="0.5" width="269.027" height="661.637" rx="134.5" fill="none"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2630)">
+        <rect id="長方形_2630-2" data-name="長方形 2630" width="210.784" height="579.291" rx="105" transform="translate(1568.84 574) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2632)">
+        <rect id="長方形_2632-2" data-name="長方形 2632" width="173.924" height="683.721" rx="86.962" transform="translate(1797.02 1019.78) rotate(45)" fill="#d4d8dc"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2680)">
+        <g id="長方形_2680-2" data-name="長方形 2680" transform="translate(1783.02 925.29) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="173.924" height="683.721" rx="86.962" stroke="none"/>
+          <rect x="0.5" y="0.5" width="172.924" height="682.721" rx="86.462" fill="none"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.83, 0)" filter="url(#長方形_2682)">
+        <g id="長方形_2682-2" data-name="長方形 2682" transform="translate(2201.35 0) rotate(45)" fill="none" stroke="#707070" stroke-width="1" opacity="0.3">
+          <rect width="141.459" height="683.721" rx="70.73" stroke="none"/>
+          <rect x="0.5" y="0.5" width="140.459" height="682.721" rx="70.23" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="グループ_1567" data-name="グループ 1567">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#長方形_2625)">
+        <rect id="長方形_2625-2" data-name="長方形 2625" width="176.494" height="517.246" rx="88.247" transform="translate(2176.58 394.46) rotate(45)" fill="#d4d8dc"/>
+      </g>
+    </g>
+  </g>
+</svg>

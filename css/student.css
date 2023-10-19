@@ -1,0 +1,1238 @@
+@charset "utf-8";
+/*------------------------------------------------------------
+	student
+------------------------------------------------------------*/
+#main {
+	background: url("../img/common/bg04.png") no-repeat left 79.8% top -28.9rem / 260rem auto;
+}
+#main .pageTitle {
+	margin-bottom: 11.4rem;
+}
+#main .textList {
+	margin: -3.1rem 0 3.2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+#main .textList li {
+	box-sizing: border-box;
+	margin: 3.1rem 3.1rem 0 0;
+	width: calc(25% - 2.4rem);
+}
+#main .textList li:nth-child(4n) {
+	margin-right: 0;
+}
+#main .textList li a {
+	padding: 4.2rem 10rem 4.5rem 5rem;
+	display: block;
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+}
+#main .textList li .num {
+	font-size: 3.8rem;
+	color: #202020;
+}
+#main .textList li .num .icon {
+	position: absolute;
+	top: 50%;
+	right: 5.8rem;
+	transform: translateY(-50%);
+}
+#main .textList li .num .icon img {
+	width: auto;
+	height: 5.2rem;
+}
+#main .textList li .sml {
+	margin-top: 0.1rem;
+	color: #A5A5A5;
+	font-size: 1.7rem;
+}
+#main .companyBox {
+	margin-bottom: 3.4rem;
+	padding: 4.1rem 5.9rem 7.4rem;
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+}
+#main .companyBox .comTtlBox01 {
+	margin-bottom: 6.7rem;
+}
+#main .companyBox .imgList {
+	margin: -5rem 0 0 2.2rem;
+}
+#main .companyBox .imgList li {
+	margin: 5rem 5rem 0 0;
+	width: calc(20% - 4.2rem);
+}
+#main .companyBox .imgList li:nth-child(5n) {
+	margin-right: 0;
+}
+#main .companyBox .imgList li .newMark {
+	padding: 0.4rem 1.5rem;
+	position: absolute;
+	right: -1.9rem;
+	top: -1.2rem;
+	font-size: 1.4rem;
+	border-radius: 3rem;
+	background: #E5F755;
+	z-index: 1;
+}
+#main .companyBox .imgList li .photoBox {
+	margin-bottom: 1.9rem;
+	position: relative;
+}
+#main .companyBox .imgList li .photoBox a {
+	padding-bottom: 57.142%;
+	border-radius: 1.5rem;
+}
+#main .companyBox .imgList li .textBox {
+	margin: 0 0.5rem;
+}
+#main .companyBox .imgList li .text01 {
+	margin-bottom: 0.6rem;
+	font-size: 1.8rem;
+}
+#main .companyBox .imgList li .text01 a {
+	color: #202020;
+}
+#main .companyBox .imgList li .text02 {
+	margin-bottom: 1.6rem;
+	color: #A3A3A3;
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+#main .companyBox .imgList li .mark {
+	margin-left: -0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	
+}
+#main .companyBox .imgList li .mark span {
+	padding: 0.5rem 1.2rem;
+	display: inline-block;
+	color: #A3A3A3;
+	font-size: 1.4rem;
+	border-radius: .6rem;
+	border: 0.2rem solid #A3A3A3;
+}
+#main .companyBox .imgList li .mark .txt02 {
+	border-color: #37AAD6;
+	background-color: #37AAD6;
+	color: #fff;
+}
+#main .moreLink {
+	right: 4.9rem;
+	top: 4.1rem;
+	margin-left: auto;
+}
+#main .moreLink.taco {
+	vertical-align: bottom;
+	margin-left: 0;
+}
+#main .moreLink a {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #A5A5A5;
+}
+#main .secBox {
+	margin-bottom: 3.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+#main .results {
+	box-sizing: border-box;
+	padding: 4.1rem 5.9rem 7.2rem;
+	width: calc(49.5% - 0.7rem);
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+}
+#main .results .comTtlBox01 {
+	margin-bottom: 5.1rem;
+}
+#main .results .chartList {
+	margin-top: -3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* トップ他己分析のレイアウト修正のため追加 */
+#main .results .chartList.taco {
+	margin-top: -3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#main .results .chartList::after {
+	width: 32.5%;
+	display: block;
+	content: "";
+}
+#main .results .chartList li {
+	margin-top: 3rem;
+	width: 100%;
+}
+#main .results .chartList .txtList.flexE li {
+	width: calc(45% - 3rem);
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+	margin-top:0;
+	margin-bottom: 3rem;
+}
+#main .results .chartList .txtList.flexE li span:last-child {
+	margin-left: auto;
+}
+#main .results .chartList .txtList.flexE .answer {
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 1.2rem;
+    line-height: 2.2;
+    color: #A3A3A3;
+}
+#main .results .chartList li::marker {
+	list-style-type: none;
+}
+#main .results .chartList li .ttl {
+	margin-bottom: 3.5rem;
+	text-align: center;
+}
+#main .results .chartList li .chart {
+	width: 100%;
+    margin: 3rem auto 4.9rem;
+    max-width: 40.8rem;
+}
+/* トップ他己分析のレイアウト変更のため追加 */
+#main .results .chartList .chart.taco {
+	width: 100%;
+    margin: 3rem auto 4.9rem;
+    max-width: 40.8rem;
+}
+#main .results .chartList li .txtList {
+	margin: 0 auto;
+}
+#main .results .chartList .txtListE {
+	margin: 0 auto;
+}
+#main .results .chartList li .txtList dt {
+	margin-bottom: 1.6rem;
+	padding-left: 2.8rem;
+	width: 70%;
+	position: relative;
+	font-size: 1.4rem;
+	box-sizing: border-box;
+}
+/* トップ　他己分析部分の書き換えのため追加 */
+#main .results .chartList .txtList.flexE dt {
+	margin-bottom: 1.6rem;
+	padding-left: 2.8rem;
+	position: relative;
+	font-size: 1.4rem;
+	box-sizing: border-box;
+	margin-right: 3rem;
+}
+#main .results .chartList li .txtList dt .color {
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0.3rem;
+	border-radius: 0.4rem;
+	background: #37AAD6;
+}
+#main .results .chartList li .txtList dt .color02 {
+	background-color: #8ED0EA;
+}
+#main .results .chartList li .txtList dt .color03 {
+	background-color: #C7E007;
+}
+#main .results .chartList li .txtList dt .color04 {
+	background-color: #343434;
+}
+#main .results .chartList li .txtList dt .color05 {
+	background-color: #BEBEBE;
+}
+/* トップ　他己分析書き換えのため追記　*/
+#main .results .chartList .txtList.flexE .color {
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	border-radius: 0.4rem;
+	background: #37AAD6;
+}
+#main .results .chartList .txtList.flexE .color02 {
+	background-color: #8ED0EA;
+}
+#main .results .chartList .txtList.flexE .color03 {
+	background-color: #C7E007;
+}
+#main .results .chartList .txtList.flexE .color04 {
+	background-color: #343434;
+}
+#main .results .chartList .txtList.flexE .color05 {
+	background-color: #BEBEBE;
+}
+
+
+#main .results .chartList li .txtList dd {
+	margin-bottom: 1.6rem;
+	box-sizing: border-box;
+	width: 30%;
+	text-align: right;
+	font-size: 1.2rem;
+	line-height: 2.2;
+	color: #A3A3A3;
+}
+/* トップ　他己分析レイアウトのため追記 */
+#main .results .chartList .txtList.flexE dd {
+	margin-bottom: 1.6rem;
+	box-sizing: border-box;
+	text-align: right;
+	font-size: 1.2rem;
+	line-height: 2.2;
+	color: #A3A3A3;
+	margin-right: 6rem;
+}
+
+#main .message{
+	box-sizing: border-box;
+	padding: 4.1rem 4.5rem 7.2rem;
+	width: calc(49.5% - 2.4rem);
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+#main .results {
+	box-sizing: border-box;
+	padding: 4.1rem 4.5rem 7.2rem;
+	/* width: calc(37% - 2.4rem); */
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+#main .message .messageList {
+	margin: 0 1.6rem;
+	max-width: 35rem;
+}
+#main .message .messageList li {
+	margin-bottom: 2.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+#main .message .messageList li:last-child {
+	margin-bottom: 0;
+}
+#main .message .messageList li .photo {
+	margin-top: 0.2rem;
+	width: 7.9rem;
+	position: relative;
+}
+#main .message .messageList li .photo .mark {
+	padding: 0.4rem 1.6rem;
+	position: absolute;
+	right: -2.2rem;
+	top: -1.4rem;
+	font-size: 1.4rem;
+	border-radius: 3rem;
+	background: #E5F755;
+	z-index:1;
+}
+#main .message .messageList li .photo .sub a {
+	padding-bottom: 100%;
+	overflow: hidden;
+	border-radius: 1.4rem;
+}
+#main .message .comTtlBox02,
+#main .results .comTtlBox02{
+	margin-bottom: 5.1rem;
+}
+#main .message .comTtlBox02 .moreLink{
+	margin: 0 auto;
+}
+#main .message .chart-profile {
+	width: 100%;
+	margin: 3rem auto 4.9rem;
+    max-width: 40.8rem;
+}
+
+#main .message .flexD li {
+	box-sizing: border-box;
+
+}
+#main .message .flexD li a {
+	display: block;
+	padding: 1.1rem 2.8rem;
+	position: relative;
+	border-radius: .8rem;
+	border: solid .15rem #005792;
+	background: #FFF;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 1.5rem;
+	color: #005792;
+}
+#main .message .flexD li a:hover {
+	background: #EFF6FB;
+
+}
+#main .message .flexD li a img {
+	width: .6rem;
+	
+}
+#main .message .txtList dt {
+    margin-bottom: 1.6rem;
+    padding-left: 2.8rem;
+    width: 70%;
+    position: relative;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+
+}
+
+#main .companyBox .imgList .tag.new {
+	padding: .5rem 2rem;
+	background: #FF0000;
+	border-radius: 3rem;
+	color: #FFF;
+	position: absolute;
+	top: -7%;
+	right: -5%;
+	z-index: 2;
+}
+#main .message .messageList li .textBox {
+	width: calc(100% - 11.2rem);
+}
+#main .message .messageList li .textBox .ttl {
+	margin-bottom: 0.9rem;
+}
+#main .message .messageList li .textBox .text {
+	margin-bottom: 0.8rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#main .message .messageList li .textBox .time {
+	padding-left: 2.7rem;
+	font-size: 1.4rem;
+	background: url("../img/common/icon52.png") no-repeat left center / 1.9rem;
+}
+#main .favorites {
+	box-sizing: border-box;
+	padding: 4.1rem 5.9rem 7.6rem;
+	width: calc(49% - 0.2rem);
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+}
+#main .favorites .headLine01 {
+	margin-bottom: 7.1rem;
+}
+#main .favorites .imgList {
+	margin: -3.8rem 1.2rem 0;
+}
+#main .favorites .imgList li {
+	margin-top: 3.8rem;
+	width: 48.2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+#main .favorites .imgList li .photoBox {
+	width: 8rem;
+}
+#main .favorites .imgList li .photoBox a {
+	padding-bottom: 100%;
+	border-radius: 1.6rem;
+}
+#main .favorites .imgList li .textBox {
+	box-sizing: border-box;
+	margin-top: 1.1rem;
+	width: calc(100% - 10.3rem);
+}
+#main .favorites .imgList li .textBox .text01 {
+	margin-bottom: 0.7rem;
+	color: #202020;
+	font-size: 1.8rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#main .favorites .imgList li .textBox .text02 {
+	color: #A3A3A3;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+#main .favorites .moreLink {
+	right: 4.3rem;
+	top: 4.6rem;
+
+}
+#main .news {
+	box-sizing: border-box;
+	padding: 4.1rem 4.6rem 7rem;
+	width: calc(51% - 3.6rem);
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+}
+#main .news .headLine01 {
+	margin-bottom: 8.3rem;
+}
+#main .news .newsList {
+	margin: 0 1.2rem 0 2.6rem;
+}
+#main .news .newsList li {
+	margin-bottom: 2.7rem;
+	border-bottom: 0.1rem solid #E5E5E5;
+}
+#main .news .newsList li:last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+#main .news .newsList li a {
+	padding: 0 1.4rem 3.1rem;
+	display: block;
+	font-size: 1.8rem;
+	color: #202020;
+}
+#main .news .newsList li .ttl {
+	margin-bottom: 0.7rem;
+	max-width: 50.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#main .news .newsList li .time {
+	padding-left: 2.8rem;
+	font-size: 1.4rem;
+	background: url("../img/common/icon52.png") no-repeat left top / 1.9rem auto;
+}
+#main .news .moreLink {
+	right: 3rem;
+	top: 3.6rem;
+}
+#main .linkList {
+	align-items: flex-start;
+}
+#main .linkList > li {
+	margin-right: 3.6rem;
+	padding: 1.9rem 4.4rem 1.6rem;
+	width: calc(25% - 2.8rem);
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+	box-sizing: border-box;
+}
+#main .linkList > li:nth-child(4n) {
+	margin-right: 0;
+}
+#main .linkList li .ttl {
+	margin-bottom: 2rem;
+	position: relative;
+	font-size: 1.8rem;
+}
+#main .linkList li .ttl .icon {
+	width: 2rem;
+	position: absolute;
+	left: -2.9rem;
+	top: 0.4rem;
+}
+#main .linkList li .subList li {
+	margin-bottom: 1.8rem;
+}
+#main .linkList li .subList li a {
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #A3A3A3;
+}
+@media all and (min-width: 1025px) {
+	#main .companyBox .imgList li .photoBox a img {
+		transition: 0.3s;
+	}
+	#main .companyBox .imgList li .photoBox a:hover img {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	#main .companyBox .imgList li .text01 a:hover {
+		color: #555;
+	}
+	#main .moreLink a:hover {
+		color: #555;
+	}
+	#main .message .messageList li .photo .sub a img {
+		transition: 0.3s;
+	}
+	#main .message .messageList li .photo .sub a:hover img {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	#main .message .messageList li .textBox .ttl a:hover {
+		color: #555;
+	}
+	#main .favorites .imgList li .photoBox a img {
+		transition: 0.3s;
+	}
+	#main .favorites .imgList li .photoBox a:hover img {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	#main .favorites .imgList li .textBox .text01 a:hover {
+		color: #555;
+	}
+	#main .news .newsList li a:hover {
+		color: #555;
+	}
+	#main .linkList li .subList li a:hover {
+		color: #555;
+	}
+}
+@media all and (min-width: 600px) and (max-width: 1024px) {
+	#main {
+		padding-top: 10.5rem;
+		background-image: url("../img/common/bg05.png");
+		background-size: 152.4rem auto;
+		background-position: left 66.8% top -21rem;
+	}
+	#main .pageTitle {
+		margin-bottom: 5rem;
+	}
+	#main .textList {
+		margin: -1.2rem 0 1.2rem;
+	}
+	#main .textList li {
+		margin: 1.2rem 1.2rem 0 0;
+		width: calc(25% - 0.9rem);
+		text-align: center;
+	}
+	#main .textList li:nth-child(4n) {
+		margin-right: 0;
+	}
+	#main .textList li a {
+		padding: 2.9rem 1rem 1.7rem;
+		border-radius: 1rem;
+	}
+	#main .textList li .num {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+	}
+	#main .textList li .num .icon {
+		margin: 0.2rem 0.5rem 0 0;
+		position: static;
+		transform: translateY(0);
+		line-height: 0;
+	}
+	#main .textList li .num .icon img {
+		height: 2.4rem;
+	}
+	#main .textList li .sml {
+		margin-top: 0.8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	#main .companyBox {
+		margin-bottom: 1.3rem;
+		padding: 1.9rem 2.5rem 2.8rem;
+		border-radius: 1rem;
+	}
+	#main .companyBox .comTtlBox01 {
+		margin-bottom: 2rem;
+	}
+	#main .companyBox .imgList {
+		margin: -2.8rem 0 0;
+	}
+	#main .companyBox .imgList li {
+		margin: 2.8rem 2.8rem 0 0;
+		width: calc(20% - 2.3rem);
+	}
+	#main .companyBox .imgList li:nth-child(5n) {
+		margin-right: 0;
+	}
+	#main .companyBox .imgList li .newMark {
+		padding: 0.2rem 0.5rem;
+		right: -1rem;
+		top: -0.4rem;
+		font-size: 0.7rem;
+	}
+	#main .companyBox .imgList li .photoBox {
+		margin-bottom: 0.5rem;
+	}
+	#main .companyBox .imgList li .photoBox a {
+		padding-bottom: 64.536%;
+		border-radius: 1rem;
+	}
+	#main .companyBox .imgList li .textBox {
+		margin: 0;
+	}
+	#main .companyBox .imgList li .text01 {
+		margin-bottom: 0.2rem;
+		font-size: 1rem;
+	}
+	#main .companyBox .imgList li .text02 {
+		margin-bottom: 0.3rem;
+		font-size: 0.6rem;
+	}
+	#main .companyBox .imgList li .mark {
+		margin-left: 0;
+	}
+	#main .companyBox .imgList li .mark span {
+		padding: 0 0.3rem;
+		font-size: 0.6rem;
+	}
+	#main .moreLink {
+		right: 2rem;
+		top: 1.5rem;
+	}
+	#main .moreLink a {
+		font-size: 0.8rem;
+	}
+	#main .secBox {
+		margin-bottom: 1.5rem;
+	}
+	#main .secBox01 {
+		display: block;
+		margin-bottom: 1.3rem;
+	}
+	#main .results {
+		margin-bottom: 1.3rem;
+		padding: 2.2rem 2.5rem 3.6rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .results .comTtlBox01 {
+		margin-bottom: 3.7rem;
+	}
+	#main .results .chartList {
+		margin-top: -2rem;
+	}
+	#main .results .chartList li {
+		margin-top: 2rem;
+	}
+	#main .results .chartList li .ttl {
+		margin-bottom: 2rem;
+	}
+	#main .results .chartList li .chart {
+		margin-bottom: 2.6rem;
+		max-width: 13.8rem;
+	}
+	#main .results .chartList li .txtList {
+		width: 80%;
+		max-width: inherit;
+	}
+	#main .results .chartList li .txtList dt {
+		margin-bottom: 1rem;
+		padding-left: 1.6rem;
+		font-size: 1rem;
+	}
+	#main .results .chartList li .txtList dt .color {
+		width: 1.3rem;
+		height: 1.3rem;
+		top: 0.2rem;
+	}
+	#main .results .chartList li .txtList dd {
+		margin-bottom: 1rem;
+		font-size: 0.8rem;
+	}
+	#main .results .moreLink {
+		top: 2.3rem;
+	}
+	#main .message {
+		padding: 1.8rem 2.5rem 3.2rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .message .headLine01 {
+		margin-bottom: 2.1rem;
+	}
+	#main .message .messageList {
+		margin: -2.8rem 0 0;
+		max-width: inherit;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#main .message .messageList li {
+		margin: 2.8rem 2.8rem 0 0;
+		width: calc(20% - 2.4rem);
+		display: block;
+	}
+	#main .message .messageList li:nth-child(5n) {
+		margin-right: 0;
+	}
+	#main .message .messageList li .photo {
+		margin: 0 0 0.5rem;
+		width: auto;
+	}
+	#main .message .messageList li .photo .mark {
+		padding: 0.2rem 0.6rem;
+		right: -1.2rem;
+		top: -0.5rem;
+		font-size: 0.8rem;
+	}
+	#main .message .messageList li .photo .sub a {
+		padding-bottom: 64.536%;
+		border-radius: 1rem;
+		background: #E5E5E5;
+	}
+	#main .message .messageList li .textBox {
+		width: auto;
+	}
+	#main .message .messageList li .textBox .ttl {
+		margin-bottom: 0.2rem;
+	}
+	#main .message .messageList li .textBox .text {
+		margin-bottom: 0.3rem;
+		color: #185858;
+		font-size: 0.6rem;
+	}
+	#main .message .messageList li .textBox .time {
+		padding-left: 1.1rem;
+		font-size: 0.8rem;
+		background-size: 0.8rem auto;
+	}
+	#main .message .moreLink {
+		top: 2rem;
+	}
+	#main .favorites {
+		padding: 1.8rem 2.5rem 2.5rem;
+		width: 49%;
+		border-radius: 1rem;
+	}
+	#main .favorites .headLine01 {
+		margin-bottom: 2.9rem;
+	}
+	#main .favorites .imgList {
+		margin: -1.5rem 0 0;
+	}
+	#main .favorites .imgList li {
+		margin-top: 1.5rem;
+		width: 47.5%;
+	}
+	#main .favorites .imgList li .photoBox {
+		width: 3.4rem;
+	}
+	#main .favorites .imgList li .photoBox a {
+		border-radius: 1rem;
+	}
+	#main .favorites .imgList li .textBox {
+		margin-top: 0.1rem;
+		width: calc(100% - 3.7rem);
+	}
+	#main .favorites .imgList li .textBox .text01 {
+		margin-bottom: 0.2rem;
+		font-size: 1rem;
+	}
+	#main .favorites .imgList li .textBox .text02 {
+		font-size: 0.6rem;
+	}
+	#main .favorites .moreLink {
+		right: 2.6rem;
+		top: 1.9rem;
+	}
+	#main .news {
+		padding: 1.8rem 2.2rem 1.2rem;
+		width: calc(51% - 1.6rem);
+		border-radius: 1rem;
+	}
+	#main .news .headLine01 {
+		margin-bottom: 2.9rem;
+	}
+	#main .news .newsList {
+		margin: 0;
+	}
+	#main .news .newsList li {
+		margin-bottom: 0.7rem;
+	}
+	#main .news .newsList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .news .newsList li a {
+		padding: 0 0.7rem 1.5rem;
+		font-size: 1rem;
+	}
+	#main .news .newsList li .ttl {
+		margin-bottom: 0.2rem;
+		max-width: inherit;
+	}
+	#main .news .newsList li .time {
+		padding-left: 1rem;
+		font-size: 0.8rem;
+		background-size: 0.7rem auto;
+		background-position: left center;
+	}
+	#main .news .moreLink {
+		right: 2.2rem;
+		top: 1.8rem;
+	}
+	#main .linkList > li {
+		margin-right: 1.5rem;
+		padding: 1.3rem 2.4rem 2rem;
+		width: calc(25% - 1.2rem);
+		border-radius: 1rem;
+	}
+	#main .linkList > li:nth-child(4n) {
+		margin-right: 0;
+	}
+	#main .linkList li .ttl {
+		margin-bottom: 1rem;
+		font-size: 0.8rem;
+	}
+	#main .linkList li .ttl .icon {
+		width: 0.8rem;
+		left: -1.2rem;
+		top: 0.2rem;
+	}
+	#main .linkList li .subList li {
+		margin-bottom: 0.2rem;
+	}
+	#main .linkList li .subList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .linkList li .subList li a {
+		font-size: 0.8rem;
+	}
+	#gFooter {
+		padding-top: 4.1rem;
+	}
+}
+@media all and (max-width: 599px) {
+	#main {
+		padding-top: 7.9rem;
+		background: transparent;
+	}
+	#main .pageTitle {
+		margin-bottom: 2.6rem;
+		display: none;
+	}
+	#main .textList {
+		margin: -1.2rem 0 1.2rem;
+		justify-content: space-between;
+	}
+	#main .textList li {
+		margin: 1.2rem 0 0;
+		width: calc(50% - 0.6rem);
+		text-align: center;
+	}
+	#main .textList li a {
+		padding: 2.9rem 1rem 2rem;
+		border-radius: 1rem;
+	}
+	#main .textList li .num {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+	}
+	#main .textList li .num .icon {
+		margin-left: -0.5rem;
+		margin-right: 0.5em;
+		position: static;
+		line-height: 0;
+		transform: translateY(0);
+	}
+	#main .textList li .num .icon img {
+		height: 2.5rem;
+	}
+	#main .textList li .sml {
+		margin-top: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 1rem;
+	}
+	#main .companyBox {
+		margin-bottom: 1.6rem;
+		padding: 3.3rem 2.6rem 2.8rem;
+		border-radius: 1rem;
+	}
+	#main .companyBox .comTtlBox01 {
+		margin-bottom: 4rem;
+	}
+	#main .companyBox .imgList {
+		margin: 0 0 2rem;
+		display: block;
+	}
+	#main .companyBox .imgList li {
+		margin: 0 0 2rem;
+		width: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	#main .companyBox .imgList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .companyBox .imgList li .newMark {
+		padding: 0.3rem 1rem;
+		right: -1.2rem;
+		top: -0.7rem;
+		font-size: 0.9rem;
+	}
+	#main .companyBox .imgList li .photoBox {
+		margin: 0;
+		width: 8rem;
+	}
+	#main .companyBox .imgList li .photoBox a {
+		padding-bottom: 100%;
+		border-radius: 1rem;
+		background: #E5E5E5;
+	}
+	#main .companyBox .imgList li .textBox {
+		margin: 0.8rem 0 0;
+		width: calc(100% - 10.4rem);
+		box-sizing: border-box;
+	}
+	#main .companyBox .imgList li .text01 {
+		margin-bottom: 0.2rem;
+		font-size: 1.4rem;
+	}
+	#main .companyBox .imgList li .text02 {
+		margin-bottom: 0.1rem;
+		font-size: 1rem;
+	}
+	#main .companyBox .imgList li .mark {
+		margin-left: 0;
+	}
+	#main .companyBox .imgList li .mark span {
+		padding: 0 0.5rem;
+		font-size: 0.8rem;
+	}
+	#main .moreLink {
+		position: static;
+		text-align: center;
+	}
+	#main .moreLink a {
+		font-size: 1rem;
+	}
+	#main .secBox {
+		margin-bottom: 1.3rem;
+		display: block;
+	}
+	#main .results {
+		margin-bottom: 1.3rem;
+		padding: 3.3rem 4.6rem 3.2rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .results .comTtlBox01 {
+		margin-bottom: 3.7rem;
+	}
+	#main .results .chartList {
+		margin: 0 0 2.4rem;
+		display: block;
+	}
+	#main .results .chartList::after {
+		display: none;
+	}
+	#main .results .chartList li {
+		margin: 0 0 3.9rem;
+		width: auto;
+	}
+	#main .results .chartList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .results .chartList li .ttl {
+		margin-bottom: 2rem;
+		font-size: 1.4rem;
+	}
+	#main .results .chartList li .chart {
+		margin-bottom: 2rem;
+		max-width: 13.8rem;
+	}
+	#main .results .chartList li .txtList {
+		max-width: inherit;
+	}
+	#main .results .chartList li .txtList dt {
+		margin-bottom: 0.6rem;
+		padding-left: 2rem;
+		font-size: 1.2rem;
+	}
+	#main .results .chartList li .txtList dt .color {
+		width: 1.3rem;
+		height: 1.3rem;
+	}
+	#main .results .chartList li .txtList dd {
+		margin-bottom: 0.6rem;
+		font-size: 1rem;
+	}
+	#main .message {
+		margin-bottom: 1.3rem;
+		padding: 3.3rem 2.6rem 3.1rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .message .headLine01 {
+		margin-bottom: 3.8rem;
+	}
+	#main .message .messageList {
+		margin: 0 0 2rem;
+		max-width: inherit;
+		display: block;
+	}
+	#main .message .messageList li {
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	#main .message .messageList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .message .messageList li .photo {
+		margin-top: 0;
+		width: 8rem;
+	}
+	#main .message .messageList li .photo .mark {
+		padding: 0.2rem 0.8rem;
+		right: -1.2rem;
+		top: -0.5rem;
+		font-size: 0.8rem;
+	}
+	#main .message .messageList li .photo .sub a {
+		border-radius: 1rem;
+	}
+	#main .message .messageList li .textBox {
+		width: calc(100% - 10.7rem);
+	}
+	#main .message .messageList li .textBox .ttl {
+		margin-bottom: 0.5rem;
+		font-size: 1.4rem;
+	}
+	#main .message .messageList li .textBox .text {
+		margin-bottom: 0.8rem;
+		font-size: 1rem;
+		line-height: 1.428;
+	}
+	#main .message .messageList li .textBox .time {
+		padding-left: 1.5rem;
+		font-size: 1rem;
+		background-size: 0.8rem auto;
+	}
+	#main .favorites {
+		margin-bottom: 1.3rem;
+		padding: 3.3rem 2.6rem 3.1rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .favorites .headLine01 {
+		margin-bottom: 3.8rem;
+	}
+	#main .favorites .imgList {
+		margin: 0 0 2rem;
+		display: block;
+	}
+	#main .favorites .imgList li {
+		margin: 0 0 2rem;
+		width: auto;
+		align-items: center;
+	}
+	#main .favorites .imgList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .favorites .imgList li .photoBox a {
+		border-radius: 1rem;
+	}
+	#main .favorites .imgList li .textBox {
+		margin-top: 0;
+		width: calc(100% - 10.3rem);
+	}
+	#main .favorites .imgList li .textBox .text01 {
+		margin-bottom: 0.2rem;
+		font-size: 1.4rem;
+	}
+	#main .favorites .imgList li .textBox .text02 {
+		font-size: 1rem;
+	}
+	#main .news {
+		margin-bottom: 2rem;
+		padding: 3.3rem 3rem 3.7rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .news .headLine01 {
+		margin-bottom: 1.5rem;
+	}
+	#main .news .newsList {
+		margin: 0 0 1.9rem;
+	}
+	#main .news .newsList li {
+		margin: 0;
+	}
+	#main .news .newsList li a {
+		padding: 1.7rem 0;
+		font-size: 1.4rem;
+	}
+	#main .news .newsList li .ttl {
+		margin-bottom: 0.5rem;
+		max-width: inherit;
+		line-height: 1.428;
+		overflow: visible;
+		text-overflow: inherit;
+		white-space: normal;
+	}
+	#main .news .newsList li .time {
+		padding-left: 1.3rem;
+		font-size: 1rem;
+		background-size: 0.8rem auto;
+		background-position: left center;
+	}
+	#main .linkList {
+		display: block;
+	}
+	#main .linkList > li {
+		margin: 0 0 1.5rem;
+		padding: 2.2rem 4.2rem 2.4rem;
+		width: auto;
+		border-radius: 1rem;
+	}
+	#main .linkList > li:last-child {
+		margin-bottom: 0;
+	}
+	#main .linkList li .ttl {
+		margin-bottom: 0;
+		font-size: 1.4rem;
+	}
+	#main .linkList li .ttl .icon {
+		width: 1.7rem;
+		left: -2.5rem;
+		top: 0.3rem;
+	}
+	#main .linkList li .ttl .icon01 {
+		width: 2rem;
+	}
+	#main .linkList li .ttl .icon02 {
+		left: -2.8rem;
+		width: 2.2rem;
+		top: 0;
+	}
+	#main .linkList li .subList {
+		padding-top: 1.1rem;
+		padding-bottom: 0.4rem;
+	}
+	#main .linkList li .subList li {
+		margin-bottom: 0.8rem;
+		line-height: 1.52;
+	}
+	#main .linkList li .subList li:last-child {
+		margin-bottom: 0;
+	}
+	#main .linkList li .subList li a {
+		display: block;
+		font-size: 1rem;
+	}
+}
