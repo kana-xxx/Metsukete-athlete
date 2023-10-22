@@ -1,5 +1,6 @@
 //要素を取得
 const noticeModal = document.querySelector('.modal-outer'),
+      hUserBoxOuter = document.querySelector('.hUserBoxOuter'),
       modalBtn = document.querySelector('.modal-open'),
       noticeClose = document.querySelector('.notice-modal-close'),
       hUserBox = document.querySelector('.hUserBox'),
@@ -14,42 +15,41 @@ function modalOpen() {
     normalBell.classList.toggle('is-active');
     openBell.classList.toggle('is-active');
 }
-modalBtn.addEventListener('click', modalOpen);
+    modalBtn.addEventListener('click', modalOpen);
 
-function hUserBoxOpen() {
-   noticeModal.classList.toggle('is-active'); 
-  hUserBoxList.classList.add('is-active'); 
+
+function modalOpenUser() {
+    hUserBoxOuter.classList.toggle('is-active'); 
+    hUserBoxList.classList.toggle('is-active');
 }
-hUserBox.addEventListener('click', hUserBoxOpen);
-
-
-
-const btn = document.querySelectorAll(".modal-toggle");
-btn.forEach(function (btn) {
-btn.onclick = function () {
-const modalAttribute = btn.getAttribute('data-modal');
-const modalShow = document.getElementById(modalAttribute);
-modalShow.classList.add('show');
-};
-});
+    hUserBox.addEventListener('click', modalOpenUser);
 
 
 
 //「閉じるボタン」をクリックしてモーダルを閉じる
 function modalClose() {
     noticeModal.classList.remove('is-active');
+    normalBell.classList.remove('is-active');
+    openBell.classList.remove('is-active');
+    hUserBoxList.classList.remove('is-active');
+    hUserBoxOuter.classList.remove('is-active'); 
 }
 noticeClose.addEventListener('click', modalClose);
 
-//「モーダルの外側」をクリックしてモーダルを閉じる
+// モーダルの外側をクリックしてモーダルを閉じる
 function modalOut(e) {
-  if (e.target == noticeModal) {
-    noticeModal.classList.remove('is-active');
-    normalBell.classList.remove('is-active');
-    openBell.classList.remove('is-active');
-    
-  }
+    if (e.target == noticeModal) {
+        modalClose(); // モーダルを閉じる処理を呼び出す
+    }
 }
-addEventListener('click', modalOut);
+
+noticeModal.addEventListener('click', modalOut);
 
 
+function modalOutUser(e) {
+    if (e.target == hUserBoxOuter) {
+        modalClose(); // モーダルを閉じる処理を呼び出す
+    }
+}
+
+hUserBoxOuter.addEventListener('click', modalOutUser);

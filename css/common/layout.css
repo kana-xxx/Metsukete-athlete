@@ -425,7 +425,27 @@ background: #DFEAF1;
 	box-sizing: border-box;
 	z-index: 1000;
 } */
+#gHeader .hUserBoxOuter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/* background: rgba(0,0,0,50%); */
+	padding: 40px 20px;
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	box-sizing: border-box;
+	z-index: 1000;
 
+}
+#gHeader .hUserBoxOuter.is-active  {
+	opacity: 1;
+	visibility: visible;
+}
 #gHeader .hUserBox-list .subList {
 	position: absolute;
     top: 110%;
