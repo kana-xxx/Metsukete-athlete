@@ -53,12 +53,12 @@
 
 <div class="menu on"><span></span><span></span><span></span></div>
 <div class="notice-user-box">
-<div class="icon bell modal-open" data-modal="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.png" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
+<div class="icon bell modal-open" data-target="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.png" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
 
 
 
 
-<div class="hUserBox" data-modal="data-user">
+<div class="hUserBox " data-target="data-user">
 	<!-- <a href="javascript:;"> -->
 		<a href="#">
         <div class="userImg"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
@@ -73,7 +73,7 @@
 	  <!-- モーダルを閉じるボタン -->
 	  <div class="modal-close notice-modal-close"></div>
 	  <!-- モーダル内部のコンテンツ -->
-	  <div class="modal-content notice" id="data-notice">
+	  <div class="modal-content notice js-modal" id="data-notice">
 		<div class="headLine-notice">お知らせ</div>
 		<ul class="notice-box">
 			<li>
@@ -141,8 +141,9 @@
 	  </div>
 	</div>
   </div>
-<div class="hUserBox-list" id="data-user">
-	<ul class="subList">
+<div class="hUserBox-list" >
+	<div class="hUserBoxOuter"></div>
+	<ul class="subList js-modal" id="data-user">
 		<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../image/common/hUserBox-grayQuestion.svg" alt=""><img src="../image/common/hUserBox-blueQuestion.svg" alt="" class="hover"></span><span class="txt">ヘルプページ</span></a></li>
 		<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../image/common/hUserBox-grayPrivacy.svg" alt=""><img src="../image/common/hUserBox-bluePrivacy.svg" alt="" class="hover"></span><span class="txt">プライバシーポリシー</span></a></li>
 		<li>
@@ -479,7 +480,6 @@
 	<script src="http://dev.metsukete.jp/js/fancybox/jquery.fancybox.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
-	<script src="../js/top-page/modal-notice.js"></script>
 	<script src="../js/top-page/doughnut-chart.js"></script>
 	<script src="../js/common/hUserBox.js"></script>
 </body>
