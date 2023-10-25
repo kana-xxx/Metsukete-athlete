@@ -514,13 +514,21 @@ background: #DFEAF1;
 }
 @media all and (max-width: 1024px) {
 	#gHeader {
-		padding: 2rem 8.5rem 1.4rem 2.3rem;
+		padding: 2rem  1.4rem 2.3rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	#gHeader::before {
+		content: '';
+		display: block;
+		flex: 1;
 	}
 	#gHeader .hBox {
 		display: block;
+		flex: 1;
 	}
 	#gHeader h1 {
-		margin: 0;
+		margin: 0 auto;
 		width: 14.5rem;
 	}
 	#gHeader .hUserBox {
@@ -545,15 +553,23 @@ background: #DFEAF1;
 		-moz-appearance: none;
 		appearance: none;
 	}
+	.responsive-headerMenu {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-left: auto;
+		align-items: center;
+		flex: 1;
+	}
+	#gHeader .notice-user-box {
+		margin-left: 0;
+	}
 	.menu {
 		width: 2.6rem;
 		height: 1.3rem;
-		position: absolute;
-		right: 3.1rem;
-		top: 50%;
 		transform: translateY(-50%);
 		cursor: pointer;
 		z-index: 10;
+		margin-right: 2rem;
 	}
 	.menu span {
 		width: 100%;
@@ -1073,12 +1089,54 @@ background: #DFEAF1;
 	font-style: normal;
 	color: #A5A5A5;
 }
+#Footer {
+	display: none;
+}
 @media all and (min-width: 1025px) {
 	#gFooter .fLinkList li a:hover {
 		color: #555;
 	}
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
+	#Footer {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 2.3rem 1.4rem;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		box-shadow: 0 -2rem 6rem rgba(0, 0, 0, 0.04);
+		background: #fff;
+		z-index: 100;
+		display: block;
+	}
+	#fNavi {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#fNavi ul{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex: 1;
+	}
+	#fNavi ul li a{
+		display: flex;
+		align-items: center;
+		flex: 1;
+	}
+	#fNavi li a .icon {
+		width: 3.5rem;
+		font-size: 0;
+		line-height: 0;
+	}s
+	#fNavi li a span  {
+		font-size: 1.2rem;
+	}
+	#fNavi li a .icon .choice {
+		display: none;
+	}
 	#gFooter {
 		padding: 8.7rem 3.8rem 2.6rem;
 	}

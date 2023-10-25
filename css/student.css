@@ -809,13 +809,14 @@
 		margin-bottom: 1.3rem;
 		column-gap: 2rem;
 	}
-	#main .results {
-		margin-bottom: 1.3rem;
+	#main .message.profile .results {
+		margin-bottom: 0;
 		padding: 2.2rem 2.5rem 3.6rem;
 		width: auto;
 		border-radius: 1rem;
 		flex: 1;
 	}
+
 	#main .results .comTtlBox01 {
 		margin-bottom: 3.7rem;
 	}
@@ -873,9 +874,18 @@
 		border-radius: 1rem;
 		flex: 1;
 	}
-	#main .message .headLine01 {
-		margin-bottom: 2.1rem;
+	#main .message.profile {
+		padding: 2.2rem 2.5rem 3.2rem;
+		width: auto;
+		border-radius: 1rem;
+		flex: 1;
+	}
+	#main .message.profile  .headLine01 {
+		margin-bottom: 3.2rem;
 		font-size: 2rem;
+	}
+	#main .message.profile .headLine01 .txt01 {
+		margin-right: 0rem;
 	}
 	#main .message .messageList {
 		margin: -2.8rem 0 0;

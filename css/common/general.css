@@ -348,6 +348,13 @@
 		font-size: 1rem;
 		vertical-align: 0.1rem;
 	}
+	.headLine01,
+.headLine05.taco {
+	margin-bottom: 3.2rem;
+	color: #202020;
+	font-size: 2rem;
+	font-weight: 700;
+}
 }
 @media all and (max-width: 599px) {
 	.headLine01 {
