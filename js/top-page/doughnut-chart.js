@@ -166,3 +166,222 @@ const centerTextPluginAna1 = {
 
   });
   
+
+
+// メディアクエリを使用してフォントサイズを調整
+const checkMediaQuery = function () {
+  if (window.innerWidth <= 768) { // 768px未満の場合
+    // フォントサイズを小さく設定
+    centerTextPluginAna1.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.fillRect(left, top, width, height);
+  
+      // データセットから値を取得
+      const dataset = chart.config.data.datasets[0];
+      const dataValue = dataset.data[0]; // ここでは最初のデータを使用
+  
+      ctx.textAlign = 'center';
+  
+      // テキストスタイルを設定
+      const labelText = 'あなたの入力率';
+      const dataText = dataValue;
+      const percentText = '%';
+  
+      // "あなたの入力率" のテキストスタイル
+      ctx.font = '500 21px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText, width / 2, height / 2 - 28); // テキストを上に配置
+  
+      // 'データ' のテキストスタイル
+      ctx.font = '100 65px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // データのテキストを中央に描画
+          ctx.fillStyle = 'black'; // テキスト色を設定
+          ctx.fillText(dataText, width / 2, height / 2 + 42); // データのテキストを下に配置
+      // '%' のテキストスタイル
+      ctx.font = '300 25px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // '%' のテキストを描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(percentText, width / 2 + 50, height / 2 + 42); // '%' テキストをデータの右に配置
+  
+      ctx.restore();
+    };
+    centerTextPluginAna2.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+    ctx.save();
+    ctx.fillStyle = 'white';
+    ctx.fillRect(left, top, width, height);
+
+    ctx.textAlign = 'center';
+
+    // テキストスタイルを設定
+    const labelText = '周りから見た';
+    const labelText2 = 'あなたのタイプ';
+
+    // "周りから見た" のテキストスタイル
+    ctx.font = '500 17px "Noto sans JP"'; // フォントの太さとファミリを設定
+
+    // テキストを中央に描画
+    ctx.fillStyle = 'black'; // テキスト色を設定
+    ctx.fillText(labelText, width / 2, height / 2 - 15); // テキストを上に配置
+
+  
+    // "あなたのタイプ" のテキストスタイル
+    ctx.font = '500 17px "Noto sans JP"'; // フォントの太さとファミリを設定
+
+    // テキストを中央に描画
+    ctx.fillStyle = 'black'; // テキスト色を設定
+    ctx.fillText(labelText2, width / 2, height / 2 - -15); // テキストを上に配置
+
+    ctx.restore();
+      
+    };     
+  }   if (window.innerWidth <= 900)  {
+    // デフォルトのフォントサイズを使用
+    centerTextPluginAna1.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.fillRect(left, top, width, height);
+  
+      // データセットから値を取得
+      const dataset = chart.config.data.datasets[0];
+      const dataValue = dataset.data[0]; // ここでは最初のデータを使用
+  
+      ctx.textAlign = 'center';
+  
+      // テキストスタイルを設定
+      const labelText = 'あなたの入力率';
+      const dataText = dataValue;
+      const percentText = '%';
+  
+      // "あなたの入力率" のテキストスタイル
+      ctx.font = '500 13px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText, width / 2, height / 2 - 20); // テキストを上に配置
+  
+      // 'データ' のテキストスタイル
+      ctx.font = '100 45px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // データのテキストを中央に描画
+          ctx.fillStyle = 'black'; // テキスト色を設定
+          ctx.fillText(dataText, width / 2, height / 2 + 30); // データのテキストを下に配置
+      // '%' のテキストスタイル
+      ctx.font = '300 18px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // '%' のテキストを描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(percentText, width / 2 + 35, height / 2 + 30); // '%' テキストをデータの右に配置
+  
+      ctx.restore();
+    };
+    centerTextPluginAna2.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.fillRect(left, top, width, height);
+  
+      ctx.textAlign = 'center';
+  
+      // テキストスタイルを設定
+      const labelText = '周りから見た';
+      const labelText2 = 'あなたのタイプ';
+
+      // "周りから見た" のテキストスタイル
+      ctx.font = '500 13px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText, width / 2, height / 2 - 10); // テキストを上に配置
+  
+    
+      // "あなたのタイプ" のテキストスタイル
+      ctx.font = '500 13px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText2, width / 2, height / 2 - -10); // テキストを上に配置
+  
+      ctx.restore();
+    };
+  }else {
+    // デフォルトのフォントサイズを使用
+    centerTextPluginAna1.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.fillRect(left, top, width, height);
+  
+      // データセットから値を取得
+      const dataset = chart.config.data.datasets[0];
+      const dataValue = dataset.data[0]; // ここでは最初のデータを使用
+  
+      ctx.textAlign = 'center';
+  
+      // テキストスタイルを設定
+      const labelText = 'あなたの入力率';
+      const dataText = dataValue;
+      const percentText = '%';
+  
+      // "あなたの入力率" のテキストスタイル
+      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText, width / 2, height / 2 - 28); // テキストを上に配置
+  
+      // 'データ' のテキストスタイル
+      ctx.font = '100 65px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // データのテキストを中央に描画
+          ctx.fillStyle = 'black'; // テキスト色を設定
+          ctx.fillText(dataText, width / 2, height / 2 + 42); // データのテキストを下に配置
+      // '%' のテキストスタイル
+      ctx.font = '300 25px "Open Sans"'; // データのフォントの太さとファミリを設定
+          // '%' のテキストを描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(percentText, width / 2 + 50, height / 2 + 42); // '%' テキストをデータの右に配置
+  
+      ctx.restore();
+    };
+    centerTextPluginAna2.beforeDraw = function (chart, args, options) {
+      const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.fillRect(left, top, width, height);
+  
+      ctx.textAlign = 'center';
+  
+      // テキストスタイルを設定
+      const labelText = '周りから見た';
+      const labelText2 = 'あなたのタイプ';
+
+      // "周りから見た" のテキストスタイル
+      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText, width / 2, height / 2 - 15); // テキストを上に配置
+  
+    
+      // "あなたのタイプ" のテキストスタイル
+      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+  
+      // テキストを中央に描画
+      ctx.fillStyle = 'black'; // テキスト色を設定
+      ctx.fillText(labelText2, width / 2, height / 2 - -15); // テキストを上に配置
+  
+      ctx.restore();
+    };
+  }
+
+  // グラフを更新して変更を適用
+  DoughnutChartAnalysis1.update();
+  DoughnutChartAnalysis2.update();
+};
+
+// ページ読み込み時と画面サイズ変更時にメディアクエリを確認
+window.addEventListener('load', checkMediaQuery);
+window.addEventListener('resize', checkMediaQuery);
