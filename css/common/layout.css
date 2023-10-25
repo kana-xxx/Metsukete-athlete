@@ -20,10 +20,17 @@ html {
 	html {
 		font-size: 0.521vw;
 	}
+	.tab-new-line {
+		display: none
+	}
+	
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	html {
 		font-size: 1.2vw;
+	}
+	.tab-new-line {
+		display: block;
 	}
 	
 }
@@ -194,6 +201,7 @@ a[href^="tel:"] {
 	padding: 3rem 2rem 2.9rem 0;
 	display: flex;
 	align-items: center;
+	pointer-events: none;
 }
 #gHeader .notice-user-box {
 	display: flex;
@@ -806,6 +814,10 @@ background: #DFEAF1;
 	border-radius: 50%;
 	background: #F8F8F8;
 }
+
+
+
+
 #sideBar .subBox .sideTtl .icon img {
 	width: 6rem;
 }

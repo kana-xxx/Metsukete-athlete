@@ -8,6 +8,9 @@
 #main .pageTitle {
 	margin-bottom: 11.4rem;
 }
+#main .User-detal {
+	display: none;
+}
 #main .textList {
 	margin: -3.1rem 0 3.2rem;
 	display: flex;
@@ -371,7 +374,7 @@
 
 }
 #main .message .flexD li a {
-	display: block;
+	/* display: block; */
 	padding: 1.1rem 2.8rem;
 	position: relative;
 	border-radius: .8rem;
@@ -562,6 +565,9 @@
 	font-size: 1.5rem;
 	color: #A3A3A3;
 }
+#main .User-detail {
+	display: none;
+}
 @media all and (min-width: 1025px) {
 	#main .companyBox .imgList li .photoBox a img {
 		transition: 0.3s;
@@ -607,24 +613,112 @@
 		background-size: 152.4rem auto;
 		background-position: left 66.8% top -21rem;
 	}
+
+	#main .top-content-box {
+		margin-bottom: 1.3rem;
+		margin-right: 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	#main .User-detail {
+		display: block;
+	padding:3rem 3rem 3rem 3rem;
+    display: block;
+    border-radius: 1.4rem;
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+	margin-right: 1.3rem;
+	grid-area: 1 / 1 / 3 / 2; 
+	position: relative;
+	}
+	#main .User-detail a {
+		display: flex;
+		align-items: center;
+		width: 80%;
+		column-gap: 1.5rem;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		right: 0;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	#main .textList.top-content {
+
+		grid-area: 1 / 2 / 3 / 4;
+		margin: 0;
+		margin-bottom: 0;
+		column-gap: 1rem;
+		row-gap: 1rem;
+	}
+	#main .textList.top-content li {
+		margin: 0;
+		position: relative;
+		flex-grow: 1;
+	}
+	#main .top-content-box .userImg {
+		margin-right: 0;
+		width: 50%;
+	}
+	#main .top-content-box .User-detail-box {
+		display: flex;
+		flex-direction: column;
+	}
+	#main .top-content-box .userImg span {
+		padding-bottom: 100%;
+		border-radius: 1.1rem;
+	}
+	#main .top-content-box p span {
+		margin-top: 0.8rem;
+		display: block;
+		font-weight: 500;
+		font-size: 1.2rem;
+		color: #8F8F8F;
+	}
+	#main .top-content-box .userName {
+		margin-right: 0;
+		font-size: 1.8rem;
+	}
+	#main .top-content-box .userArrow {
+		margin-top: 1.5rem;
+		width: 1.1rem;
+		margin-left: auto;
+	}
 	#main .pageTitle {
 		margin-bottom: 5rem;
 	}
 	#main .textList {
 		margin: -1.2rem 0 1.2rem;
+		justify-content: space-between;
 	}
-	#main .textList li {
-		margin: 1.2rem 1.2rem 0 0;
-		width: calc(25% - 0.9rem);
+	#main .top-content-detail {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:100%;
+	}
+	#main .textList.top-content li {
+		margin: 0;
 		text-align: center;
+		width: 45%;
+		height: auto;
+		padding: 0;
 	}
+	#main .textList.top-content li a{
+		height: 60px;
+	}
+
 	#main .textList li:nth-child(4n) {
-		margin-right: 0;
+		margin-right: 0
 	}
 	#main .textList li a {
 		padding: 2.9rem 1rem 1.7rem;
 		border-radius: 1rem;
 	}
+
 	#main .textList li .num {
 		display: flex;
 		justify-content: center;
@@ -710,11 +804,17 @@
 		display: block;
 		margin-bottom: 1.3rem;
 	}
+	#main .secBox01.top-content-tablet {
+		display: flex;
+		margin-bottom: 1.3rem;
+		column-gap: 2rem;
+	}
 	#main .results {
 		margin-bottom: 1.3rem;
 		padding: 2.2rem 2.5rem 3.6rem;
 		width: auto;
 		border-radius: 1rem;
+		flex: 1;
 	}
 	#main .results .comTtlBox01 {
 		margin-bottom: 3.7rem;
@@ -750,16 +850,32 @@
 		margin-bottom: 1rem;
 		font-size: 0.8rem;
 	}
+	#main .results .chartList .chart.taco {
+		width: 100%;
+		margin: 3rem auto 4.9rem;
+		max-width: 22rem;
+	}
 	#main .results .moreLink {
 		top: 2.3rem;
 	}
+	#main .results .chartList .txtList.flexE li {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		column-gap: 1.5rem;
+		margin-top:0;
+		margin-bottom: 1rem;
+	}
+
 	#main .message {
 		padding: 1.8rem 2.5rem 3.2rem;
 		width: auto;
 		border-radius: 1rem;
+		flex: 1;
 	}
 	#main .message .headLine01 {
 		margin-bottom: 2.1rem;
+		font-size: 2rem;
 	}
 	#main .message .messageList {
 		margin: -2.8rem 0 0;
@@ -806,6 +922,11 @@
 		font-size: 0.8rem;
 		background-size: 0.8rem auto;
 	}
+	#main .message .chart-profile {
+		width: 100%;
+		margin: 3rem auto 4.9rem;
+		max-width: 22rem;
+	}
 	#main .message .moreLink {
 		top: 2rem;
 	}
@@ -813,6 +934,11 @@
 		padding: 1.8rem 2.5rem 2.5rem;
 		width: 49%;
 		border-radius: 1rem;
+	}
+	#main .message .flexD li a {
+		padding: .7rem 1.5rem;
+		font-size: 1.1rem;
+		gap: 1rem;
 	}
 	#main .favorites .headLine01 {
 		margin-bottom: 2.9rem;
@@ -840,6 +966,18 @@
 	}
 	#main .favorites .imgList li .textBox .text02 {
 		font-size: 0.6rem;
+	}
+
+	#main .companyBox .imgList .tag.new {
+		padding: .5rem 1rem;
+		background: #FF0000;
+		border-radius: 3rem;
+		color: #FFF;
+		position: absolute;
+		top: -12%;
+		right: 65%;
+		z-index: 2;
+		font-size: .9rem;
 	}
 	#main .favorites .moreLink {
 		right: 2.6rem;
@@ -923,15 +1061,18 @@
 	#main .textList {
 		margin: -1.2rem 0 1.2rem;
 		justify-content: space-between;
+		height: auto;
 	}
 	#main .textList li {
 		margin: 1.2rem 0 0;
 		width: calc(50% - 0.6rem);
 		text-align: center;
+		height: auto;
 	}
 	#main .textList li a {
 		padding: 2.9rem 1rem 2rem;
 		border-radius: 1rem;
+
 	}
 	#main .textList li .num {
 		display: flex;
