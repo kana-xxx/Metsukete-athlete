@@ -71,11 +71,15 @@
 </div>
 <div class="modal notice-modal modal-outer">
 	<div class="modal-container notice">
-	  <!-- モーダルを閉じるボタン -->
-	  <div class="modal-close notice-modal-close"></div>
+	  
 	  <!-- モーダル内部のコンテンツ -->
 	  <div class="modal-content notice js-modal" id="data-notice">
+		<div class="notice-headlineBox">
+				<!-- モーダルを閉じるボタン -->
+		<div class="modal-close notice-modal-close"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
 		<div class="headLine-notice">お知らせ</div>
+	
+	</div>
 		<ul class="notice-box">
 			<li>
 				<a class="notice-content unread" href="#">
@@ -139,16 +143,25 @@
 			</li>
 		</ul>
 		<div class="moreLink"><a href="#">もっと見る</a></div>
+
+		<!-- ページネーション -->
+		<ul class="modal pagination">
+			<li class="prev"><a href="#"><img src="../image/common/modal-pageNation-back.svg" alt="ページネーション前へボタン"></a></li>
+			<li class="page-number choice"><a href="#">1</a></li>
+			<li class="page-number"><a href="#">2</a></li>
+			<li class="page-number"><a href="#">3</a></li>
+			<li class="next"><a href="#"><img src="../image/common/modal-pageNation-next.svg" alt="ページネーション次へボタン"></a></li>
+		  </ul>
 	  </div>
 	</div>
   </div>
 <div class="hUserBox-list" >
 	<div class="hUserBoxOuter"></div>
 	<ul class="subList js-modal" id="data-user">
-		<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../image/common/hUserBox-grayQuestion.svg" alt=""><img src="../image/common/hUserBox-blueQuestion.svg" alt="" class="hover"></span><span class="txt">ヘルプページ</span></a></li>
-		<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../image/common/hUserBox-grayPrivacy.svg" alt=""><img src="../image/common/hUserBox-bluePrivacy.svg" alt="" class="hover"></span><span class="txt">プライバシーポリシー</span></a></li>
+		<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../image/common/hUserBox-grayQuestion.svg" alt=""><img src="../image/common/hUserBox-blueQuestion.svg" alt="" class="hover"></span><span class="txt">ヘルプページ</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
+		<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../image/common/hUserBox-grayPrivacy.svg" alt=""><img src="../image/common/hUserBox-bluePrivacy.svg" alt="" class="hover"></span><span class="txt">プライバシーポリシー</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
 		<li>
-		<form name="temp_logout_form" name="form" action="http://dev.metsukete.jp/student/logout" method="POST"><input type="hidden" name="_token" value="CuMCtpSoqhSoISQrgkztmfmTIcvsJsaJO5YlDODS">                <a href="javascript:temp_logout_form.submit()"><span class="icon"><img src="../image/common/hUserBox-grayLogout.svg" alt=""><img src="../image/common/hUserBox-blueLogout.svg" alt="" class="hover"></span><span class="txt">ログアウト</span></a>
+		<form name="temp_logout_form" name="form" action="http://dev.metsukete.jp/student/logout" method="POST"><input type="hidden" name="_token" value="CuMCtpSoqhSoISQrgkztmfmTIcvsJsaJO5YlDODS">                <a href="javascript:temp_logout_form.submit()"><span class="icon"><img src="../image/common/hUserBox-grayLogout.svg" alt=""><img src="../image/common/hUserBox-blueLogout.svg" alt="" class="hover"></span><span class="txt">ログアウト</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a>
 		</li></span>
 		</form>
 	</ul>
@@ -432,7 +445,7 @@
 																						
 					</section>
             <!-- 他己分析 -->
-            <section class="results">
+            <section class="results taco">
                 <div class="comTtlBox02">
                     <h3 class="headLine05 taco">他己分析結果</h3>
                     <p class="subTtl">小西 奏さんについて0名の依頼者が回答しました

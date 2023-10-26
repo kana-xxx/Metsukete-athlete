@@ -16,6 +16,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 html {
 	font-size: 62.5%;
 }
+*:focus {
+	outline: none;
+  }
+  a {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	cursor:pointer;
+  }
 @media all and (min-width: 1025px) and (max-width: 1919px) {
 	html {
 		font-size: 0.521vw;
@@ -217,6 +224,7 @@ a[href^="tel:"] {
 	position: relative;
 	cursor: pointer;
 	z-index: 2;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 #gHeader .icon.bell .bellUsually {
 	opacity: 1;
@@ -233,6 +241,7 @@ a[href^="tel:"] {
   }
   #gHeader .icon.bell .bellOpen.is-active {
 	opacity: 1;
+	cursor: pointer;
   }
 #gHeader .icon.bell .hover {
 	display: none;
@@ -292,21 +301,10 @@ a[href^="tel:"] {
 	width: 90%;
   }
   
-  /* モーダルを閉じるボタンの指定  仮削除　　 */
-  /* .notice-modal-close{
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: -20px;
-	right: -20px;
-	width: 40px;
-	height: 40px;
-	color: #fff;
-
-	border-radius: 50%;
+  /* モーダルを閉じるボタンの指定 　 */
+  .notice-modal-close{
 	cursor: pointer;
-  } */
+  }
   
   /* モーダルのコンテンツ部分の指定 */
   #gHeader .modal-content.notice{
@@ -320,10 +318,12 @@ a[href^="tel:"] {
 	transition: .3s ease-in ;
 	cursor: pointer;
   }
+  @media (hover: hover) {
   #gHeader .notice-box li:hover,
   #gHeader .modal-content .notice-content.unread:hover {
 background: #DFEAF1;
   }
+}
   #gHeader .modal-content .headLine-notice {
 	background: #005792;
 	height: 6rem;
@@ -344,6 +344,9 @@ background: #DFEAF1;
 	display: block;
 	color: #FFF;
 	font-size: 1.5rem;
+  }
+  #gHeader .modal-content.notice .notice-modal-close  {
+	display: none;
   }
 /* お知らせのレイアウト */
 #gHeader .list-headline {
@@ -394,7 +397,9 @@ background: #DFEAF1;
     font-size: 1.5rem;
     font-weight: 500;
 }
-
+#gHeader .modal.pagination {
+	display: none;
+}
 @media all and (min-width: 1025px) {
 #gHeader .hUserBox .icon.bell:hover img{
 	display: none;
@@ -491,12 +496,18 @@ background: #DFEAF1;
 #gHeader .hUserBox-list .subList li a .icon .hover {
 	display: none;
 }
+#gHeader .hUserBox-list .subList li .responsive-arrow {
+	display: none;
+}
 #gHeader .hUserBox .userName {
 	margin-right: 2rem;
 }
 #gHeader .hUserBox .userArrow {
 	width: 1.7rem;
 	transform: rotate(90deg);
+}
+.responsive-headerMenu {
+	margin-left: auto;
 }
 @media all and (min-width: 1025px) {
 	#gHeader .hUserBox .subList li a:hover .icon img {
@@ -557,12 +568,13 @@ background: #DFEAF1;
 		display: flex;
 		flex-direction: row-reverse;
 		margin-left: auto;
-		align-items: center;
+		align-items: flex-end;
 		flex: 1;
 	}
 	#gHeader .notice-user-box {
 		margin-left: 0;
 	}
+
 	.menu {
 		width: 2.6rem;
 		height: 1.3rem;
@@ -715,6 +727,7 @@ background: #DFEAF1;
 		font-size: 1rem;
 		color: #A3A3A3;
 	}
+	
 }
 @media all and (max-width: 599px) {
 	#gHeader {
@@ -919,6 +932,122 @@ background: #DFEAF1;
 	#sideBar .subBox .sLinkList li .subList li:not(:last-child) {
 		margin-bottom: 0.8rem;
 	}
+
+	#gHeader .modal-container.notice{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		background: #FFF;
+	  }
+	  #gHeader .modal-content .moreLink {
+		display: none;
+	  }
+	  #gHeader .modal-content .headLine-notice {
+		background: #FFF;
+		padding: 1rem 1.4rem 1.3rem;
+		line-height: auto;
+		color: #202020;
+		text-align: center;
+		font-size: 1.9rem;
+		border-radius: auto;
+		flex: 1;
+	  }
+	  #gHeader .modal-content.notice  .notice-headlineBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
+		background: #FFF;
+	  }
+	  #gHeader .modal-content.notice  .notice-headlineBox::after {
+		content: '';
+		display: block;
+		flex: 1;
+	  }
+	  #gHeader .modal-content.notice .notice-modal-close {
+		display: block;
+		flex: 1;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+	  }
+	  #gHeader .modal-content.notice .notice-modal-close img {
+		margin-left: 3rem;
+
+	  }
+	  #gHeader .modal-content .notice-list-ttl {
+		width: 100%;
+		max-width: 620px;
+		margin-bottom: .5rem;
+	}
+	#gHeader .modal.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 1.8rem;
+	}
+
+	#gHeader .modal.pagination li a{
+		display: inline-block;
+		height: 1.8rem;
+		width: 1.8rem;
+		line-height: 1.8rem;
+		border-radius: 1.3rem;
+		text-align: center;
+		font-size: 1.6rem;
+		padding: 1.5rem ;
+	}
+
+	#gHeader .modal.pagination .page-number.choice a {
+		background: #005792;
+		color: #FFF;
+	}
+/* タブレット　ユーザーボックスモーダル */
+#gHeader .hUserBoxOuter {
+	z-index: 1;
+
+}
+	#gHeader .hUserBox-list .subList {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		box-sizing: border-box;
+		border: none;
+		background: #F3F5F6;
+		border-radius: 0;
+		display:none;
+
+	}
+	#gHeader .hUserBox-list .subList li:not(:last-child) {
+		border: none;
+	}
+	#gHeader .hUserBox-list .subList li:first-child {
+		margin-top: 5%;
+	}
+
+	#gHeader .hUserBox-list .subList li{
+		background: #FFF;
+		width: 80%;
+		border-radius: 1rem;
+		margin: 1.2rem auto;
+	}
+	#gHeader .hUserBox-list .subList li a {
+		padding: 2.5rem 4.5rem;
+	}
+	#gHeader .hUserBox-list .subList li .responsive-arrow {
+		display: block;
+		margin-left: auto;
+	}
+	#gHeader .hUserBox-list .subList li a .icon  {
+		margin-right: 4rem;
+	}
+	
 }
 @media all and (max-width: 599px) {
 	#sideBar {

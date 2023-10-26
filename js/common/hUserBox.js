@@ -2,6 +2,7 @@
 const noticeModal = document.querySelector('.modal-outer'),
       hUserBoxOuter = document.querySelector('.hUserBoxOuter'),
       modalBtn = document.querySelector('.modal-open'),
+      noticeBack = document.querySelector('.modal-close'),
       noticeClose = document.querySelector('.notice-modal-close'),
       hUserBox = document.querySelector('.hUserBox'),
       hUserBoxList = document.querySelector('.subList'),
@@ -44,7 +45,6 @@ function modalOut(e) {
 }
 
 noticeModal.addEventListener('click', modalOut);
-
 
 function modalOutUser(e) {
     if (e.target == hUserBoxOuter) {
