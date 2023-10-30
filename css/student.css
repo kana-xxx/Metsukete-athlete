@@ -1,4 +1,21 @@
 @charset "utf-8";
+/* ----------------------------------  
+settings
+---------------------------------*/
+.sp-new-line {
+	display: none;
+}
+@media all and (min-width: 600px) and (max-width: 1024px) {
+	.sp-new-line {
+		display: none;
+	}
+}
+@media all and (max-width: 599px) {
+ .sp-new-line {
+	display: block;
+ }
+}
+
 /*------------------------------------------------------------
 	student
 ------------------------------------------------------------*/
