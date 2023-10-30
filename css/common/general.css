@@ -31,6 +31,9 @@
 	justify-content: space-between;
 	margin: 0 6rem;
 }
+.imgList.flex {
+	justify-content: space-around;
+}
 .openSans {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -69,18 +72,30 @@
 	}
 	.flexD {
 		justify-content: center;
-		row-gap: 2rem;
+		row-gap: 1rem;
 		column-gap: 1rem;
 	}
 	.flexE {
 		justify-content: space-between;
 		margin: 0 2rem;
 	}
+	.objectImg img {
+		width: 90%;
+	}
 }
 @media all and (max-width: 599px) {
 	.content {
 		padding: 0 2.5rem;
 		max-width: inherit;
+	}
+	.flexD {
+		justify-content: center;
+		row-gap: 1.5rem;
+		column-gap: 1rem;
+	}
+	.flexE {
+		justify-content: space-between;
+		margin: 0rem;
 	}
 }
 /*------------------------------------------------------------
@@ -370,6 +385,12 @@
 		margin-top: 0.6rem;
 		font-size: 1rem;
 	}
+	.headLine01,
+	.headLine05.taco {
+		margin-bottom: 2.3rem;
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
 }
 /*------------------------------------------------------------
 	headLine02
@@ -504,9 +525,11 @@
 	flex-wrap: wrap;
 	align-items: center;
 }
+
 .comTtlBox01 .headLine05 {
 	margin-right: 2.7rem;
 }
+.comTtlBox01 .subTtl,
 .comTtlBox02 .subTtl {
 	color: #A5A5A5;
 	font-size: 1.5rem;
@@ -517,12 +540,21 @@
 	.comTtlBox01 {
 		margin-bottom: 2.1rem;
 	}
+	.comTtlBox01.offer {
+		flex-direction: column;
+		justify-content: center;
+	}
 	.comTtlBox01 .headLine05 {
 		margin-right: 1.6rem;
 	}
-	.comTtlBox01 .subTtl {
+	.comTtlBox01 .subTtl,
+	.comTtlBox02 .subTtl
+	 {
 		margin-top: 0.1rem;
 		font-size: 0.8rem;
+	}
+	.comTtlBox02 .subTtl {
+		height: 30px;
 	}
 }
 @media all and (max-width: 599px) {
@@ -535,7 +567,8 @@
 		margin: 0 0 0.6rem;
 		font-size: 1.6rem;
 	}
-	.comTtlBox01 .subTtl {
+	.comTtlBox01 .subTtl ,
+	.comTtlBox02 .subTtl{
 		display: block;
 		font-size: 1rem;
 	}
@@ -6285,7 +6318,7 @@
 ------------------------------------------------------------*/
 @media all and (max-width: 599px) {
 	.comProfileEditing {
-		margin-bottom: 1.8rem;
+		margin-bottom: 1rem;
 		box-sizing: border-box;
 		border-radius: 1rem;
 		background: #fff;

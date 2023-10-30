@@ -46,6 +46,7 @@ html {
 		font-size: 2.565vw;
 	}
 }
+
 body, table, input, textarea, select, option {
 	font-family: 'Noto Sans JP', sans-serif;
 }
@@ -89,6 +90,25 @@ a:hover {
 a:active {
 	color: #343434;
 }
+.fadeUP {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
 /*------------------------------------------------------------
 	レイアウト
 ------------------------------------------------------------*/
@@ -469,6 +489,11 @@ background: #DFEAF1;
 	background: #fff;
 	border-radius: 1.3rem;
 	display: none;
+	z-index: 1100;
+
+}
+#gHeader .hUserBox-list .subList .User-detail{
+	display: none;
 
 }
 #gHeader .hUserBox-list .subList.is-active {
@@ -528,6 +553,7 @@ background: #DFEAF1;
 		padding: 2rem  1.4rem 2.3rem;
 		display: flex;
 		justify-content: space-between;
+		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 	}
 	#gHeader::before {
 		content: '';
@@ -568,35 +594,53 @@ background: #DFEAF1;
 		display: flex;
 		flex-direction: row-reverse;
 		margin-left: auto;
-		align-items: flex-end;
+		align-items: center;
 		flex: 1;
 	}
 	#gHeader .notice-user-box {
 		margin-left: 0;
 	}
-
+	.menu-box {
+		margin-right: 2rem;
+	}
 	.menu {
 		width: 2.6rem;
 		height: 1.3rem;
-		transform: translateY(-50%);
 		cursor: pointer;
 		z-index: 10;
-		margin-right: 2rem;
+		position: relative;
+	
 	}
-	.menu span {
+	.menu.on span {
 		width: 100%;
 		height: 1px;
 		display: block;
 		position: absolute;
-		left: 0;
-		top: 0;
-		background: #000;
+		background: #8F8F8F;
+		transition: .3s ease-in-out;
 	}
 	.menu span:nth-child(2) {
-		top: 0.6rem;
+		top: 0;
+	}
+	.menu span:nth-child(2) {
+		top: 50%;
+		transform: translateX(0%);
 	}
 	.menu span:nth-child(3) {
-		top: 1.2rem;
+		bottom: 0;
+	}
+	.menu.active span:nth-child(1) {
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
+	
+	.menu.active span:nth-child(2) {
+		transform: translateX(-100%);
+		display: none;
+	}
+	.menu.active span:nth-child(3) {
+		bottom: 50%;
+		transform: translateY(-50%) rotate(-45deg);
 	}
 	.menuBox {
 		width: 100%;
@@ -727,6 +771,10 @@ background: #DFEAF1;
 		font-size: 1rem;
 		color: #A3A3A3;
 	}
+	#gHeader .hUserBox-list .subList .User-detail{
+		display: block;
+	
+	}
 	
 }
 @media all and (max-width: 599px) {
@@ -734,6 +782,7 @@ background: #DFEAF1;
 		padding: 1.8rem 3.4rem 0.9rem 2.5rem;
 		background: #F8F8F8;
 		box-shadow: none;
+		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 	}
 	#gHeader .hBox {
 		margin: 0 auto;
@@ -746,13 +795,40 @@ background: #DFEAF1;
 		display: none;
 	}
 	.menu {
-		right: 2.3rem;
+		right: 0;
 	}
 	.menuBox {
 		height: calc(100vh - 6.1rem);
 		top: 6.1rem;
 		background: #F8F8F8;
 	}
+	.menu-box {
+	margin-right: 0;
+	}
+	#gHeader .icon.bell {
+		margin-right: 1rem;
+
+	}
+	#gHeader .bell-notice {
+	width: .7rem;
+    height: .7rem;
+    background: #FE1211;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    right: 15%;
+
+	}
+	#gHeader .modal-content .notice-icon {
+		width: 1rem;
+		height: 1rem;
+		background: #FE1211;
+		border-radius: 50%;
+		z-index: 5;
+		display: block;
+		margin-right: 2rem;
+	  }
+
 }
 /*------------------------------------------------------------
 	gNavi
@@ -989,6 +1065,7 @@ background: #DFEAF1;
 		justify-content: center;
 		align-items: center;
 		column-gap: 1.8rem;
+		margin-top: 5rem;
 	}
 
 	#gHeader .modal.pagination li a{
@@ -1024,6 +1101,9 @@ background: #DFEAF1;
 		display:none;
 
 	}
+	#gHeader .hUserBox-list .subList.active {
+		display: block;
+	}
 	#gHeader .hUserBox-list .subList li:not(:last-child) {
 		border: none;
 	}
@@ -1033,7 +1113,8 @@ background: #DFEAF1;
 
 	#gHeader .hUserBox-list .subList li{
 		background: #FFF;
-		width: 80%;
+		padding: 0;
+		max-width: 86.33%;
 		border-radius: 1rem;
 		margin: 1.2rem auto;
 	}
@@ -1047,9 +1128,137 @@ background: #DFEAF1;
 	#gHeader .hUserBox-list .subList li a .icon  {
 		margin-right: 4rem;
 	}
-	
+	#gHeader .User-detail.hUserBox .userImg {
+		margin-right: 2.4rem;
+		width: 7rem;
+	}
 }
 @media all and (max-width: 599px) {
+	#gHeader .modal-container.notice{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		background: #FFF;
+	  }
+	  #gHeader .modal-content .moreLink {
+		display: none;
+	  }
+	  #gHeader .modal-content .headLine-notice {
+		background: #FFF;
+		padding: 1rem 1.4rem 1.3rem;
+		line-height: auto;
+		color: #202020;
+		text-align: center;
+		font-size: 1.9rem;
+		border-radius: auto;
+		flex: 1;
+	  }
+	  #gHeader .modal-content.notice  .notice-headlineBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
+		background: #FFF;
+	  }
+	  #gHeader .modal-content.notice  .notice-headlineBox::after {
+		content: '';
+		display: block;
+		flex: 1;
+	  }
+	  #gHeader .modal-content.notice .notice-modal-close {
+		display: block;
+		flex: 1;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+	  }
+	  #gHeader .modal-content.notice .notice-modal-close img {
+		margin-left: 3rem;
+
+		
+	  }
+	  #gHeader .modal-content .notice-list-ttl {
+		width: 100%;
+		max-width: 300px;
+		margin-bottom: .5rem;
+	}
+	#gHeader .hUserBox-list .subList {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		box-sizing: border-box;
+		border: none;
+		background: #F3F5F6;
+		border-radius: 0;
+		display:none;
+
+	}
+	#gHeader .hUserBox-list .subList.active {
+		display: block;
+	}
+	#gHeader .hUserBoxOuter {
+		z-index: 1;
+	}
+	#gHeader .hUserBox-list .subList.active {
+		display: block;
+	}
+	#gHeader .hUserBox-list .subList li:not(:last-child) {
+		border: none;
+	}
+	#gHeader .hUserBox-list .subList li:first-child {
+		margin-top: 5%;
+	}
+
+	#gHeader .hUserBox-list .subList li{
+		background: #FFF;
+		padding: 0;
+		max-width: 86.33%;
+		border-radius: 1rem;
+		margin: 1.2rem auto;
+	}
+	#gHeader .hUserBox-list .subList li a {
+		padding: 2.5rem 3rem;
+	}
+	#gHeader .hUserBox-list .subList li .responsive-arrow {
+		display: block;
+		margin-left: auto;
+	}
+	#gHeader .hUserBox-list .subList li a .icon  {
+		margin-right: 4rem;
+	}
+	#gHeader .User-detail.hUserBox .userImg {
+		margin-right: 2.4rem;
+		width: 7rem;
+	}
+	#gHeader .modal.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 1.8rem;
+		margin-top: 5rem;
+	}
+
+	#gHeader .modal.pagination li a{
+		display: inline-block;
+		height: 1.2rem;
+		width: 1.2rem;
+		line-height: 1.2rem;
+		border-radius: 1rem;
+		text-align: center;
+		font-size: 1.4rem;
+		padding: 1.5rem ;
+	}
+
+	#gHeader .modal.pagination .page-number.choice a {
+		background: #005792;
+		color: #FFF;
+	}
 	#sideBar {
 		margin-bottom: 1.3rem;
 		width: auto;

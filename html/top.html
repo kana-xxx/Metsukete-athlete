@@ -51,7 +51,9 @@
     </nav>
 </div>
 <div class="responsive-headerMenu">
+<div class="menu-box">
 <div class="menu on"><span></span><span></span><span></span></div>
+</div>
 <div class="notice-user-box">
 <div class="icon bell modal-open" data-target="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.png" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
 
@@ -62,7 +64,7 @@
 	<!-- <a href="javascript:;"> -->
 		<a href="#">
         <div class="userImg"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
-        <p class="userName">小西 奏<span>〇〇大学／◯学部／◯学科／所属部活</span></p>
+        <p class="userName">運動 太郎<span>〇〇大学／◯学部／◯学科／所属部活</span></p>
 		<img class="userArrow" src="../image/common/header-rightArrow-user-icon.svg" alt="ユーザーアイコンクリックの右矢印">
 		</a>
 </div>
@@ -158,10 +160,22 @@
 <div class="hUserBox-list" >
 	<div class="hUserBoxOuter"></div>
 	<ul class="subList js-modal" id="data-user">
-		<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../image/common/hUserBox-grayQuestion.svg" alt=""><img src="../image/common/hUserBox-blueQuestion.svg" alt="" class="hover"></span><span class="txt">ヘルプページ</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
-		<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../image/common/hUserBox-grayPrivacy.svg" alt=""><img src="../image/common/hUserBox-bluePrivacy.svg" alt="" class="hover"></span><span class="txt">プライバシーポリシー</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
+		<li class="User-detail hUserBox">
+			<a href="#">
+				<div class="userImg">
+					<span class="objectImg"><img src="../image/top-page/responsive/User-icon.svg" alt=""></span>
+				</div>
+				<div class="User-detail-box">
+				<p class="userName">小西 奏<span>〇〇大学／◯学部／◯学科／所属部活</span></p>	
+			</div>
+			<span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span>
+			</a>
+
+		</li>
+		<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../image/common/hUserBox-blueQuestion.svg" alt="" class="action"></span><span class="txt">ヘルプページ</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
+		<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../image/common/hUserBox-bluePrivacy.svg" alt="" class="action"></span><span class="txt">プライバシーポリシー</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a></li>
 		<li>
-		<form name="temp_logout_form" name="form" action="http://dev.metsukete.jp/student/logout" method="POST"><input type="hidden" name="_token" value="CuMCtpSoqhSoISQrgkztmfmTIcvsJsaJO5YlDODS">                <a href="javascript:temp_logout_form.submit()"><span class="icon"><img src="../image/common/hUserBox-grayLogout.svg" alt=""><img src="../image/common/hUserBox-blueLogout.svg" alt="" class="hover"></span><span class="txt">ログアウト</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a>
+		<form name="temp_logout_form" name="form" action="http://dev.metsukete.jp/student/logout" method="POST"><input type="hidden" name="_token" value="CuMCtpSoqhSoISQrgkztmfmTIcvsJsaJO5YlDODS">                <a href="javascript:temp_logout_form.submit()"><span class="icon"><img src="../image/common/hUserBox-blueLogout.svg" alt="" class="action"></span><span class="txt">ログアウト</span><span class="responsive-arrow"><img src="../image/common/hUserBox-modal-arrow.svg" alt=""></span></a>
 		</li></span>
 		</form>
 	</ul>
@@ -174,7 +188,7 @@
 		<div class="sub01 flexB">
 			<div class="photo"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
 			<div class="textBox">
-				<p class="name">小西 奏</p>
+				<p class="name">運動 太郎</p>
 				<span class="sml">各種設定</span>
                 <span class="belonging">〇〇大学／◯学部／◯学科／所属部活</span>
 			</div>
@@ -245,7 +259,7 @@
 			<div class="content">
 				<div class="pageTitle">
 					<div class="ttlBox">
-    <h2>小西 奏さんのマイページ</h2>
+    <h2>運動 太郎さんのマイページ</h2>
 </div>
 
 				</div>
@@ -253,7 +267,7 @@
 					<div class="sub01 flexB">
 						<div class="photo"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
 						<div class="textBox">
-							<p class="name">小西 奏</p>
+							<p class="name">運動 太郎</p>
 							<p class="sml">各種設定</p>
 						</div>
 					</div>
@@ -281,7 +295,7 @@
 							<span class="objectImg"><img src="../image/top-page/responsive/User-icon.svg" alt=""></span>
 						</div>
 						<div class="User-detail-box">
-						<p class="userName">小西 奏<span>〇〇大学／◯学部／<br class="tab-new-line">◯学科／所属部活</span></p>
+						<p class="userName">運動 太郎<span>〇〇大学／◯学部／<br class="tab-new-line">◯学科／所属部活</span></p>
 						<img class="userArrow" src="../image/common/header-rightArrow-user-icon.svg" alt="ユーザーアイコンクリックの右矢印">
 					</div>
 					</a>
@@ -320,12 +334,12 @@
 			</div>
 				<!-- オファー一覧 -->
 				<section class="companyBox">
-					<div class="comTtlBox01">
+					<div class="comTtlBox01 offer">
 						<h3 class="headLine05">オファーが届いた企業</h3>
 						<p class="subTtl">
 														21社からオファーが届いています
 													</p>
-													<div class="moreLink"><a href="http://dev.metsukete.jp/student/company/index">一覧はこちら</a></div>
+													<div class="moreLink up"><a href="http://dev.metsukete.jp/student/company/index">一覧はこちら</a></div>
 					</div>
 					<ul class="imgList flex">
 						<li>
@@ -338,7 +352,7 @@
 								<p class="text01"><a href="http://dev.metsukete.jp/student/company/profile/4">Metsukete株式会社</a></p>
 								<p class="text02">広告・マスコミ業界</p>
 								<p class="mark">
-								<span class="txt02" style="background-color: #A3A3A3; color: #fff; border-color: #A3A3A3;">未承認</span>
+								<span class="txt02" style="background-color: #005792; color: #fff; border-color: #005792;">未承認</span>
 								<img src="../image/common/icon-blue-bubble-border.svg" alt="">
 																	</p>
 							
@@ -346,14 +360,29 @@
 						</li>
 						<li>
 							<div class="photoBox">
-							<div class="photo"><a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/common/logo.svg" alt=""></a></div>
+							<div class="photo"><a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/カラー横ロゴ.png" alt=""></a></div>
 								
 						</div>
 							<div class="textBox">
-								<p class="text01"><a href="http://dev.metsukete.jp/student/company/profile/4">Metsukete株式会社</a></p>
+								<p class="text01"><a href="http://dev.metsukete.jp/student/company/profile/4">イーバリュー株式会社</a></p>
 								<p class="text02">広告・マスコミ業界</p>
 								<p class="mark">
-								<span class="txt02" style="background-color: #005792; color: #fff; border-color: #005792;">承認中</span>
+								<span class="txt02" style="background-color: #A3A3A3; color: #fff; border-color: #A3A3A3;">承認中</span>
+								<img src="../image/common/icon-blue-bubble-border.svg" alt="">
+																	</p>
+							
+							</div>
+						</li>
+						<li>
+							<div class="photoBox">
+							<div class="photo"><a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a></div>
+								
+						</div>
+							<div class="textBox">
+								<p class="text01"><a href="http://dev.metsukete.jp/student/company/profile/4">ああああああああああああああああ株式会社</a></p>
+								<p class="text02">アミューズメント・レジャー業界</p>
+								<p class="mark">
+								<span class="txt02" style="background-color: #FFF; color: #005792; border-color: #005792;">保留中</span>
 								<img src="../image/common/icon-blue-bubble-border.svg" alt="">
 																	</p>
 							
@@ -374,7 +403,7 @@
 							
 							</div>
 						</li>
-						<li>
+						<li class="tablet-none">
 							<div class="photoBox">
 							<div class="photo"><a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/common/logo.svg" alt=""></a></div>
 								
@@ -390,7 +419,7 @@
 							</div>
 						</li>
 											</ul>
-					
+											<div class="moreLink down"><a href="http://dev.metsukete.jp/student/company/index">一覧はこちら</a></div>
 				</section>
 				<!-- START グラフ -->
 				<div class="secBox secBox01 top-content-tablet">
@@ -400,7 +429,7 @@
 						<div class="comTtlBox02">
 						<h3 class="headLine01"><span class="txt01">未入力のプロフィール項目</span></h3>
 						<div class="subTtl">
-														<div style="color: #A5A5A5;">プロフィールを最後まで入力するとオファーが届きやすくなるよ</div>
+														<div style="color: #A5A5A5;">プロフィールを最後まで入力すると<br class="tab-new-line">オファーが届きやすくなるよ</div>
 													</div>
 												</div>
 													<div class="chart-profile">
@@ -448,7 +477,7 @@
             <section class="results taco">
                 <div class="comTtlBox02">
                     <h3 class="headLine05 taco">他己分析結果</h3>
-                    <p class="subTtl">小西 奏さんについて0名の依頼者が回答しました
+                    <p class="subTtl">運動 太郎さんについて0名の依頼者が回答しました
 						<!-- <br>※★の質問は必須項目です。 -->
 					</p>
                 </div>
@@ -528,5 +557,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
 	<script src="../js/top-page/doughnut-chart.js"></script>
 	<script src="../js/common/hUserBox.js"></script>
+	<script src="../js/common/hamburgerMenu.js"></script>
 </body>
 </html>
