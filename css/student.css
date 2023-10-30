@@ -66,8 +66,8 @@
 	margin: -5rem 0 0 2.2rem;
 }
 #main .companyBox .imgList li {
-	margin: 5rem 5rem 0 0;
-	width: calc(20% - 4.2rem);
+	margin: 5rem 0 0 0;
+	width: calc(19%);
 }
 #main .companyBox .imgList li:nth-child(5n) {
 	margin-right: 0;
@@ -86,6 +86,11 @@
 	margin-bottom: 1.9rem;
 	position: relative;
 }
+#main .companyBox .imgList li .photoBox .photo {
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+	border-radius: 2rem;
+}
+
 #main .companyBox .imgList li .photoBox a {
 	padding-bottom: 57.142%;
 	border-radius: 1.5rem;
@@ -140,6 +145,9 @@
 	font-size: 1.5rem;
 	font-weight: 500;
 	color: #A5A5A5;
+}
+#main .moreLink.down {
+	display: none;
 }
 #main .secBox {
 	margin-bottom: 3.7rem;
@@ -215,6 +223,9 @@
 	width: 100%;
     margin: 3rem auto 4.9rem;
     max-width: 40.8rem;
+}
+#main .results .chartList .chart.taco img{
+	display: none;
 }
 #main .results .chartList li .txtList {
 	margin: 0 auto;
@@ -323,6 +334,16 @@
 	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
     text-align: center;
 }
+#main .results.taco {
+	box-sizing: border-box;
+	padding: 2.2rem 4.5rem 3.2rem;
+	/* width: calc(37% - 2.4rem); */
+	position: relative;
+	border-radius: 1.4rem;
+	background: #fff;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
 
 #main .message .messageList {
 	margin: 0 1.6rem;
@@ -367,6 +388,9 @@
 	width: 100%;
 	margin: 3rem auto 4.9rem;
     max-width: 40.8rem;
+}
+#main .message .chart-profile img{
+	display: none;
 }
 
 #main .message .flexD li {
@@ -613,9 +637,12 @@
 		background-size: 152.4rem auto;
 		background-position: left 66.8% top -21rem;
 	}
-
+	#main .pageTitle {
+		margin-bottom: 2.6rem;
+		display: none;
+	}
 	#main .top-content-box {
-		margin-bottom: 1.3rem;
+		margin-bottom: 1.8rem;
 		margin-right: 0;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -742,7 +769,7 @@
 		font-size: 1rem;
 	}
 	#main .companyBox {
-		margin-bottom: 1.3rem;
+		margin-bottom: 1.8rem;
 		padding: 1.9rem 2.5rem 2.8rem;
 		border-radius: 1rem;
 	}
@@ -752,9 +779,12 @@
 	#main .companyBox .imgList {
 		margin: -2.8rem 0 0;
 	}
+	#main .companyBox .imgList.flex  {
+		justify-content: space-around;
+	} 
 	#main .companyBox .imgList li {
-		margin: 2.8rem 2.8rem 0 0;
-		width: calc(20% - 2.3rem);
+		margin: 2.8rem  0 0 0;
+		width: 21%;
 	}
 	#main .companyBox .imgList li:nth-child(5n) {
 		margin-right: 0;
@@ -765,6 +795,10 @@
 		top: -0.4rem;
 		font-size: 0.7rem;
 	}
+	#main .companyBox .imgList li .photoBox .photo {
+		box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.08);
+		border-radius: 1.3rem;
+	}
 	#main .companyBox .imgList li .photoBox {
 		margin-bottom: 0.5rem;
 	}
@@ -774,6 +808,8 @@
 	}
 	#main .companyBox .imgList li .textBox {
 		margin: 0;
+		margin-top: 1.5rem;
+
 	}
 	#main .companyBox .imgList li .text01 {
 		margin-bottom: 0.2rem;
@@ -785,15 +821,24 @@
 	}
 	#main .companyBox .imgList li .mark {
 		margin-left: 0;
+		margin-top: 1.1rem;
 	}
+
 	#main .companyBox .imgList li .mark span {
-		padding: 0 0.3rem;
-		font-size: 0.6rem;
+		padding: .2rem .9rem;
+		font-size: 0.5rem;
 	}
 	#main .moreLink {
 		right: 2rem;
 		top: 1.5rem;
 	}
+	#main .companyBox .moreLink.up {
+	display: none;
+	}
+	#main .companyBox .moreLink.down {
+		margin-top: 2rem;
+		text-align: right;
+		}
 	#main .moreLink a {
 		font-size: 0.8rem;
 	}
@@ -807,15 +852,16 @@
 	#main .secBox01.top-content-tablet {
 		display: flex;
 		margin-bottom: 1.3rem;
-		column-gap: 2rem;
+		column-gap: 1.3rem;
 	}
-	#main .results {
-		margin-bottom: 1.3rem;
+	#main .message.profile .results {
+		margin-bottom: 0;
 		padding: 2.2rem 2.5rem 3.6rem;
 		width: auto;
 		border-radius: 1rem;
 		flex: 1;
 	}
+
 	#main .results .comTtlBox01 {
 		margin-bottom: 3.7rem;
 	}
@@ -873,9 +919,18 @@
 		border-radius: 1rem;
 		flex: 1;
 	}
-	#main .message .headLine01 {
-		margin-bottom: 2.1rem;
+	#main .message.profile {
+		padding: 2.2rem 2.5rem 3.2rem;
+		width: auto;
+		border-radius: 1rem;
+		flex: 1;
+	}
+	#main .message.profile  .headLine01 {
+		margin-bottom: 3.2rem;
 		font-size: 2rem;
+	}
+	#main .message.profile .headLine01 .txt01 {
+		margin-right: 0rem;
 	}
 	#main .message .messageList {
 		margin: -2.8rem 0 0;
@@ -969,15 +1024,15 @@
 	}
 
 	#main .companyBox .imgList .tag.new {
-		padding: .5rem 1rem;
+		padding: .4rem 1rem;
 		background: #FF0000;
 		border-radius: 3rem;
 		color: #FFF;
 		position: absolute;
 		top: -12%;
-		right: 65%;
+		right: 75%;
 		z-index: 2;
-		font-size: .9rem;
+		font-size: .4rem;
 	}
 	#main .favorites .moreLink {
 		right: 2.6rem;
@@ -1048,12 +1103,26 @@
 	#gFooter {
 		padding-top: 4.1rem;
 	}
+	#main .companyBox .imgList li .photoBox a img {
+		transition: 0.3s;
+	}
+	#main .companyBox .imgList .tablet-none {
+		display: none;
+	}
+	#main .moreLink.taco {
+		vertical-align: bottom;
+		margin-left: auto;
+	}
 }
 @media all and (max-width: 599px) {
 	#main {
-		padding-top: 7.9rem;
+		padding-top: 9.5rem;
 		background: transparent;
 	}
+	#main .message .comTtlBox02,
+	#main .results .comTtlBox02{
+	margin-bottom: 3.1rem;
+}
 	#main .pageTitle {
 		margin-bottom: 2.6rem;
 		display: none;
@@ -1063,6 +1132,7 @@
 		justify-content: space-between;
 		height: auto;
 	}
+	
 	#main .textList li {
 		margin: 1.2rem 0 0;
 		width: calc(50% - 0.6rem);
@@ -1072,6 +1142,7 @@
 	#main .textList li a {
 		padding: 2.9rem 1rem 2rem;
 		border-radius: 1rem;
+		height: 70px;
 
 	}
 	#main .textList li .num {
@@ -1103,6 +1174,12 @@
 		padding: 3.3rem 2.6rem 2.8rem;
 		border-radius: 1rem;
 	}
+	#main .companyBox .moreLink.up {
+		display: none;
+		}
+		#main .companyBox .moreLink.down {
+			text-align: right;
+			}
 	#main .companyBox .comTtlBox01 {
 		margin-bottom: 4rem;
 	}
@@ -1132,27 +1209,48 @@
 	#main .companyBox .imgList li .photoBox a {
 		padding-bottom: 100%;
 		border-radius: 1rem;
-		background: #E5E5E5;
+	
 	}
+
 	#main .companyBox .imgList li .textBox {
-		margin: 0.8rem 0 0;
+		margin: 0;
 		width: calc(100% - 10.4rem);
 		box-sizing: border-box;
 	}
 	#main .companyBox .imgList li .text01 {
 		margin-bottom: 0.2rem;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 	#main .companyBox .imgList li .text02 {
 		margin-bottom: 0.1rem;
 		font-size: 1rem;
 	}
 	#main .companyBox .imgList li .mark {
+		margin-top: 1rem;
 		margin-left: 0;
 	}
+	#main .companyBox .imgList li .mark img {
+		margin-left: auto;
+	}
 	#main .companyBox .imgList li .mark span {
-		padding: 0 0.5rem;
-		font-size: 0.8rem;
+		padding: .2rem .7rem;
+		font-size: .9rem;
+		border: 0.1rem solid #A3A3A3;
+	}
+
+	#main .companyBox .imgList .tablet-none {
+		display: none;
+	}
+	#main .companyBox .imgList .tag.new {
+		padding: .3rem 1.1rem;
+		background: #FF0000;
+		border-radius: 3rem;
+		color: #FFF;
+		position: absolute;
+		top: -7%;
+		right: 50%;
+		z-index: 2;
+		font-size: .5rem;
 	}
 	#main .moreLink {
 		position: static;
@@ -1171,6 +1269,11 @@
 		width: auto;
 		border-radius: 1rem;
 	}
+	#main .results .chartList .chart.taco {
+		width: 100%;
+		margin: 3rem auto;
+		max-width: 18rem;
+	}
 	#main .results .comTtlBox01 {
 		margin-bottom: 3.7rem;
 	}
@@ -1184,6 +1287,14 @@
 	#main .results .chartList li {
 		margin: 0 0 3.9rem;
 		width: auto;
+	}
+	#main .results .chartList .txtList.flexE li {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		column-gap: 1.5rem;
+		margin-top:0;
+		margin-bottom: 1rem;
 	}
 	#main .results .chartList li:last-child {
 		margin-bottom: 0;
@@ -1218,8 +1329,13 @@
 		width: auto;
 		border-radius: 1rem;
 	}
+	#main .message .chart-profile {
+		width: 100%;
+		margin: 3rem auto;
+		max-width: 18rem;
+	}
 	#main .message .headLine01 {
-		margin-bottom: 3.8rem;
+		margin-bottom: 2.3rem;
 	}
 	#main .message .messageList {
 		margin: 0 0 2rem;
@@ -1263,6 +1379,11 @@
 		padding-left: 1.5rem;
 		font-size: 1rem;
 		background-size: 0.8rem auto;
+	}
+	#main .message .flexD li a {
+		padding: .7rem 1.5rem;
+		font-size: 1.1rem;
+		gap: 1rem;
 	}
 	#main .favorites {
 		margin-bottom: 1.3rem;
@@ -1375,5 +1496,13 @@
 	#main .linkList li .subList li a {
 		display: block;
 		font-size: 1rem;
+	}
+	#main .companyBox .imgList li .photoBox .photo {
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+		border-radius: 1.2rem;
+	}
+	#main .moreLink.taco {
+		vertical-align: bottom;
+		margin-left: auto;
 	}
 }
