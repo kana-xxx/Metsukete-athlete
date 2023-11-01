@@ -2,12 +2,15 @@
 const noticeModal = document.querySelector('.modal-outer'),
       hUserBoxOuter = document.querySelector('.hUserBoxOuter'),
       modalBtn = document.querySelector('.modal-open'),
+      modalBtnSp = document.querySelector('.modal-openSp'),
       noticeBack = document.querySelector('.modal-close'),
       noticeClose = document.querySelector('.notice-modal-close'),
       hUserBox = document.querySelector('.hUserBox'),
       hUserBoxList = document.querySelector('.subList'),
       normalBell = document.querySelector('.bellUsually'),
-      openBell = document.querySelector('.bellOpen');
+      normalBellSp = document.querySelector('.bellUsuallySP'),
+      openBell = document.querySelector('.bellOpen'),
+      openBellSp = document.querySelector('.bellOpenSp');
       // hUserBoxList = document.querySelector('.hUserBox-list'); 
 //「開くボタン」をクリックしてモーダルを開く
 
@@ -17,6 +20,15 @@ function modalOpen() {
     openBell.classList.toggle('is-active');
 }
     modalBtn.addEventListener('click', modalOpen);
+
+    
+    function modalOpenSp() {
+        noticeModal.classList.toggle('is-active'); 
+        normalBellSp.classList.toggle('is-active');
+        openBellSp.classList.toggle('is-active');
+    }
+        modalBtnSp.addEventListener('click', modalOpenSp);
+    
 
 
 function modalOpenUser() {

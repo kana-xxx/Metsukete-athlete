@@ -211,6 +211,9 @@ a[href^="tel:"] {
 	display: flex;
 	align-items: center;
 }
+#gHeader .noticeSp-box {
+	display: none;
+}
 #gHeader h1 {
 	margin-top: 0.5rem;
 	margin-right: 6.7rem;
@@ -235,6 +238,9 @@ a[href^="tel:"] {
 	align-items: center;
 	margin-left: auto;
 }
+#gHeader .notice-user-box.sp {
+	display: none;
+}
 #gHeader .icon.bell {
 	width: 2.5rem;
 	height: 2.5rem;
@@ -246,14 +252,17 @@ a[href^="tel:"] {
 	z-index: 2;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
-#gHeader .icon.bell .bellUsually {
+#gHeader .icon.bell .bellUsually,
+#gHeader .icon.bell .bellUsuallySp {
 	opacity: 1;
 	position: relative;
 }
 #gHeader .icon.bell .bellUsually.is-active {
 	opacity: 0;
 }
-#gHeader .icon.bell .bellOpen {
+
+#gHeader .icon.bell .bellOpen,
+#gHeader .icon.bell .bellOpenSp {
 	opacity: 0;
 	position: absolute;
 	top: 0;
@@ -263,6 +272,8 @@ a[href^="tel:"] {
 	opacity: 1;
 	cursor: pointer;
   }
+
+
 #gHeader .icon.bell .hover {
 	display: none;
 }
@@ -278,7 +289,8 @@ a[href^="tel:"] {
 
   
   /* モーダルと背景の指定 */
-  #gHeader .modal-outer{
+  #gHeader .modal-outer,
+  #gHeader .modal-outer-sp{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -296,7 +308,8 @@ a[href^="tel:"] {
   }
   
   /* モーダルの擬似要素の指定 */
-  #gHeader .notice-modal:before{
+  #gHeader .notice-modal:before,
+  #gHeader .notice-modal-sp:before{
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -305,20 +318,22 @@ a[href^="tel:"] {
   }
   
   /* クラスが追加された時の指定 */
-  #gHeader .notice-modal.is-active{
+  #gHeader .notice-modal.is-active,
+  #gHeader .notice-modal-sp.is-active{
 	opacity: 1;
 	visibility: visible;
   }
-  
   /* モーダル内側の指定 */
   #gHeader .modal-container.notice{
 	position: fixed;
 	top: 10%;
-	right: 23%;
+	right: 1%;
 	display: inline-block;
 	vertical-align: middle;
 	max-width: 600px;
+	height: auto;
 	width: 90%;
+	overflow: hidden;
   }
   
   /* モーダルを閉じるボタンの指定 　 */
@@ -332,6 +347,10 @@ a[href^="tel:"] {
 	text-align: left;
 	line-height: 1.8;
 	display: block;
+  }
+  #gHeader .modal-content.notice .notice-box {
+	max-height: 400px;
+	overflow: scroll;
   }
   /* モーダルのコンテンツ部分のテキストの指定 */
   #gHeader .notice-box li {
@@ -365,6 +384,9 @@ background: #DFEAF1;
 	color: #FFF;
 	font-size: 1.5rem;
   }
+  #gHeader .modal-content .moreLink .moreLink-text {
+	display: none;
+  }
   #gHeader .modal-content.notice .notice-modal-close  {
 	display: none;
   }
@@ -386,6 +408,11 @@ background: #DFEAF1;
 	z-index: 5;
 	display: block;
 	margin-right: 4rem;
+  }
+
+  /* 既読の場合の通知マーク　非表示処理 */
+  #gHeader .modal-content .notice-icon.red {
+	opacity: 0;
   }
 #gHeader .modal-content  .notice-content {
 	display: flex;
@@ -481,8 +508,8 @@ background: #DFEAF1;
 }
 #gHeader .hUserBox-list .subList {
 	position: absolute;
-    top: 110%;
-    right: 4%;
+    top: 80%;
+    right: 3%;
 	width: 33rem;
 	box-sizing: border-box;
 	border: 0.1rem solid #E5E5E5;
@@ -502,6 +529,10 @@ background: #DFEAF1;
 #gHeader .hUserBox-list .subList li:not(:last-child) {
 	border-bottom: 0.1rem solid #E5E5E5;
 }
+#gHeader .hUserBox-list .subList .User-detail li a {
+	height: 12rem;
+}
+
 #gHeader .hUserBox-list .subList li a {
 	padding: 1.9rem 3rem;
 	display: flex;
@@ -511,8 +542,7 @@ background: #DFEAF1;
 #gHeader .hUserBox-list .subList li a .icon {
 	margin-right: 0.9rem;
 	width: 1.7rem;
-	font-size: 0;
-	line-height: 0;
+	line-height: 2rem;
 }
 #gHeader .hUserBox-list .subList li.item01 a .icon {
 	margin-right: 0.8rem;
@@ -523,6 +553,9 @@ background: #DFEAF1;
 }
 #gHeader .hUserBox-list .subList li .responsive-arrow {
 	display: none;
+}
+#gHeader .hUserBox-list .subList .hamburger-list a {
+height: 3.5rem;
 }
 #gHeader .hUserBox .userName {
 	margin-right: 2rem;
@@ -619,11 +652,11 @@ background: #DFEAF1;
 		background: #8F8F8F;
 		transition: .3s ease-in-out;
 	}
-	.menu span:nth-child(2) {
+	.menu span:nth-child(1) {
 		top: 0;
 	}
 	.menu span:nth-child(2) {
-		top: 50%;
+		top: 45%;
 		transform: translateX(0%);
 	}
 	.menu span:nth-child(3) {
@@ -775,11 +808,14 @@ background: #DFEAF1;
 		display: block;
 	
 	}
+	#gHeader .modal-content .moreLink .moreLink-text {
+		display: block;
+	  }
 	
 }
 @media all and (max-width: 599px) {
 	#gHeader {
-		padding: 1.8rem 3.4rem 0.9rem 2.5rem;
+		padding: 1.8rem 2.5rem 0.9rem 2.5rem;
 		background: #F8F8F8;
 		box-shadow: none;
 		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
@@ -787,6 +823,10 @@ background: #DFEAF1;
 	#gHeader .hBox {
 		margin: 0 auto;
 		display: block;
+	}
+	#gHeader .noticeSp-box {
+		display: block;
+		flex: 1;
 	}
 	#gHeader h1 {
 		width: 14rem;
@@ -806,7 +846,9 @@ background: #DFEAF1;
 	margin-right: 0;
 	}
 	#gHeader .icon.bell {
-		margin-right: 1rem;
+		width: 2.1rem;
+		height: 2.1rem;
+		margin-right: 1.5rem;
 
 	}
 	#gHeader .bell-notice {
@@ -815,19 +857,35 @@ background: #DFEAF1;
     background: #FE1211;
     border-radius: 50%;
     position: absolute;
-    top: 8%;
-    right: 15%;
+    top: 9%;
+    right: 5%;
 
 	}
 	#gHeader .modal-content .notice-icon {
-		width: 1rem;
-		height: 1rem;
+		width: .8rem;
+		height: .8rem;
 		background: #FE1211;
 		border-radius: 50%;
 		z-index: 5;
 		display: block;
 		margin-right: 2rem;
 	  }
+	  #gHeader .notice-user-box {
+		display: none;
+	}
+	#gHeader::before {
+		display: none;
+	}
+	  #gHeader .notice-user-box.sp {
+		display: flex;
+		flex: 1;
+	}
+	#gHeader .icon.bell .bellOpenSp.is-active {
+		opacity: 1;
+		cursor: pointer;
+	  }#gHeader .icon.bell .bellUsuallySp.is-active {
+		opacity: 0;
+	}
 
 }
 /*------------------------------------------------------------
@@ -843,18 +901,30 @@ background: #DFEAF1;
 #gNavi li a {
 	display: flex;
 	align-items: center;
+	transition: all .3s ease;
 }
 #gNavi li a .icon {
 	margin-right: 0.7rem;
 	width: 2rem;
 	font-size: 0;
 	line-height: 0;
+	transition: all .3s ease;
 }
-
+#gNavi li a  .txt {
+	transition: all .3s ease;
+}
 
 #gNavi li a .icon .hover {
 	display: none;
 }
+
+#gNavi li a .txt:hover ~ #gNavi li a .icon .hover{
+	display: none;
+}
+#gNavi li a .txt:hover {
+	color: #005792;
+}
+
 @media all and (min-width: 1025px) {
 	#gNavi li a:hover img {
 		display: none;
@@ -1053,12 +1123,13 @@ background: #DFEAF1;
 	  }
 	  #gHeader .modal-content.notice .notice-modal-close img {
 		margin-left: 3rem;
-
+		width: 3rem;
 	  }
 	  #gHeader .modal-content .notice-list-ttl {
 		width: 100%;
 		max-width: 620px;
-		margin-bottom: .5rem;
+		margin-bottom: 0;
+		font-size: 1.3rem;
 	}
 	#gHeader .modal.pagination {
 		display: flex;
@@ -1066,22 +1137,36 @@ background: #DFEAF1;
 		align-items: center;
 		column-gap: 1.8rem;
 		margin-top: 5rem;
+		position: fixed;
+		left: 30%;
+		bottom: 10%;
 	}
 
 	#gHeader .modal.pagination li a{
 		display: inline-block;
-		height: 1.8rem;
-		width: 1.8rem;
-		line-height: 1.8rem;
-		border-radius: 1.3rem;
+		height: 1.1rem;
+		width: 1.1rem;
+		line-height: 1.1rem;
+		border-radius: 1rem;
 		text-align: center;
-		font-size: 1.6rem;
+		font-size: 1.3rem;
 		padding: 1.5rem ;
 	}
-
+	#gHeader .modal.pagination .prev a,
+	#gHeader .modal.pagination .next a{
+		width: .8rem;
+	}
+	
 	#gHeader .modal.pagination .page-number.choice a {
 		background: #005792;
 		color: #FFF;
+	}
+	#gHeader .notice-time {
+		display: inline-block;
+		vertical-align: 0.4rem;
+		color: #A5A5A5;
+		font-size: 1.2rem;
+		font-weight: 500;
 	}
 /* タブレット　ユーザーボックスモーダル */
 #gHeader .hUserBoxOuter {
@@ -1125,13 +1210,26 @@ background: #DFEAF1;
 		display: block;
 		margin-left: auto;
 	}
-	#gHeader .hUserBox-list .subList li a .icon  {
+	#gHeader .hUserBox-list .subList .hamburger-list .icon {
 		margin-right: 4rem;
 	}
+	#gHeader .hUserBox-list .subList .hamburger-list .icon img {
+
+		width: 1.5rem;
+
+	}
+
 	#gHeader .User-detail.hUserBox .userImg {
 		margin-right: 2.4rem;
 		width: 7rem;
 	}
+	#gHeader .modal-content .moreLink .moreLink-text {
+		display: block;
+	  }
+	  #gHeader .modal-content.notice .notice-box {
+	max-height: 700px;
+    overflow: hidden;
+	  }
 
 }
 @media all and (max-width: 599px) {
@@ -1152,11 +1250,11 @@ background: #DFEAF1;
 	  }
 	  #gHeader .modal-content .headLine-notice {
 		background: #FFF;
-		padding: 1rem 1.4rem 1.3rem;
+		padding: 0;
 		line-height: auto;
 		color: #202020;
 		text-align: center;
-		font-size: 1.9rem;
+		font-size: 1.5rem;
 		border-radius: auto;
 		flex: 1;
 	  }
@@ -1166,6 +1264,7 @@ background: #DFEAF1;
 		align-items: center;
 		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 		background: #FFF;
+		padding: .2rem 2.5rem .1rem 2.5rem;
 	  }
 	  #gHeader .modal-content.notice  .notice-headlineBox::after {
 		content: '';
@@ -1178,14 +1277,15 @@ background: #DFEAF1;
 		-webkit-tap-highlight-color:rgba(0,0,0,0);
 	  }
 	  #gHeader .modal-content.notice .notice-modal-close img {
-		margin-left: 3rem;
-
+		margin-left: 0rem;
+		width: 3rem;
 		
 	  }
 	  #gHeader .modal-content .notice-list-ttl {
 		width: 100%;
-		max-width: 300px;
-		margin-bottom: .5rem;
+		max-width: 270px;
+		margin-bottom: 0rem;
+		font-size: 1.4rem;
 	}
 	#gHeader .hUserBox-list .subList {
 		position: absolute;
@@ -1225,22 +1325,23 @@ background: #DFEAF1;
 	}
 	#gHeader .hUserBox-list .subList li a {
 		padding: 2.5rem 3rem;
-		column-gap: 1rem;
+		column-gap: 1.3rem;
 	}
+
 	#gHeader .hUserBox-list .subList li .responsive-arrow {
 		display: block;
 		margin-left: auto;
 	}
 	#gHeader .hUserBox-list .subList li a .icon  {
-		margin-right: 4rem;
+		margin-right: 3rem;
 	}
 	#gHeader .User-detail.hUserBox .userImg {
 		margin-right: 0;
-		width: 7rem;
-		flex: 3;
+		width: 8rem;
+		flex: 4;
 	}
 	#gHeader .User-detail.hUserBox .User-detail-box {
-		flex: 9;
+		flex: 10;
 	}
 	#gHeader .hUserBox-list .subList li .responsive-arrow {
 		flex: 1;
@@ -1252,17 +1353,21 @@ background: #DFEAF1;
 		align-items: center;
 		column-gap: 1.8rem;
 		margin-top: 5rem;
+		position: fixed;
+		bottom: 15%;
+		left: 15%;
+
 	}
 
 	#gHeader .modal.pagination li a{
 		display: inline-block;
-		height: 1.2rem;
-		width: 1.2rem;
-		line-height: 1.2rem;
+		height: 1rem;
+		width: 1rem;
+		line-height: 1rem;
 		border-radius: 1rem;
 		text-align: center;
 		font-size: 1.4rem;
-		padding: 1.5rem ;
+		padding: 1.2rem ;
 	}
 
 	#gHeader .modal.pagination .page-number.choice a {
@@ -1408,6 +1513,20 @@ background: #DFEAF1;
 	#sideBar.bar01 .subBox.fzBig .sLinkList li .subList li:not(:last-child) {
 		margin-bottom: 2rem;
 	}
+	#gHeader .modal-content .moreLink .moreLink-text {
+		display: block;
+	  }
+	  #gHeader .modal-content.notice .notice-box {
+		max-height: 500px;
+		overflow: hidden;
+		  }
+		  #gHeader .notice-time {
+			display: inline-block;
+			vertical-align: 0.4rem;
+			color: #A5A5A5;
+			font-size: 1.2rem;
+			
+}
 }
 /*------------------------------------------------------------
 	フッター
@@ -1449,7 +1568,7 @@ background: #DFEAF1;
 	#Footer {
 		box-sizing: border-box;
 		width: 100%;
-		padding: 2.3rem 1.4rem;
+		padding: 1.1rem 1.4rem 3.5rem;
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -1484,16 +1603,17 @@ background: #DFEAF1;
 	}
 	#fNavi li a .icon .fNavi-notice {
 		position: absolute;
-		top: -25%;
-		right: -5%;
-		width: 2.2rem;
-		height: 2.2rem;
+		top: -20%;
+		right: -8%;
+		width: 1.7rem;
+		height: 1.7rem;
 		text-align: center;
-		line-height: 2rem;
-		font-size: .8rem;
+		line-height: 1.6rem;
+		font-size: 1rem;
 		background: #FE1211;
 		color: #FFF;
 		border-radius: 50%;
+		border: solid 1px #FFF;
 	}
 
 	#fNavi li a span  {
@@ -1541,11 +1661,12 @@ background: #DFEAF1;
 		font-size: 0.9rem;
 	}
 
+
 /* Footer  スマホ*/
 	#Footer {
 		box-sizing: border-box;
 		width: 100%;
-		padding: 1.6rem 1.4rem 1.2rem;
+		padding: .6rem 0 3.5rem;
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -1571,30 +1692,31 @@ background: #DFEAF1;
 		justify-content: center;
 		align-items: center;
 		flex: 1;
-		row-gap: .5rem;
+		row-gap: 0rem;
 		column-gap: 0;
 		
 	}
 	#fNavi li a .icon .fNavi-notice {
 		position: absolute;
-		top: -25%;
-		right: -20%;
-		width: 1.8rem;
-		height: 1.8rem;
+		top: -10%;
+		right: -30%;
+		width: 1.7rem;
+		height: 1.7rem;
 		text-align: center;
-		line-height: 1.8rem;
-		font-size: .7rem;
+		line-height: 1.5rem;
+		font-size: 1rem;
 		background: #FE1211;
 		color: #FFF;
 		border-radius: 50%;
+		border: solid 1.5px #FFF;
 	}
 	#fNavi ul li  {
 		width: 25%;
 	}
 	#fNavi li a .icon {
-		width: 3rem;
-		height: 3rem;
-		line-height: 3rem;
+		width: 2.6rem;
+		height: 2.5rem;
+		line-height: 2.5rem;
 		font-size: 0;
 		display: flex;
 		align-items: center;
@@ -1608,7 +1730,7 @@ background: #DFEAF1;
 	}
 	
 	#fNavi li a span  {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	#fNavi li a .icon .choice {
 		display: none;

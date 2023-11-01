@@ -327,19 +327,19 @@ const checkMediaQuery = function () {
       const percentText = '%';
   
       // "あなたの入力率" のテキストスタイル
-      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+      ctx.font = '500 18px "Noto sans JP"'; // フォントの太さとファミリを設定
   
       // テキストを中央に描画
       ctx.fillStyle = 'black'; // テキスト色を設定
-      ctx.fillText(labelText, width / 2, height / 2 - 28); // テキストを上に配置
+      ctx.fillText(labelText, width / 2, height / 2 - 20); // テキストを上に配置
   
       // 'データ' のテキストスタイル
-      ctx.font = '100 65px "Open Sans"'; // データのフォントの太さとファミリを設定
+      ctx.font = '100 60px "Open Sans"'; // データのフォントの太さとファミリを設定
           // データのテキストを中央に描画
           ctx.fillStyle = 'black'; // テキスト色を設定
           ctx.fillText(dataText, width / 2, height / 2 + 42); // データのテキストを下に配置
       // '%' のテキストスタイル
-      ctx.font = '300 25px "Open Sans"'; // データのフォントの太さとファミリを設定
+      ctx.font = '300 23px "Open Sans"'; // データのフォントの太さとファミリを設定
           // '%' のテキストを描画
       ctx.fillStyle = 'black'; // テキスト色を設定
       ctx.fillText(percentText, width / 2 + 50, height / 2 + 42); // '%' テキストをデータの右に配置
@@ -359,7 +359,7 @@ const checkMediaQuery = function () {
       const labelText2 = 'あなたのタイプ';
 
       // "周りから見た" のテキストスタイル
-      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+      ctx.font = '500 18px "Noto sans JP"'; // フォントの太さとファミリを設定
   
       // テキストを中央に描画
       ctx.fillStyle = 'black'; // テキスト色を設定
@@ -367,7 +367,7 @@ const checkMediaQuery = function () {
   
     
       // "あなたのタイプ" のテキストスタイル
-      ctx.font = '500 20px "Noto sans JP"'; // フォントの太さとファミリを設定
+      ctx.font = '500 18px "Noto sans JP"'; // フォントの太さとファミリを設定
   
       // テキストを中央に描画
       ctx.fillStyle = 'black'; // テキスト色を設定
