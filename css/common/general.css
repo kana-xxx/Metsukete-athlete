@@ -23,9 +23,10 @@
 	justify-content: center;
 }
 .flexD {
-	justify-content: center;
-	row-gap: 2rem;
-	column-gap: 3rem;
+	justify-content: left;
+	row-gap: 1.5rem;
+	column-gap: 1.3rem;
+	margin: 0 3rem;
 }
 .flexE {
 	justify-content: space-between;
@@ -74,6 +75,7 @@
 		justify-content: center;
 		row-gap: 1rem;
 		column-gap: 1rem;
+		margin: 0;
 	}
 	.flexE {
 		justify-content: space-between;
@@ -90,8 +92,9 @@
 	}
 	.flexD {
 		justify-content: center;
-		row-gap: 1.5rem;
+		row-gap: 1.1rem;
 		column-gap: 1rem;
+		margin: 0;
 	}
 	.flexE {
 		justify-content: space-between;
@@ -491,7 +494,7 @@
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.headLine05 {
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 	}
 }
 /*------------------------------------------------------------
@@ -545,13 +548,14 @@
 		justify-content: center;
 	}
 	.comTtlBox01 .headLine05 {
-		margin-right: 1.6rem;
+		margin-right: 0;
+		margin-bottom: 2rem;
 	}
 	.comTtlBox01 .subTtl,
 	.comTtlBox02 .subTtl
 	 {
 		margin-top: 0.1rem;
-		font-size: 0.8rem;
+		font-size: 1.05rem;
 	}
 	.comTtlBox02 .subTtl {
 		height: 30px;
@@ -564,13 +568,13 @@
 		text-align: center;
 	}
 	.comTtlBox01 .headLine05 {
-		margin: 0 0 0.6rem;
+		margin: 0 0 1.3rem;
 		font-size: 1.6rem;
 	}
 	.comTtlBox01 .subTtl ,
 	.comTtlBox02 .subTtl{
 		display: block;
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 }
 /*------------------------------------------------------------
@@ -6325,9 +6329,11 @@
 		box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
 	}
 	.comProfileEditing .sub01 {
-		padding: 1.7rem 1.6rem;
+		padding: 1.7rem 2rem;
 		position: relative;
 		align-items: center;
+		justify-content: space-around;
+		column-gap: 1.2rem;
 	}
 	.comProfileEditing .sub01::after {
 		width: 1.1rem;
