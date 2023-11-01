@@ -886,6 +886,9 @@ height: 3.5rem;
 	  }#gHeader .icon.bell .bellUsuallySp.is-active {
 		opacity: 0;
 	}
+	#gHeader .hUserBox-list .subList .hamburger-list a {
+		height: 2rem;
+		}
 
 }
 /*------------------------------------------------------------
