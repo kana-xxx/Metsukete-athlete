@@ -887,7 +887,7 @@ height: 3.5rem;
 		opacity: 0;
 	}
 	#gHeader .hUserBox-list .subList .hamburger-list a {
-		height: 2rem;
+		height: 2.5rem;
 		}
 
 }
@@ -913,6 +913,9 @@ height: 3.5rem;
 	line-height: 0;
 	transition: all .3s ease;
 }
+#gNavi li a .icon img {
+	transition: all .3s ease;
+}
 #gNavi li a  .txt {
 	transition: all .3s ease;
 }
@@ -920,14 +923,9 @@ height: 3.5rem;
 #gNavi li a .icon .hover {
 	display: none;
 }
-
-#gNavi li a .txt:hover ~ #gNavi li a .icon .hover{
-	display: none;
-}
-#gNavi li a .txt:hover {
+#fNavi li a .txt.select{
 	color: #005792;
 }
-
 @media all and (min-width: 1025px) {
 	#gNavi li a:hover img {
 		display: none;
@@ -935,6 +933,20 @@ height: 3.5rem;
 	#gNavi li a:hover img.hover {
 		display: inline;
 	}
+	#gNavi li a:hover .txt {
+		color: #005792;
+	}
+	#gNavi li a.select {
+		color: #005792;
+	}
+
+	#gNavi li a .icon .selected-none  {
+		display: none;
+		}
+		#gNavi li a .icon .selected-inline  {
+			display: inline;
+			}
+
 }
 @media all and (max-width: 1024px) {
 	#gNavi {
@@ -1093,6 +1105,7 @@ height: 3.5rem;
 		vertical-align: middle;
 		max-width: 100%;
 		background: #FFF;
+		z-index: 200;
 	  }
 	  #gHeader .modal-content .moreLink {
 		display: none;
@@ -1141,8 +1154,8 @@ height: 3.5rem;
 		column-gap: 1.8rem;
 		margin-top: 5rem;
 		position: fixed;
-		left: 30%;
-		bottom: 10%;
+		left: 32%;
+		bottom: 8%;
 	}
 
 	#gHeader .modal.pagination li a{
@@ -1230,8 +1243,8 @@ height: 3.5rem;
 		display: block;
 	  }
 	  #gHeader .modal-content.notice .notice-box {
-	max-height: 700px;
-    overflow: hidden;
+	max-height: auto;
+    overflow: visible;
 	  }
 
 }
@@ -1247,6 +1260,7 @@ height: 3.5rem;
 		vertical-align: middle;
 		max-width: 100%;
 		background: #FFF;
+		z-index: 200;
 	  }
 	  #gHeader .modal-content .moreLink {
 		display: none;
@@ -1357,8 +1371,8 @@ height: 3.5rem;
 		column-gap: 1.8rem;
 		margin-top: 5rem;
 		position: fixed;
-		bottom: 15%;
-		left: 15%;
+		bottom: 12%;
+		left: 19%;
 
 	}
 
@@ -1520,8 +1534,8 @@ height: 3.5rem;
 		display: block;
 	  }
 	  #gHeader .modal-content.notice .notice-box {
-		max-height: 500px;
-		overflow: hidden;
+		max-height: auto;
+		overflow: visible;
 		  }
 		  #gHeader .notice-time {
 			display: inline-block;
@@ -1580,6 +1594,9 @@ height: 3.5rem;
 		z-index: 100;
 		display: block;
 	}
+	#Footer.is-active {
+		display: none;
+	}
 	#fNavi {
 		display: flex;
 		align-items: center;
@@ -1603,6 +1620,10 @@ height: 3.5rem;
 		line-height: 3.5rem;
 		position: relative;
 		display: flex;
+	}
+	#fNavi li a .icon img {
+		width: 3.3rem;
+		height: 3rem;
 	}
 	#fNavi li a .icon .fNavi-notice {
 		position: absolute;
@@ -1678,6 +1699,9 @@ height: 3.5rem;
 		z-index: 100;
 		display: block;
 	}
+	#Footer.is-active {
+		display: none;
+	}
 	#fNavi {
 		display: flex;
 		align-items: center;
@@ -1718,7 +1742,7 @@ height: 3.5rem;
 	}
 	#fNavi li a .icon {
 		width: 2.6rem;
-		height: 2.5rem;
+		height: 2.6rem;
 		line-height: 2.5rem;
 		font-size: 0;
 		display: flex;
@@ -1726,6 +1750,10 @@ height: 3.5rem;
 		justify-content: center;
 		position: relative;
 	
+	}
+	#fNavi li a .icon img  {
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 	
 	#fNavi li a .icon .fnavi-headlig {

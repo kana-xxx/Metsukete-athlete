@@ -10,7 +10,8 @@ const noticeModal = document.querySelector('.modal-outer'),
       normalBell = document.querySelector('.bellUsually'),
       normalBellSp = document.querySelector('.bellUsuallySP'),
       openBell = document.querySelector('.bellOpen'),
-      openBellSp = document.querySelector('.bellOpenSp');
+      openBellSp = document.querySelector('.bellOpenSp'),
+      Footer = document.getElementById('Footer');
       // hUserBoxList = document.querySelector('.hUserBox-list'); 
 //「開くボタン」をクリックしてモーダルを開く
 
@@ -18,6 +19,7 @@ function modalOpen() {
     noticeModal.classList.toggle('is-active'); 
     normalBell.classList.toggle('is-active');
     openBell.classList.toggle('is-active');
+    Footer.classList.toggle('is-active');
 }
     modalBtn.addEventListener('click', modalOpen);
 
@@ -26,6 +28,7 @@ function modalOpen() {
         noticeModal.classList.toggle('is-active'); 
         normalBellSp.classList.toggle('is-active');
         openBellSp.classList.toggle('is-active');
+        Footer.classList.toggle('is-active');
     }
         modalBtnSp.addEventListener('click', modalOpenSp);
     
@@ -46,6 +49,7 @@ function modalClose() {
     openBell.classList.remove('is-active');
     hUserBoxList.classList.remove('is-active');
     hUserBoxOuter.classList.remove('is-active'); 
+    Footer.classList.remove('is-active');
 }
 noticeClose.addEventListener('click', modalClose);
 

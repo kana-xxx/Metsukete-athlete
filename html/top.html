@@ -43,10 +43,10 @@
     <h1><a href="http://dev.metsukete.jp/student/mypage"><img src="../image/common/logo.svg" alt="Metsukete ミツケテ"></a></h1>
     <nav id="gNavi">
         <ul>
-            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-blackHome.svg" alt=""><img src="../image/common/header-icon-blueHome.svg" alt="" class="hover"></span><span class="txt">ホーム</span></a></li>
-            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-grayAirplane.svg" alt="">><img src="../image/common/header-icon-blueAirplane.svg" alt="" class="hover"></span><span class="txt">企業オファー</span></a></li>
-            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-grayBubble.svg" alt="">><img src="../image/common/header-icon-blueBubble.svg" alt="" class="hover"></span><span class="txt">メッセージ</span></a></li>
-            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-graySetting.svg" alt="">><img src="../image/common/header-icon-blueSetting.svg" alt="" class="hover"></span><span class="txt">設定</span></a></li>
+            <li><a href="#" class="select"><span class="icon"><img src="../image/common/header-icon-grayHome.svg" alt="" class="selected-none"><img src="../image/common/header-icon-blueHome.svg" alt="" class="hover selected-inline"></span><span class="txt">ホーム</span></a></li>
+            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-grayAirplane.svg" alt=""><img src="../image/common/header-icon-blueAirplane.svg" alt="" class="hover"></span><span class="txt">企業オファー</span></a></li>
+            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-grayBubble.svg" alt=""><img src="../image/common/header-icon-blueBubble.svg" alt="" class="hover"></span><span class="txt">メッセージ</span></a></li>
+            <li><a href="#"><span class="icon"><img src="../image/common/header-icon-graySetting.svg" alt=""><img src="../image/common/header-icon-blueSetting.svg" alt="" class="hover"></span><span class="txt">設定</span></a></li>
             <li><a href="#"><span class="icon"><img src="../image/common/header-icon-grayDot.svg" alt=""><img src="../image/common/header-icon-blueDot.svg" alt="" class="hover"></span><span class="txt">その他</span></a></li>
         </ul>
     </nav>
@@ -297,6 +297,7 @@
 
 				</div>
 				<div class="sp comProfileEditing">
+					<a href="#">
 					<div class="sub01 flexB">
 						<div class="photo"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
 						<div class="User-detail-box">
@@ -306,11 +307,11 @@
 					</div>
 					<div class="sub02">
 						<ul class="subUl">
-							<li><a href="http://dev.metsukete.jp/student/profile/edit"><span class="icon"><img src="../img/common/icon08.png" alt=""></span><span class="txt">プロフィール編集・確認</span></a></li>
-							<li><a href="http://dev.metsukete.jp/student/setting/index"><span class="icon"><img src="../img/common/icon09.png" alt=""></span><span class="txt">設定変更</span></a></li>
-							<li><a href="http://dev.metsukete.jp/student/notice/index"><span class="icon"><img src="../img/common/icon11.png" alt=""></span><span class="txt">お知らせ</span></a></li>
+							<li><a href="#"><span class="icon"><img src="../img/common/icon08.png" alt=""></span><span class="txt">プロフィール編集・確認</span></a></li>
+							<li><a href="#"><span class="icon"><img src="../img/common/icon09.png" alt=""></span><span class="txt">設定変更</span></a></li>
+							<li><a href="#"><span class="icon"><img src="../img/common/icon11.png" alt=""></span><span class="txt">お知らせ</span></a></li>
 							<li><a href="#"><span class="icon"><img src="../img/common/icon12.png" alt=""></span><span class="txt">よくある質問</span></a></li>
-							<li><a href="http://dev.metsukete.jp/student/contact"><span class="icon"><img src="../img/common/icon10.png" alt=""></span><span class="txt">お問い合わせ</span></a></li>
+							<li><a href="#"><span class="icon"><img src="../img/common/icon10.png" alt=""></span><span class="txt">お問い合わせ</span></a></li>
 							<li>
 								<form name="maypage_logout_form" name="form" action="http://dev.metsukete.jp/student/logout" method="POST">
 									<input type="hidden" name="_token" value="CuMCtpSoqhSoISQrgkztmfmTIcvsJsaJO5YlDODS">									<a href="javascript:maypage_logout_form.submit()"><span class="icon"><img src="../img/common/icon13.png" alt=""></span><span class="txt">ログアウト</span></a></span>
@@ -318,9 +319,9 @@
 							</li>
 						</ul>
 					</div>
+				</a>
 				</div>
-												<article id="conts">
-				</article>
+
 				<div class="top-content-box">
 				<div class="User-detail">
 					<a href="#">
@@ -336,29 +337,49 @@
 				<ul class="textList top-content">
 					<li><a href="http://dev.metsukete.jp/student/approval/company/index">
 						<span class="top-content-detail">
-							<p class="num"><span class="icon"><img src="../image/common/iconBlue-check-circle.svg" alt=""></span><span class="txt openSans">0</span></p>
-							<p class="sml">承認したオファー</p>
+							<span class="icon">
+								<img src="../image/common/iconBlue-check-circle.svg" alt=""></span>
+							<span class="num">		
+								<span class="top-content-resp">		
+									<span class="icon-resp">
+										<img src="../image/common/iconBlue-check-circle.svg" alt=""></span>		
+								<span class="txt openSans">0</span>
+								</span>	
+							<p class="sml">承認したオファー</p></span>
 						</span>
 						</a>
 					</li>
 					<li><a href="http://dev.metsukete.jp/student/favorite/company/index">
 						<span class="top-content-detail">
-							<p class="num"><span class="icon"><img src="../image/common/iconBlue-star.svg" alt=""></span><span class="txt openSans">0</span></p>
-							<p class="sml">お気に入り<br class="no-pc">登録してくれた企業</p>
+							<span class="icon"><img src="../image/common/iconBlue-star.svg" alt=""></span>
+
+							<span class="num">
+								<span class="top-content-resp">	
+									<span class="icon-resp"><img src="../image/common/iconBlue-star.svg" alt=""></span>	
+								<span class="txt openSans">0</span></span>
+							<p class="sml">お気に入り<br class="no-pc">登録してくれた企業</p></span>
 						</span></a>
 					</li>
 				
 					<li><a href="http://dev.metsukete.jp/student/company/messages/index">
 						<span class="top-content-detail">
-							<p class="num"><span class="icon"><img src="../image/common/iconBlue-magnifying-glass.svg" alt=""></span><span class="txt openSans">0</span></p>
-							<p class="sml">新着メッセージ</p>
+							<span class="icon"><img src="../image/common/iconBlue-magnifying-glass.svg" alt=""></span>
+							<span class="num">
+								<span class="top-content-resp">	
+									<span class="icon-resp"><img src="../image/common/iconBlue-magnifying-glass.svg" alt=""></span>
+								<span class="txt openSans">0</span></span>
+							<p class="sml">新着メッセージ</p></span>
 						</span>
 					</a>
 					</li>
 					<li><a href="http://dev.metsukete.jp/student/analysis/result">
 						<span class="top-content-detail">
-						<p class="num"><span class="icon"><img src="../image/common/icon-blue-bubble-border.svg" alt=""></span><span class="txt openSans">0</span></p>
-						<p class="sml">他己分析に回答した人</p>
+							<span class="icon"><img src="../image/common/icon-blue-bubble-border.svg" alt=""></span>
+						<span class="num">
+							<span class="top-content-resp">	
+								<span class="icon-resp"><img src="../image/common/icon-blue-bubble-border.svg" alt=""></span>
+							<span class="txt openSans">0</span></span>
+						<p class="sml">他己分析に回答した人</p></span>
 					</span>
 				</a>
 				</li>
