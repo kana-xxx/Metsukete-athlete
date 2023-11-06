@@ -341,7 +341,7 @@
 .headLine05.taco {
 	margin-bottom: 3.2rem;
 	color: #202020;
-	font-size: 2.4rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 }
 .headLine01 .txt01 {
@@ -549,7 +549,7 @@
 	}
 	.comTtlBox01 .headLine05 {
 		margin-right: 0;
-		margin-bottom: 2rem;
+		margin-bottom: .5rem;
 	}
 	.comTtlBox01 .subTtl,
 	.comTtlBox02 .subTtl
