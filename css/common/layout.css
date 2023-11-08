@@ -330,7 +330,7 @@ a[href^="tel:"] {
 	right: 1%;
 	display: inline-block;
 	vertical-align: middle;
-	max-width: 600px;
+	max-width: 550px;
 	height: auto;
 	width: 90%;
 	overflow: hidden;
@@ -434,7 +434,7 @@ background: #DFEAF1;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: 100%;
-	max-width: 480px;
+	max-width: 400px;
 	margin-bottom: .5rem;
 }
 #gHeader .notice-time {
