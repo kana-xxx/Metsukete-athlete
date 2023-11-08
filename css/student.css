@@ -361,7 +361,7 @@ justify-content: flex-end;
 
 #main .message{
 	box-sizing: border-box;
-	padding: 4.1rem 4.5rem 7.2rem;
+	padding: 7rem 4.5rem 7rem;
 	width: calc(49.5% - 2.4rem);
 	position: relative;
 	border-radius: 1.4rem;
@@ -381,7 +381,7 @@ justify-content: flex-end;
 }
 #main .results.taco {
 	box-sizing: border-box;
-	padding: 4.1rem 4.5rem 7.2rem;
+	padding: 7rem 4.5rem 7rem;
 	position: relative;
 	border-radius: 1.4rem;
 	background: #fff;
@@ -391,7 +391,7 @@ justify-content: flex-end;
 #main .results .headLine05.taco {
 	margin-bottom: 3.2rem;
 	color: #202020;
-	font-size: 1.8rem;
+	font-size: 2.3rem;
 	font-weight: 700;
 }
 #main .message .messageList {
@@ -444,6 +444,7 @@ justify-content: flex-end;
 
 #main .message .flexD li {
 	box-sizing: border-box;
+	flex-basis: 30%;
 
 }
 #main .message .flexD li a {
@@ -456,12 +457,11 @@ justify-content: flex-end;
 	display: flex;
 	align-items: center;
 	color: #005792;
-    width: 130px;
     text-align: center;
     justify-content: center;
 }
 #main .message .flexD li a:hover {
-	background: #EFF6FB;
+	background: #DDEBF5;
 }
 #main .message .flexD li a span {
 	flex: 10;
@@ -927,7 +927,7 @@ justify-content: flex-end;
 		text-align: right;
 		}
 	#main .moreLink a {
-		font-size: 0.8rem;
+		font-size: 1rem;
 	}
 	#main .secBox {
 		margin-bottom: 1.5rem;
@@ -1441,6 +1441,7 @@ justify-content: flex-end;
 		text-align: center;
 	}
 	#main .moreLink a {
+		margin-top: .5rem;
 		font-size: 1.1rem;
 	}
 	#main .secBox {
@@ -1452,6 +1453,11 @@ justify-content: flex-end;
 		padding: 3.3rem 4.6rem 3.2rem;
 		width: auto;
 		border-radius: 1rem;
+	}
+	#main .results.taco {
+		box-sizing: border-box;
+		padding: 4.1rem 4.5rem 2.8rem;
+
 	}
 	#main .results .headLine05.taco {
 		margin-bottom: 1.3rem;
@@ -1468,7 +1474,7 @@ justify-content: flex-end;
 		margin-bottom: 3.7rem;
 	}
 	#main .results .chartList {
-		margin: 0 0 2.4rem;
+		margin: 0;
 		display: block;
 	}
 	#main .results .chartList::after {
@@ -1485,6 +1491,9 @@ justify-content: flex-end;
 		column-gap: 1.5rem;
 		margin-top:0;
 		margin-bottom: 1rem;
+	}
+	#main .results .chartList .txtList.flexE li:last-of-type {
+		margin-bottom: 2rem;
 	}
 	#main .results .chartList li:last-child {
 		margin-bottom: 0;
