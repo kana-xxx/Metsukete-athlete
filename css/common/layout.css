@@ -958,7 +958,7 @@ height: 3.5rem;
 ------------------------------------------------------------*/
 #conts {
 	padding-right: 0.5rem;
-	width: 74.3%;
+	width: 100%;
 	box-sizing: border-box;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {

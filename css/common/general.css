@@ -2084,8 +2084,10 @@
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	background: url("../../img/common/icon31.png") no-repeat left center / 100% auto;
+	background: url("/image/common/company-offer-bubble-line.svg") no-repeat left center / 100% auto;
+	background-size: cover;
 	content: "";
+	display: inline-block;
 }
 .comListBox02 .listBody li .ttl .txt {
 	display: inline-block;
@@ -2112,9 +2114,9 @@
 	max-width: 12.6rem;
 	color: #fff;
 	font-size: 1.4rem;
-	border-radius: 1.4rem;
-	border: 0.1rem solid #37AAD6;
-	background: #37AAD6;
+	border-radius: .8rem;
+	border: 0.1rem solid #005792;
+	background: #005792;
 }
 .comListBox02 .listBody li .status02 span {
 	border-color: #A3A3A3;
