@@ -71,6 +71,9 @@
 		padding: 0;
 		max-width: 86.33%;
 	}
+	.flexB {
+		justify-content: center;
+	}
 	.flexD {
 		justify-content: center;
 		row-gap: 1rem;
@@ -112,6 +115,7 @@
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.mainBox {
+		margin: 0 auto;
 		padding: 0;
 		max-width: 86.33%;
 	}
@@ -131,7 +135,7 @@
 	padding: 0 2rem;
 	max-width: 163.6rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
 }
@@ -141,11 +145,16 @@
 .pageTitle .ttlBox {
 	box-sizing: border-box;
 	padding: 0.6rem 0;
-	width: 60%;
+	/* width: 35%; */
 	max-width: calc(100% - 41.2rem);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	column-gap: 1rem;
+	margin-right: auto;
+}
+.pageTitle img {
+ width: 5.8rem;
 }
 .pageTitle h2 {
 	margin-right: 2.9rem;
@@ -204,9 +213,10 @@
 .pageTitle .backBtn {
 	box-sizing: border-box;
 	padding-bottom: 0.1rem;
-	width: 40%;
+	/* width: 35%; */
 	display: flex;
 	justify-content: flex-end;
+	margin-left: auto;
 }
 .pageTitle .backBtn a {
 	padding: 0 0.6rem 0 2.6rem;
@@ -277,6 +287,9 @@
 		font-size: 1rem;
 		background-size: 1rem auto;
 	}
+	.pageTitle img {
+		width: 3.1rem;
+	   }
 }
 @media all and (max-width: 599px) {
 	.pageTitle {
@@ -286,6 +299,9 @@
 		display: block;
 		text-align: center;
 	}
+	.pageTitle img {
+		width: 2rem;
+	   } 
 	.pageTitle01 {
 		margin-bottom: 1.5rem;
 	}
@@ -293,11 +309,14 @@
 		padding: 0;
 		width: auto;
 		max-width: inherit;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
 	}
 	.pageTitle h2 {
-		margin: 0 0 1.2rem;
-		font-size: 1.8rem;
+		margin: 0;
+		font-size: 1.4rem;
 	}
 	.pageTitle .subTtl {
 		font-size: 1rem;
@@ -1336,18 +1355,18 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-	color: #343434;
+	color: #A3A3A3;
 	text-align: center;
 	font-size: 1.8rem;
 	border-radius: 1rem;
-	background: #fff;
+	background: #E8EAEC;
 	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.04);
 	box-sizing: border-box;
 	opacity: 1;
 }
 .comTabList li.on a {
-	color: #fff;
-	background-color: #37AAD6;
+	color: #005792;
+	background-color: #FFF;
 }
 @media all and (min-width: 1025px) {
 	.comTabList.col4 li {
@@ -1379,7 +1398,7 @@
 	}
 	.comTabList li a:hover {
 		color: #fff;
-		background-color: #37AAD6;
+		background-color: #005792;
 	}
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
@@ -1433,7 +1452,7 @@
 		margin-right: 0.7rem;
 	}
 	.comTabList li a {
-		padding: 0.9rem 0.5rem 1.1rem;
+		padding: 1.6rem 0.5rem 1.6rem;
 		font-size: 1rem;
 		border-radius: 0.5rem;
 	}
@@ -1464,7 +1483,7 @@
 		justify-content: center;
 		align-items: center;
 		align-content: center;
-		font-size: 1.2rem;
+		font-size: .9rem;
 		border-radius: 0.5rem;
 	}
 }
@@ -2031,18 +2050,25 @@
 	color: #A3A3A3;
 	font-weight: 500;
 }
+.comListBox02 .listBody li .time.resp {
+	display: none;
+}
 .comListBox02 .listBody li .category {
 	padding-left: 0.5rem;
 	padding-right: 1rem;
 	width: 20.3%;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
+	justify-content: center;
 	font-size: 1.7rem;
 	box-sizing: border-box;
+	column-gap: 1.3rem;
 }
 .comListBox02 .listBody li .category .pho {
-	width: 5rem;
+	width: 20rem;
+	position: relative;
 }
+
 .comListBox02 .listBody li .category .pho a {
 	width: 100%;
 	padding-bottom: 100%;
@@ -2051,6 +2077,26 @@
 	border-radius: 1.6rem;
 	overflow: hidden;
 	will-change: transform;
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.08);
+}
+.comListBox02 .listBody li .category .tag.new {
+	padding: .4rem 1.6rem;
+	background: #FF0000;
+	border-radius: 3rem;
+	color: #FFF;
+	position: absolute;
+	top: -7%;
+	right: -10%;
+	z-index: 2;
+	font-size: 1.4rem;
+}
+.comListBox02 .listBody li .category .favoriteIcon {
+	width: 3.3rem;
+	position: absolute;
+	bottom: -5%;
+	right: -10%;
+	z-index: 2;
+	font-size: 1.2rem;
 }
 .comListBox02 .listBody li .category .textBox {
 	width: calc(100% - 5rem);
@@ -2058,15 +2104,19 @@
 	padding-left: 1.3rem;
 	color: #202020;
 }
+.comListBox02 .listBody li .category .textBox .ttl.phone{
+  display: none;
+}
 .comListBox02 .listBody li .category .textBox p {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	font-size: 1.8rem;
 }
 .comListBox02 .listBody li .category .textBox .sml {
 	margin-top: 0.2rem;
-	font-size: 1.1rem;
-	font-weight: 500;
+	font-size: 1.5rem;
+	font-weight: normal;
 	color: #A3A3A3;
 }
 .comListBox02 .listBody li .ttl {
@@ -2074,20 +2124,33 @@
 	position: relative;
 	width: 37.5%;
 	color: #202020;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	line-height: 2.4;
+	display: flex;
+	column-gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
 }
-.comListBox02 .listBody li .ttl::before {
-	width: 3.6rem;
-	height: 3.6rem;
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	background: url("/image/common/company-offer-bubble-line.svg") no-repeat left center / 100% auto;
-	background-size: cover;
-	content: "";
-	display: inline-block;
+.comListBox02 .listBody li .ttl img {
+	width: 3.2rem;
+}
+.comListBox02 .listBody li .ttl .offer-listImg {
+	position: relative;
+}
+.comListBox02 .listBody li .ttl .offer-listImg.favorite {
+	opacity: 0;
+}
+.comListBox02 .listBody li .ttl .offer-listImg.noread::before {
+ content: '';
+ display: block;
+ width: 1rem;
+    height: 1rem;
+    background: #FE1211;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5%;
+    right: 1%;
+	z-index: 2;
 }
 .comListBox02 .listBody li .ttl .txt {
 	display: inline-block;
@@ -2096,6 +2159,9 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	transition: all 0.3s;
+}
+.comListBox02 .listBody li .ttl .txt.favorite {
+	color: #005792;
 }
 .comListBox02 .listBody li .status {
 	box-sizing: border-box;
@@ -2115,7 +2181,7 @@
 	color: #fff;
 	font-size: 1.4rem;
 	border-radius: .8rem;
-	border: 0.1rem solid #005792;
+	border: 0.2rem solid #005792;
 	background: #005792;
 }
 .comListBox02 .listBody li .status02 span {
@@ -2123,8 +2189,8 @@
 	background-color: #A3A3A3;
 }
 .comListBox02 .listBody li .status03 span {
-	color: #A3A3A3;
-	border-color: #A3A3A3;
+	color: #005792;
+	border-color: #005792;
 	background-color: #fff;
 }
 .comListBox02 .listBody li .clickBtn {
@@ -2189,16 +2255,17 @@
 	.comListBox02 .listHead .item01 {
 		padding-right: 0.5rem;
 		width: 18%;
+		display: none;
 	}
 	.comListBox02 .listHead .item02 {
-		padding-right: 2.4rem;
-		width: 19%;
+		padding-left: 4%;
+		width: 33%;
 	}
 	.comListBox02 .listHead .item03 {
 		width: 43.5%;
 	}
 	.comListBox02 .listHead .item04 {
-		padding-right: 8%;
+		padding-right: 3%;
 	}
 	.comListBox02 .listBody {
 		padding-bottom: 0.5rem;
@@ -2207,21 +2274,50 @@
 		padding: 1.4rem 0 1.5rem;
 		font-size: 0.8rem;
 	}
+	.comListBox02 .listBody li .ttl a {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
 	.comListBox02 .listBody li .time {
 		padding: 0;
-		width: 18%;
+		/* width: 18%;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
-		text-align: center;
+		text-align: center; */
+		display: none;
+	}
+	.comListBox02 .listBody li .time.resp {
+		display: block;
+		width: auto;
+		line-height: 1.2;
+	}
+
+
+	.comListBox02 .listBody li .category .tag.new {
+		padding: .3rem .9rem;
+		background: #FF0000;
+		border-radius: 3rem;
+		color: #FFF;
+		position: absolute;
+		top: -10%;
+		right: -18%;
+		z-index: 2;
+		font-size: .8rem;
 	}
 	.comListBox02 .listBody li .category {
-		padding: 0;
-		width: 19%;
+		padding-left: 4%;
+		width: 33%;
 		font-size: 0.8rem;
+
+
 	}
-	.comListBox02 .listBody li .category .pho {
-		display: none;
+	.comListBox02 .listBody li .category .pho .objectImg img {
+    color: #A3A3A3;
+	width: 100%;
+    height: 100%;
+
 	}
 	.comListBox02 .listBody li .category .textBox {
 		width: auto;
@@ -2229,10 +2325,10 @@
 	}
 	.comListBox02 .listBody li .category .textBox .sml {
 		margin-top: 0.2rem;
-		font-size: 0.6rem;
+		font-size: 1rem;
 	}
 	.comListBox02 .listBody li .ttl {
-		padding-left: 2.8rem;
+		padding-left: 4rem;
 		width: 43.5%;
 		font-size: 1rem;
 	}
@@ -2244,11 +2340,15 @@
 		max-width: 18.9rem;
 	}
 	.comListBox02 .listBody li .status {
-		padding-right: 3rem;
+		box-sizing: border-box;
+		padding-right: 3%;
 		padding-left: 0.1rem;
+		flex: 1;
+		display: flex;
+		align-items: center;
 	}
 	.comListBox02 .listBody li .status span {
-		margin: 0;
+		margin: 0 auto;
 		padding: 0.4rem 0.5rem 0.4rem;
 		max-width: 6.2rem;
 		font-size: 0.9rem;
@@ -2262,6 +2362,35 @@
 		right: 2rem;
 		font-size: 1rem;
 		border-radius: 0.5rem;
+	}
+	.comListBox02 .listBody li .ttl img {
+		width: 1.7rem;
+	}
+	.comListBox02 .listBody li .ttl .offer-listImg.noread::before {
+		content: '';
+		display: block;
+		width: .5rem;
+		   height: .5rem;
+		   background: #FE1211;
+		   border-radius: 50%;
+		   position: absolute;
+		   top: 1.5%;
+		   right: 0%;
+		   z-index: 2;
+	   }
+	   .comListBox02 .listBody li .category .favoriteIcon {
+		width: 2rem;
+		position: absolute;
+		bottom: -10%;
+		right: -13%;
+		z-index: 2;
+		font-size: 1.2rem;
+	}
+	.comListBox02 .listBody li .category .textBox p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 1.25rem;
 	}
 }
 @media all and (max-width: 599px) {
@@ -2283,6 +2412,7 @@
 		display: block;
 	}
 	.comListBox02 .listBody li .time {
+		display: none;
 		margin-bottom: 0.7rem;
 		padding-left: 2.8rem;
 		width: auto;
@@ -2303,25 +2433,30 @@
 		padding: 0.3rem 6rem 0 0;
 		width: 100%;
 		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 	}
 	.comListBox02 .listBody li .category .pho {
-		width: auto;
+		width: 7rem;
 	}
 	.comListBox02 .listBody li .category .textBox {
-		width: auto;
 		padding-left: 0;
 		display: flex;
 		flex-wrap: wrap;
+		max-width: 65%;
 	}
 	.comListBox02 .listBody li .category .textBox p {
-		margin-right: 1rem;
+		margin-right: .8rem;
+		font-size: 1.2rem;
 	}
 	.comListBox02 .listBody li .category .textBox .sml {
 		margin-top: 0.2rem;
-		font-size: 0.8rem;
+		font-size: 1.1rem;
 	}
 	.comListBox02 .listBody li .ttl {
-		padding: 0.2rem 7.5rem 0 0;
+		display: none;
+		padding: 0.2rem 1.5rem 0 0;
 		width: 100%;
 		font-size: 1.2rem;
 		line-height: 1.5;
@@ -2331,8 +2466,11 @@
 		display: none;
 	}
 	.comListBox02 .listBody li .ttl .txt {
-		width: 100%;
-		max-width: inherit;
+		max-width: 100%;
+		/* max-width: inherit; */
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	.comListBox02 .listBody li .status {
 		padding-right: 0;
@@ -2355,6 +2493,30 @@
 		font-size: 1rem;
 		border-radius: 0.5rem;
 	}
+	.comListBox02 .listBody li .category .tag.new {
+		padding: .3rem .9rem;
+		background: #FF0000;
+		border-radius: 3rem;
+		color: #FFF;
+		position: absolute;
+		top: -10%;
+		right: -18%;
+		z-index: 2;
+		font-size: .8rem;
+	}
+	.comListBox02 .listBody li .category .favoriteIcon {
+		width: 2rem;
+		position: absolute;
+		bottom: -10%;
+		right: -13%;
+		z-index: 2;
+		font-size: 1.2rem;
+	}
+	.comListBox02 .listBody li .category .textBox .ttl.phone{
+		display: block;
+		font-size: 1.05rem;
+		margin-top: .7rem;
+	  }
 }
 /*------------------------------------------------------------
 	comListUl01
