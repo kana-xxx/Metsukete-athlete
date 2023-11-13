@@ -1762,6 +1762,7 @@ height: 3.5rem;
 	
 	#fNavi li a span  {
 		font-size: 1rem;
+		color: #343434;
 	}
 	#fNavi li a .icon .choice {
 		display: none;

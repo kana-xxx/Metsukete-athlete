@@ -1,6 +1,6 @@
 // 入力欄に文字が入力された場合に、背景色をつける 
 
-const target = document.querySelectorAll('.emailBox, .passwordBox, .telBox, .passwordBoxRe .select-birthDay');
+const target = document.querySelectorAll('.emailBox, .passwordBox, .telBox, .passwordBoxRe, #year, #month, #day');
 console.log(target);
 for(let i in target){
 	if (target.hasOwnProperty(i)) {
