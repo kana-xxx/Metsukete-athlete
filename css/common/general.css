@@ -236,9 +236,9 @@
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.pageTitle {
-		margin: 0 0 5rem;
-		padding: 0 2.7rem;
-		max-width: 100%;
+		margin: 0 auto 5rem;
+		padding: 0;
+		max-width: 86.33%;
 	}
 	.pageTitle .ttlBox {
 		padding: 0;
@@ -1364,7 +1364,8 @@
 	box-sizing: border-box;
 	opacity: 1;
 }
-.comTabList li.on a {
+
+.comTabList .tab__name.is-active a {
 	color: #005792;
 	background-color: #FFF;
 }
@@ -1490,8 +1491,11 @@
 /*------------------------------------------------------------
 	comTabBox
 ------------------------------------------------------------*/
-.comTabBox .tabInner {
+.comTabBox .tab__content {
 	display: none;
+}
+.comTabBox .tab__content.is-show {
+	display: block;
 }
 /*------------------------------------------------------------
 	comFaqList
@@ -2813,19 +2817,36 @@
 /*------------------------------------------------------------
 	comLinkBox01
 ------------------------------------------------------------*/
+/* comLink-box */
+.comLink-outer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .comLinkBox01 {
 	margin-bottom: 2.9rem;
 	padding: 6.6rem 4% 6.6rem 5.8%;
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	column-gap: 3rem;
 	border-radius: 1.4rem;
 	background: #fff;
 	box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 }
-.comLinkBox01 .leftBox {
+.comLinkBox01 .company-logo {
+	width: 13%;
+}
+.comLinkBox01 .company-detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	row-gap: 3rem;
+}
+/* .comLinkBox01 .leftBox {
 	width: 52%;
 	max-width: calc(100% - 43.6rem);
-}
+} */
 .comLinkBox01 .leftBox p {
 	color: #292929;
 	font-size: 2.4rem;
@@ -2838,13 +2859,16 @@
 }
 .comLinkBox01 .btnList {
 	margin-top: -0.4rem;
-	width: 45%;
-	max-width: 43.6rem;
 	display: flex;
 	justify-content: space-between;
 }
+.comLinkBox01 .btnList.multi {
+	column-gap: 2rem;
+}
+.comLinkBox01 .btnList.multi img{
+	margin-right: .7rem;
+}
 .comLinkBox01 .btnList li {
-	margin-top: 1rem;
 	width: calc(50% - 0.6rem);
 }
 .comLinkBox01 .btnList li a {
@@ -2856,6 +2880,18 @@
 	border-radius: 1.2rem;
 	background: #343434 url("../../img/common/icon38.png") no-repeat left 2.3rem center / 1.6rem auto;
 }
+/* グラデーションボタン */
+.comLinkBox01 .btnList  li .bgGradation {
+    background: linear-gradient(70deg, #005792 0%, #91C0E0 50%, #005792 100% , #91C0E0 200%);
+    background-position: 0% 50%;
+    background-size: 200% auto;
+    transition: all .35s ease-out;
+}
+
+.comLinkBox01 .btnList  li .bgGradation:hover {
+    background-position: 100% 50%;
+  }
+
 @media all and (min-width: 1025px) {
 	.comLinkBox01 .btnList li a:hover {
 		background-color: #37AAD6;
@@ -2866,10 +2902,12 @@
 		margin-bottom: 1.4rem;
 		padding: 2.9rem 2.6rem 2.8rem 3rem;
 		border-radius: 1rem;
+		justify-content: flex-start;
+		column-gap: 2rem;
 	}
 	.comLinkBox01 .leftBox {
-		width: calc(100% - 26.2rem);
 		max-width: inherit;
+		flex: 1;
 	}
 	.comLinkBox01 .leftBox p {
 		font-size: 1.4rem;
@@ -2880,8 +2918,6 @@
 		font-size: 1rem;
 	}
 	.comLinkBox01 .btnList {
-		margin-top: 0.8rem;
-		width: 23.3rem;
 	}
 	.comLinkBox01 .btnList li {
 		width: calc(50% - 0.5rem);
@@ -2893,13 +2929,31 @@
 		background-size: 0.85rem auto;
 		background-position: left 1.1rem center;
 	}
+
+	.comLinkBox01 .company-detail {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		row-gap: 3rem;
+		column-gap: 3rem;
+		flex: 4;
+	}
+	.comLinkBox01 .btnList.multi {
+		column-gap: 1rem;
+
+	}
+	.comLinkBox01 .company-logo {
+		flex: 1;
+	}
 }
 @media all and (max-width: 599px) {
 	.comLinkBox01 {
 		margin-bottom: 1.1rem;
 		padding: 2.3rem 2.4rem 2.9rem;
-		display: block;
 		border-radius: 1rem;
+		column-gap: 1rem;
+		justify-content: space-between;
 	}
 	.comLinkBox01 .leftBox {
 		margin-bottom: 1.3rem;
@@ -2914,7 +2968,6 @@
 		font-size: 1.2rem;
 	}
 	.comLinkBox01 .btnList {
-		margin-top: -1rem;
 		width: auto;
 		max-width: inherit;
 	}
@@ -2925,6 +2978,27 @@
 		background-size: 0.85rem auto;
 		background-position: left 1.4rem center;
 	}
+	.comLinkBox01 .btnList li .bgGradation {
+		padding: 0.7rem 1.4rem 0.8rem;
+		font-size: 1.1rem;
+		align-items: center;
+	}
+	.comLinkBox01 .company-logo  {
+		width: 35%;
+	}
+	.comLinkBox01 .company-detail {
+		row-gap: 1rem;
+	}
+	.comLinkBox01 .btnList.multi {
+		column-gap: 1rem;
+}
+.comLinkBox01 .company-detail {
+	flex: 5;
+}
+.comLinkBox01 .btnList.multi img {
+	width: 1.3rem;
+	vertical-align: middle;
+}
 }
 /*------------------------------------------------------------
 	comInfoBox
@@ -4363,16 +4437,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	color: #fff;
+	color: #343434;
 	border-radius: 1.4rem;
-	background: #37aad6;
+	background: #FFF;
 	box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 }
 .comLinkBox02 .leftBox {
-	flex: 1;
+	display: flex;
+	align-items: center;
+	column-gap: 3rem;
 }
+/* .comLinkBox02 .rightBox {
+	display: flex;
+	align-items: center;
+} */
 .comLinkBox02 .leftBox .ttl {
-	margin-bottom: 1.5rem;
 	font-size: 2.4rem;
 }
 .comLinkBox02 .leftBox .txtList {
@@ -4412,27 +4491,69 @@
 }
 .comLinkBox02 .btnList {
 	margin-top: -1.2rem;
-	width: 43.6rem;
 	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.comLinkBox02 .btnList.multi {
+	column-gap: 2rem;
+}
+.comLinkBox02 .btnList.multi li .message-resp {
+	display: none;
 }
 .comLinkBox02 .btnList li {
 	margin-top: 1.2rem;
-	width: calc(50% - 0.6rem);
 }
-.comLinkBox02 .btnList li:nth-child(2n) {
+/* .comLinkBox02 .btnList li:nth-child(2n) {
 	margin-left: 1.1rem;
-}
+} */
 .comLinkBox02 .btnList li a {
-	padding: 1.5rem 2.6rem 1.8rem 4rem;
+	padding: 1.5rem 2.6rem 1.8rem;
 	display: block;
 	text-align: center;
 	color: #292929;
 	font-size: 1.8rem;
 	border-radius: 1.2rem;
 	background: #fff url("../../img/common/icon39.png") no-repeat left 9.4% center / 2rem auto;
+	border: solid 1.5px transparent;
 }
+.comLinkBox02 .btnList li .stateBtn {
+	width: 8rem;
+}
+.comLinkBox02 .btnList li .fill:hover {
+	opacity: .7;
+}
+.comLinkBox02 .btnList li .message:hover {
+	background: #E8EAEC;
+}
+.comLinkBox02 .btnList li .hold:hover {
+	background: #DDEBF5;
+}
+.comLinkBox02 .btnList li .message {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 2rem;
+	padding: 1.5rem 3.5rem 1.8rem;
+	border-color:#292929;
+}
+.comLinkBox02 .btnList li .approve {
+	background: #005792;
+	color: #FFF;
+}
+.comLinkBox02 .btnList li .hold {
+
+	border-color: #005792;
+	color: #005792;
+}
+.comLinkBox02 .btnList li .refuse {
+	background: #343434;
+	color: #FFF;
+}
+.comLinkBox02 .btnList li .hover {
+display: none;
+}
+
 .comLinkBox02 .btnList .btn02 a {
 	background-image: url("../../img/common/icon40.png");
 	background-position: left 13% center;
@@ -4452,10 +4573,6 @@
 	position: relative;
 }
 @media all and (min-width: 1025px) {
-	.comLinkBox02 .btnList li a:hover {
-		color: #fff;
-		background-color: #222;
-	}
 	.comLinkBox02 .btnList .btn01 a:hover {
 		background-image: url("../../img/common/icon59.png");
 	}
@@ -4473,11 +4590,10 @@
 		margin-bottom: 3.5rem;
 	}
 	.comLinkBox02 .leftBox {
-		width: calc(100% - 15rem);
 		max-width: inherit;
+		justify-content: flex-start;
 	}
 	.comLinkBox02 .leftBox .ttl {
-		margin-bottom: 1.4rem;
 		font-size: 1.4rem;
 	}
 	.comLinkBox02 .leftBox .txtList {
@@ -4502,9 +4618,10 @@
 	}
 	.comLinkBox02 .btnList {
 		margin-top: -0.6rem;
-		width: 11.2rem;
 		max-width: inherit;
-		display: block;
+	}
+	.comLinkBox02 .btnList.multi {
+		column-gap: 1rem;
 	}
 	.comLinkBox02 .btnList li {
 		margin-top: 0.3rem;
@@ -4520,6 +4637,9 @@
 		background-size: 1rem auto;
 		background-position: left 0.8rem center;
 	}
+	.comLinkBox02 .btnList li .message {
+		padding: 0.7rem 1.6rem 0.8rem 2rem;
+	}
 	.comLinkBox02 .btnList .btn02 a {
 		background-position: left 0.9rem center;
 		background-size: 0.8rem auto;
@@ -4528,6 +4648,14 @@
 		margin: 0 -9.1rem 0 0;
 		max-width: 53.6rem;
 		top: 8rem;
+	}
+	.comLinkBox02 .rightBox {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.comLinkBox02 .btnList li .stateBtn {
+		width: 5rem;
 	}
 }
 @media all and (max-width: 599px) {
@@ -4539,6 +4667,7 @@
 	}
 	.fixBox {
 		margin-bottom: 2.5rem;
+		height: auto;
 	}
 	.comLinkBox02 .leftBox {
 		margin: 0 0.3rem 1.8rem;
@@ -4575,14 +4704,29 @@
 	.comLinkBox02 .btnList {
 		width: auto;
 		max-width: inherit;
-		justify-content: center;
+		justify-content: space-between;
 	}
-	.comLinkBox02 .btnList li a {
+	.comLinkBox02 .btnList.multi {
+		column-gap: .5rem;
+	}
+	.comLinkBox02 .btnList li:first-child {
+		margin-right: auto;
+	}
+	.comLinkBox02 .btnList li .message {
+		display: none;
+	}
+	.comLinkBox02 .btnList li a ,
+	.comLinkBox02 .btnList.multi li .message-resp {
 		padding: 0.9rem 1rem;
 		font-size: 1.2rem;
 		border-radius: 0.5rem;
 		background-position: left 1.3rem center;
 		background-size: 1rem auto;
+	}
+	.comLinkBox02 .btnList.multi li .message-resp {
+		display: flex;
+		column-gap: .5rem;
+		border-radius: 1rem;
 	}
 	.comLinkBox02 .btnList .btn02 a {
 		background-position: left 1.3rem center;
@@ -4622,16 +4766,16 @@
 		margin-top: 0.2rem;
 		font-size: 1.2rem;
 	}
-	.comLinkBox02.boxStyle01 .btnList li {
+	/* .comLinkBox02.boxStyle01 .btnList li {
 		width: calc(50% - 0.4rem);
-	}
-	.comLinkBox02.boxStyle01 .btnList li:nth-child(2n) {
+	} */
+	/* .comLinkBox02.boxStyle01 .btnList li:nth-child(2n) {
 		margin-left: 0.8rem;
-	}
+	} */
 	.comLinkBox02.boxStyle01 .btnList li a {
-		padding: 1.1rem 1rem 1.3rem 1.6rem;
+		padding: .8rem 1.4rem .8rem ;
 		font-size: 1.1rem;
-		border-radius: 1rem;
+		border-radius: .8rem;
 		background-size: 1.3rem auto;
 	}
 	.comLinkBox02.boxStyle01 .btnList .btn01 a {
@@ -4642,6 +4786,12 @@
 		font-size: 1.2rem;
 		background-size: 1.3rem auto;
 		background-position: left 1.7rem center;
+	}
+	.comLinkBox02 .btnList li .stateBtn {
+		width: 2.6rem;
+	}
+	.comLinkBox02 .rightBox {
+		justify-content: center;
 	}
 }
 /*------------------------------------------------------------
@@ -10077,3 +10227,4 @@
 		margin-left: 0;
 	}
 }
+
