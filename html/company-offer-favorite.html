@@ -319,221 +319,112 @@
 
 <ul class="comTabList flex">
     
-            <li id="all_students"><a href="http://dev.metsukete.jp/student/company/index" onclick="student_all_frameClick();">全て表示</a></li>
+            <li id="all_students"><a href="#" onclick="student_all_frameClick();">全て表示</a></li>
     
     
-            <li id="approval_students" class="on"><a href="http://dev.metsukete.jp/student/approval/company/index" onclick="student_approval_frameClick();">承認済み</a></li>
+            <li id="approval_students" class="on"><a href="#" onclick="student_approval_frameClick();">承認済み</a></li>
     
     
-            <li id="favorite_students"><a href="http://dev.metsukete.jp/student/offer/company/index" onclick="student_favorite_frameClick();">未承認</a></li>
+            <li id="favorite_students"><a href="#" onclick="student_favorite_frameClick();">未承認</a></li>
     
     
-            <li id="offer_students"><a href="http://dev.metsukete.jp/student/hold/company/index" onclick="student_offer_frameClick();">保留中</a></li>
+            <li id="offer_students"><a href="#" onclick="student_offer_frameClick();">保留中</a></li>
     
     
-            <li id="meet_students"><a href="http://dev.metsukete.jp/student/favorite/company/index" onclick="student_meet_frameClick();">お気に入り</a></li>
+            <li id="meet_students"><a href="#" onclick="student_meet_frameClick();">お気に入り</a></li>
     
 </ul>
-<div class="comListBox02">
-    <div class="listHead">
-        <p class="item01">日時</p>
-        <p class="item02">企業名</p>
-        <p class="item03">企業からのメッセージ</p>
-        <p class="item04">ステータス</p>
+<div class="comListBox02 favorite">
+
+<div class="favorite-wrapper">
+<a class="favorite-content" href="#">
+    <div class="favorite-box">
+<div class="favorite-img">
+    <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+</div>
+<div class="favorite-body">
+    <div class="textBox">
+        <p>株式会社サンプル</p>
+        <p class="sml">広告・マスコミ業界</p></div>
+</div>
+</div>
+<p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+</a>
+
+<a class="favorite-content" href="#">
+    <div class="favorite-box">
+    <div class="favorite-img">
+        <img src="../image/top-page/カラー横ロゴ.png" alt="お気に入り企業のイメージ画像">
     </div>
-    <div class="listBody">
-        <ul>
-                            <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <span class="tag new">NEW</span>
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/カラー横ロゴ.png" alt=""></a>
-                            <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg noread">
-                                                <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" ><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span>
-                                                <span class="time resp">2023-10-27 10:43:37</span></a>
-                                            </p>
-                    
-                                            <div class="status status01"><span>未承認</span></div>
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <span class="tag new">NEW</span>
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="http://dev.metsukete.jp/storage/img/company/logo/photo03.jpg" alt=""></a></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg">
-                                                <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</a></p>
-                    
-                                            <div class="status status02"><span>承認中</span></div>
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <span class="tag new">NEW</span>
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/common/logo.svg" alt=""></a></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                            <p class="ttl phone"><a class="phone-text" href="http://dev.metsukete.jp/student/company/messages/3" ><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span></a></p>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg noread">
-                                                <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</a></p>
-                    
-                                            <div class="status status01"><span>承認中</span></div>
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="http://dev.metsukete.jp/storage/img/company/logo/photo03.jpg" alt=""></a>
-                        <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg noread favorite">
-                                                    <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt favorite">株式会社サンプルがお気に入りに登録しました</a></p>
-                    
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <span class="tag new">NEW</span>
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="http://dev.metsukete.jp/storage/img/company/logo/photo03.jpg" alt=""></a></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg">
-                                                <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</a></p>
-                    
-                                            <div class="status status03"><span>保留中</span></div>
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <span class="tag new">NEW</span>
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/カラー横ロゴ.png" alt=""></a></div>
-                        <div class="textBox">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl">
-                                                <span class="offer-listImg">
-                                                <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</a></p>
-                    
-                                            <div class="status status03"><span>保留中</span></div>
-
-                                        <div class="clickBtn"><a href="#"></a></div>
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                    </ul>
+    <div class="favorite-body">
+        <div class="textBox">
+            <p>株式会社サンプル</p>
+            <p class="sml">広告・マスコミ業界</p></div>
     </div>
+    </div>
+    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+    </a>
+
+    <a class="favorite-content" href="#">
+        <div class="favorite-box">
+        <div class="favorite-img">
+            <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+        </div>
+        <div class="favorite-body">
+            <div class="textBox">
+                <p>株式会社サンプル</p>
+                <p class="sml">広告・マスコミ業界</p></div>
+        </div>
+    </div>
+        <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+        </a>
+
+        <a class="favorite-content" href="#">
+            <div class="favorite-img">
+                <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+            </div>
+            <div class="favorite-body">
+                <div class="textBox">
+                    <p>株式会社サンプル</p>
+                    <p class="sml">広告・マスコミ業界</p></div>
+            </div>
+            <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+            </a>
+            <a class="favorite-content" href="#">
+                <div class="favorite-img">
+                    <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+                </div>
+                <div class="favorite-body">
+                    <div class="textBox">
+                        <p>株式会社サンプル</p>
+                        <p class="sml">広告・マスコミ業界</p></div>
+                </div>
+                <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+                </a>
+                <a class="favorite-content" href="#">
+                    <div class="favorite-img">
+                        <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+                    </div>
+                    <div class="favorite-body">
+                        <div class="textBox">
+                            <p>株式会社サンプル</p>
+                            <p class="sml">広告・マスコミ業界</p></div>
+                    </div>
+                    <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+                    </a>
+                    <a class="favorite-content" href="#">
+                        <div class="favorite-img">
+                            <img src="../image/common/Bg-image-pc.svg" alt="お気に入り企業のイメージ画像">
+                        </div>
+                        <div class="favorite-body">
+                            <div class="textBox">
+                                <p>株式会社サンプル</p>
+                                <p class="sml">広告・マスコミ業界</p></div>
+                        </div>
+                        <p class="time">2023-10-27 10:43:37<br class="ipad"></p>
+                        </a>
+
+</div>
 </div>
 <div class="comPageNavi">
     <ul class="pagination">

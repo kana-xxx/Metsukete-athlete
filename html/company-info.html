@@ -18,12 +18,10 @@
 </title>
 
     <!-- ファビコン -->
-    <link rel="icon" sizes="192x192" href="http://dev.metsukete.jp/img/common/android-chrome-192x192.png">
-    <link rel="icon" sizes="512x512" href="http://dev.metsukete.jp/img/common/android-chrome-512x512.png">
-    <link rel="icon" sizes="16x16" href="http://dev.metsukete.jp/img/common/favicon-16x16.png">
-    <link rel="icon" sizes="32x32" href="http://dev.metsukete.jp/img/common/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="http://dev.metsukete.jp/img/common/apple-touch-icon.png">
-    <link rel="shortcut icon" href="http://dev.metsukete.jp/img/common/favicon.ico">
+    <link rel="icon" href="/icon-svg.svg" >
+    <link rel="apple-touch-icon" href="/apple-icon-180.png" sizes="180x180"> 
+    <link rel="apple-touch-icon" href="/apple-icon-152px.png" sizes="152x152">
+    <link rel="shortcut icon" href="/favicon.ico" sizes="any" type="image/svg+xml">
 
     <!-- cs -->
     <link rel="stylesheet" type="text/css" href="http://dev.metsukete.jp/js/simplebar.css">
@@ -335,16 +333,39 @@
                         <ul class="btnList multi">
                             <li><a class="message line message-resp" href="http://dev.metsukete.jp/student/company/messages/3">
                                 <span>オファー確認</span><img src="../image/common/rightArrow-messageBtn.svg" alt="右矢印"><img src="../image/common/rightArrow-messageBtn.svg" alt="右矢印ホバー用" class="hover"></a></li>
-                            <li><a class="stateBtn approve fill " href="http://dev.metsukete.jp/student/company/messages/3">承認</a></li>
-                            <li><a class="stateBtn hold line" href="http://dev.metsukete.jp/student/company/messages/3">保留</a></li>
-                            <li><a class="stateBtn refuse fill" href="http://dev.metsukete.jp/student/company/messages/3">辞退</a></li>
+                            <li><a class="stateBtn approve fill " href="#">承認</a></li>
+                            <li><a class="stateBtn hold line" href="#">保留</a></li>
+                            <li><a class="stateBtn refuse refuse-btn fill" href="#">辞退</a></li>
                         </ul>
                         </div>
+                        <div class="refuse-modal">
+                            <div class="refuse-conitaner">
+                                <div class="refuse-content">
+                                    <p>オファーを辞退すると企業情報を閲覧できなくなります。<br>
+                                        本当に辞退しますか？</p>
+                            <ul class="btnList multi refuseBtn-box">
+                                <li><a class="stateBtn confilm-btn refuse" href="">辞退する</a></li>
+                                <li><a class="stateBtn confilm-btn cancel" href="">キャンセル</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="modal js-modal">
+                            <div class="modal-container">
+                              <!-- モーダルを閉じるボタン -->
+                              <div class="modal-close js-modal-close">×</div>
+                              <!-- モーダル内部のコンテンツ -->
+                              <div class="modal-content">
+                                <p>開きました。</p>
+                              </div>
+                            </div>
+                          </div>
                 </div>
             </div>
         
 <!-- 共通部分 -->
-<div class=""></div>
+<div class="comLink-container">
 <div class="comLinkBox01">
     <div class="company-logo">
         <img src="../image/top-page/カラー横ロゴ.png" alt="企業ロゴ">
@@ -365,21 +386,22 @@
     </ul>
     </div>
 </div>
-<div class="comTabList outer">
-<ul class="comTabList pc flex mb01 col4 ">
-    <li class="on tab__name is-active"><a href="#">企業情報</a></li>
-    <li class="tab__name"><a href="#">企業PR</a></li>
-    <li class="tab__name"><a href="#">求める人物像</a></li>
-    <li class="tab__name"><a href="#">募集要項</a></li>
+<div class="comTabList-outer">
+<ul class="comTabList flex mb01 col4 ">
+    <li class="on tab__name is-active"><a tabindex="-1">企業情報</a></li>
+    <li class="tab__name"><a tabindex="-1">企業PR</a></li>
+    <li class="tab__name"><a tabindex="-1">求める人物像</a></li>
+    <li class="tab__name"><a tabindex="-1">募集要項</a></li>
 </ul>
 </div>
+</div>
 <div class="comTabBox">
-    <ul class="comTabList mobile flex mb01 col4">
+    <!-- <ul class="comTabList mobile flex mb01 col4">
         <li class="on"><a href="#">企業情報</a></li>
         <li><a href="#">企業PR</a></li>
         <li><a href="#">求める人物像</a></li>
         <li><a href="#">募集要項</a></li>
-    </ul>
+    </ul> -->
     <div class="tabInner tab__content is-show">
         <section class="comInfoBox">
             <h3 class="headLine03">事業概要</h3>
@@ -391,8 +413,10 @@
 その結果、2022年度の売り上げは27億を超え、現在では専門商社として、日本の製造業を支えています。サービスとしては、リサイクル率の向上の支援や、業務効率化のためのシステム導入、社員教育の企画・実施などがあります。<br />
 <br />
 お客様の課題を解決することを目的としているため、課題に応じてサービスを新しく創り上げたり、カスタマイズしたりすることもあります。</p>
-                    <ul class="comLinkList01">
-                                            </ul>
+<ul class="comLinkList01">
+    <li><a href="#" target="_blank" rel="noopener noreferrer">添付ファイル１.docx</a></li>
+    <li><a href="" target="_blank" rel="noopener noreferrer">tenpu.png</a></li>
+</ul>
                 </div>
 
             </div>
@@ -495,6 +519,7 @@
     <script src="../js/common/hUserBox.js"></script>
 	<script src="../js/common/hamburgerMenu.js"></script>
     <script src="../js/common/category-tab.js"></script>
+    <script src="../js/company-offer/offer-refuse.js"></script>
 
     <script>
         window.setTimeout(() => {
