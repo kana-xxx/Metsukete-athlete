@@ -349,7 +349,7 @@ a[href^="tel:"] {
 	display: block;
   }
   #gHeader .modal-content.notice .notice-box {
-	max-height: auto;
+	max-height: 450px;
 	overflow: scroll;
   }
   /* モーダルのコンテンツ部分のテキストの指定 */
