@@ -371,7 +371,7 @@
                         <p class="ttl">お気に入りに登録されています</p>
                     </div>
                     <div class="rightBox">
-                        <ul class="btnList multi">
+                        <ul class="btnList multi favorite">
                             <li><a class="stateBtn fill meet" href="#">
                                 <img src="../image/common/icon-favorite.svg" alt="">
                                 <span>会いたい！</span></a></li>
@@ -436,7 +436,7 @@
         <p>Metsukete株式会社</p>
         <p class="sml">専門コンサルタント</p>
     </div>
-    <ul class="btnList multi">
+    <ul class="btnList multi hpLink">
         <li><a class="refuse  bgGradation" href="http://dev.metsukete.jp/student/company/messages/3">
             <img src="../image/common/icon-btnLink.svg" alt="リンクアイコンイメージ">
             <span>企業HP</span></a></li>
@@ -573,37 +573,12 @@
     <script src="http://dev.metsukete.jp/js/jquery-3.6.0.min.js"></script>
     <script src="http://dev.metsukete.jp/js/ofi.min.js"></script>
     <script src="http://dev.metsukete.jp/js/simplebar.min.js"></script>
-    <script src="http://dev.metsukete.jp/js/fancybox/jquery.fancybox.min.js"></script>
-    <!-- <script src="http://dev.metsukete.jp/js/common.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
     <script src="../js/common/hUserBox.js"></script>
 	<script src="../js/common/hamburgerMenu.js"></script>
     <script src="../js/common/category-tab.js"></script>
     <script src="../js/company-offer/offer-refuse.js"></script>
 
-    <script>
-        window.setTimeout(() => {
-            $(".error").slideUp();
-            $(".alert").slideUp();
-        }, 5000);
-    </script>
-
-    <!-- オファー辞退 -->
-    <script>
-        $("#decline_button").click(function() {
-            if (confirm("本当に辞退しますか？")) {
-                /*　OKの時の処理 */
-                $(".output").text("OKを押しました。");
-            } else {
-                /* キャンセルの時の処理 */
-                $(".output").text("キャンセルを押しました。");
-
-                //  処理と止める　※これをしないとボタンの処理が行われる。
-                return false;
-            }
-        });
-    </script>
 
     <!-- メッセージテンプレート ※メッセージ送信時-->
     <script>

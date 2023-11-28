@@ -10,19 +10,17 @@ function modalOpen() {
     modal.classList.add('is-active');
   }
   refuseBtn.addEventListener('click', modalOpen);
-  
-  //「閉じるボタン」をクリックしてモーダルを閉じる
-  // function modalClose() {
-  //   modal.classList.remove('is-active');
-  // }
-  // close.addEventListener('click', modalClose);
-  
-  //「モーダルの外側」をクリックしてモーダルを閉じる
+  refuseBtn.addEventListener('touchstart', modalOpen);
+
   function modalOut(e) {
     if (e.target == modal) {
       modal.classList.remove('is-active');
+      e.stopPropagation(); // イベントの伝播停止
+      e.preventDefault();  // デフォルトのアクション停止
     }
   }
   addEventListener('click', modalOut);
+  addEventListener('touchstart', modalOut);
   
 }, false);
+

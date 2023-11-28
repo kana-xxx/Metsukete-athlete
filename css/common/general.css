@@ -2117,7 +2117,7 @@
 	width: 20.3%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	font-size: 1.7rem;
 	box-sizing: border-box;
 	column-gap: 1.3rem;
@@ -2165,6 +2165,10 @@
 	padding-left: 1.3rem;
 	color: #202020;
 }
+.comListBox02 .listBody li .category .status-wrapper {
+	display: none;
+
+}
 .comListBox02 .favorite-body .textBox {
 	width: calc(100%);
 	box-sizing: border-box;
@@ -2173,12 +2177,12 @@
 .comListBox02 .listBody li .category .textBox .ttl.phone{
   display: none;
 }
-.comListBox02 .listBody li .category .textBox p {
+.comListBox02 .listBody li .category .textBox .txt {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	font-size: 1.8rem;
 }
+
 .comListBox02 .listBody li .category .textBox .sml,
 .comListBox02 .favorite-body .textBox .sml {
 	margin-top: 0.2rem;
@@ -2229,6 +2233,9 @@
 }
 .comListBox02 .listBody li .ttl .txt.favorite {
 	color: #005792;
+		overflow: visible;
+		white-space: nowrap;
+		text-overflow: inherit;
 }
 .comListBox02 .listBody li .status {
 	box-sizing: border-box;
@@ -2237,7 +2244,14 @@
 	display: flex;
 	align-items: center;
 }
-.comListBox02 .listBody li .status span {
+.comListBox02 .listBody li .status.status.state-favo {
+	opacity: 0;
+}
+.comListBox02 .listBody li .statusPho {
+display: none;
+}
+.comListBox02 .listBody li .status span,
+.comListBox02 .listBody li .status-wrapper span {
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1.3rem 1rem;
@@ -2380,7 +2394,7 @@ align-items: center;
 	}
 	.comListBox02 .listHead .item02 {
 		padding-left: 4%;
-		width: 33%;
+		flex: 2;
 	}
 	.comListBox02 .listHead .item03 {
 		width: 43.5%;
@@ -2429,7 +2443,8 @@ align-items: center;
 	}
 	.comListBox02 .listBody li .category {
 		padding-left: 4%;
-		width: 33%;
+		/* width: 40%; */
+		flex: 2;
 		font-size: 0.8rem;
 
 
@@ -2449,7 +2464,7 @@ align-items: center;
 		font-size: 1rem;
 	}
 	.comListBox02 .listBody li .ttl {
-		padding-left: 4rem;
+		padding-left: 0;
 		width: 43.5%;
 		font-size: 1rem;
 	}
@@ -2460,7 +2475,8 @@ align-items: center;
 	.comListBox02 .listBody li .ttl .txt {
 		max-width: 18.9rem;
 	}
-	.comListBox02 .listBody li .status {
+	.comListBox02 .listBody li .status,
+	.comListBox02 .listBody li .status-wrapper .status {
 		box-sizing: border-box;
 		padding-right: 3%;
 		padding-left: 0.1rem;
@@ -2468,6 +2484,7 @@ align-items: center;
 		display: flex;
 		align-items: center;
 	}
+
 	.comListBox02 .listBody li .status span {
 		margin: 0 auto;
 		padding: 0.4rem 0.5rem 0.4rem;
@@ -2505,16 +2522,18 @@ align-items: center;
 	   .comListBox02 .listBody li .category .favoriteIcon {
 		width: 2rem;
 		position: absolute;
-		bottom: -10%;
-		right: -13%;
+		bottom: -3%;
+		right: -8%;
 		z-index: 2;
 		font-size: 1.2rem;
 	}
 	.comListBox02 .listBody li .category .textBox p {
+		font-size: 1.25rem;
+	}
+	.comListBox02 .listBody li .category .textBox .txt {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		font-size: 1.25rem;
 	}
 
 	/* お気に入りされた企業一覧  タブレット*/
@@ -2545,6 +2564,20 @@ align-items: center;
 		font-size: 1rem;
 		margin-top: 0.1rem;
 	}
+	.comListBox02 .listBody li .category .pho {
+		/* width: 10rem; */
+		position: relative;;
+		flex: 1;
+	}
+	.comListBox02 .listBody li .category .pho a {
+		width: 10rem;
+	}
+	.comListBox02 .listBody li .category .textBox {
+		flex: 3;
+	}
+	.comListBox02 .listBody li .status.state-favo {
+		opacity: 0;
+	} 
 }
 @media all and (max-width: 599px) {
 	.comListBox02 {
@@ -2560,6 +2593,7 @@ align-items: center;
 	.comListBox02 .listBody li {
 		padding: 1.5rem 1.5rem 1.5rem 1.7rem;
 		flex-wrap: wrap;
+		position: relative;
 	}
 	.comListBox02 .listBody li p {
 		display: block;
@@ -2573,6 +2607,19 @@ align-items: center;
 		font-size: 1rem;
 		font-weight: 500;
 	}
+	.comListBox02 .listBody li .time.phone {
+		display: block;
+		margin-bottom: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: auto;
+		font-size: 1rem;
+		font-weight: 500;
+		position: absolute;
+		top: 9%;
+		right: 5%;
+	}
 	.comListBox02 .listBody li .time::before {
 		width: 2rem;
 		height: 2rem;
@@ -2583,23 +2630,66 @@ align-items: center;
 		content: "";
 	}
 	.comListBox02 .listBody li .category {
-		padding: 0.3rem 6rem 0 0;
+		padding: 0.3rem 0rem 0 0;
 		width: 100%;
 		font-size: 1rem;
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
+		justify-content:start;
 	}
 	.comListBox02 .listBody li .category .pho {
 		width: 7rem;
 	}
+	.comListBox02 .listBody li .category .status-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 1rem;
+	
+	}
+	.comListBox02 .listBody li .category .stat-messagePhone {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: .5rem;
+		row-gap: 1rem;
+	
+	}
 	.comListBox02 .listBody li .category .textBox {
 		padding-left: 0;
 		display: flex;
-		flex-wrap: wrap;
-		max-width: 65%;
+		flex-direction: column;
+		width: 40%;
 	}
 	.comListBox02 .listBody li .category .textBox p {
+		margin-right: 0;
+	}
+	.comListBox02 .listBody li .category .textBox p  {
+		font-size: 1.2rem;
+	}
+	.comListBox02 .listBody li .category .textBox .sml  {
+		font-size: 1rem;
+	} 
+	.comListBox02 .listBody li .category .stat-messagePhone .offer-listImg {
+		position: relative;
+	}
+	.comListBox02 .listBody li .category .stat-messagePhone .offer-listImg img {
+		width: 2.2rem;
+	}
+	.comListBox02 .listBody li .category .stat-messagePhone .offer-listImg.noread::before {
+		content: '';
+		display: block;
+		width: .7rem;
+		height: .7rem;
+		background: #FE1211;
+		border-radius: 50%;
+		position: absolute;
+		top: 3%;
+		right: -3%;
+		z-index: 2;
+	}
+ p {
 		margin-right: .8rem;
 		font-size: 1.2rem;
 	}
@@ -2609,7 +2699,7 @@ align-items: center;
 	}
 	.comListBox02 .listBody li .ttl {
 		display: none;
-		padding: 0.2rem 1.5rem 0 0;
+		padding: 0;
 		width: 100%;
 		font-size: 1.2rem;
 		line-height: 1.5;
@@ -2626,12 +2716,26 @@ align-items: center;
 		text-overflow: ellipsis;
 	}
 	.comListBox02 .listBody li .status {
+		display: block;
+		flex: none;
+		}
+	.comListBox02 .listBody li .statusPho {
+		display: block;
+		}
+	.comListBox02 .listBody li .status {
 		padding-right: 0;
-		position: absolute;
+		/* position: absolute; */
 		right: 3.8rem;
-		top: 3.4rem;
+		top: 3.4rem
 	}
 	.comListBox02 .listBody li .status span {
+		display: none;
+		padding: 0.3rem 0.6rem 0.4rem;
+		width: 4.7rem;
+		font-size: 1rem;
+		border-radius: 0.5rem;
+	}
+	.comListBox02 .listBody li .status-wrapper span {
 		padding: 0.3rem 0.6rem 0.4rem;
 		width: 4.7rem;
 		font-size: 1rem;
@@ -2659,6 +2763,14 @@ align-items: center;
 	}
 	.favoriteIcon {
 		width: 2rem;
+	}
+	#container .comListBox02 .favorite-box {
+		position: relative;
+	}
+	.favoriteIcon.top {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
 	}
 	.comListBox02 .listBody li .category .favoriteIcon {
 		width: 2rem;
@@ -2706,6 +2818,7 @@ align-items: center;
 	.comListBox02.favorite {
 		padding: 3.1rem 5.5% 3.8rem;
 	}
+
 }
 /*------------------------------------------------------------
 	comListUl01
@@ -3181,6 +3294,9 @@ align-items: center;
 		background-size: 0.85rem auto;
 		background-position: left 1.4rem center;
 	}
+	.comLinkBox01 .btnList.hpLink li a {
+		column-gap: .5rem;
+	}
 	.comLinkBox01 .btnList li .bgGradation {
 		padding: 0.7rem 1.4rem 0.8rem;
 		font-size: 1.1rem;
@@ -3195,6 +3311,8 @@ align-items: center;
 	.comLinkBox01 .btnList.multi {
 		column-gap: 1rem;
 }
+
+
 .comLinkBox01 .company-detail {
 	flex: 5;
 }
@@ -4943,6 +5061,12 @@ display: none;
 	.comLinkBox02 .btnList li .stateBtn {
 		width: 5rem;
 	}
+
+	.comLinkBox02 .btnList.refuseBtn-box li .stateBtn {
+		width: 8rem;
+	}
+	
+
 			/* 会いたいボタン */
 		.comLinkBox02 .btnList li .stateBtn.meet {
 			column-gap: 1rem;
@@ -4999,6 +5123,13 @@ display: none;
 		max-width: inherit;
 		justify-content: space-between;
 	}
+	/* お気に入りされている時のボタン　スマホ表示　二つ見せるためにcolumに変更 */
+	.comLinkBox02 .btnList.favorite {
+		width: auto;
+		max-width: inherit;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 	.comLinkBox02 .btnList.multi {
 		column-gap: .5rem;
 	}
@@ -5018,7 +5149,7 @@ display: none;
 	}
 	.comLinkBox02 .btnList.multi li .message-resp {
 		display: flex;
-		column-gap: .5rem;
+		column-gap: .45rem;
 		border-radius: .7rem;
 	}
 	.comLinkBox02 .btnList .btn02 a {
