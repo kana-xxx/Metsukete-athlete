@@ -1,76 +1,63 @@
-
 window.addEventListener('DOMContentLoaded', () => {
-
-    // 「送信」ボタンの要素を取得
     const submit = document.querySelector('.submit');
-    
-    // 「送信」ボタンの要素にクリックイベントを設定する
+
     submit.addEventListener('click', (e) => {
-        // デフォルトアクションをキャンセル
         e.preventDefault();
 
-        // 「メールアドレス」入力欄とエラーメッセージを取得
         const email = document.querySelector('input[type="email"]');
         const errMsgEmail = document.querySelector('.err-msg-email');
         const regexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-        // 「電話番号」入力欄とエラーメッセージを取得
         const tel = document.querySelector('input[type="tel"]');
         const errMsgTel = document.querySelector('.err-msg-tel');
 
-        // 「誕生日」入力欄とエラーメッセージを取得
-        // const birthdayContainer = document.querySelector('.birthDay');
         const errMsgBirthday = document.querySelector('.err-msg-birthday');
 
-        // パスワードの入力欄とエラーメッセージを取得
         const passFields = document.querySelectorAll('input[type="password"]');
-        const password = document.getElementById('password');
-        const passConfilm = document.getElementById('confirm_password');
         const errMsgPasses = document.querySelectorAll('.err-msg-pass');
-                    // 半角英数字（4文字以上）
-                    var regexPass = /^[a-zA-Z0-9]{4,}$/;
+        const regexPass = /^[a-zA-Z0-9]{8,}$/;
 
-
-
-        // その他の入力フィールドのエラーメッセージの初期化
-       
-        // エラーがあるかどうかのフラグ
         let hasError = false;
 
-        // 各フィールドに対するエラーチェックを行う
-        if (passFields === "undefined") {
-            console.log("undefinedです");
-        }
-        
-     
         // パスワードのエラーチェック
         passFields.forEach((pass, index) => {
             const errMsgPass = errMsgPasses[index];
-            const password =  passFields[index];
 
-            // パスワードのエラーメッセージの初期化
             errMsgPass.textContent = '';
 
             if (!pass.value) {
                 errMsgPass.textContent = '※パスワードが入力されていません';
-                password.style.backgroundColor = "#FFCFCF";
+                pass.style.backgroundColor = "#FFCFCF";
                 hasError = true;
+            } else if (!regexPass.test(pass.value)) {
+                errMsgPass.textContent = '※半角英数字8文字以上で入力してください';
+                pass.style.backgroundColor = "#FFCFCF";
+                hasError = true;
+            } else {
+                errMsgPass.textContent = '';
+                pass.style.backgroundColor = "#F5F6F7";
             }
-
-        else if (regexPass.test(pass) != true) {
-            errMsgPass.textContent = '※半角英数字8文字以上で入力してください';
-            password.style.backgroundColor = "#FFCFCF";
-        }     else if (regexPass.test(pass) = true) {
-            errMsgPass.textContent = '';
-            password.style.backgroundColor = "#F5F6F7";
-        }
-
         });
 
+        // ページごとに条件分岐
+        if (document.body.classList.contains('password-page')) {
+            const confirmPassword = document.getElementById('confirm_password');
+            const errMsgConfirmPass = document.querySelector('.err-msg-confirm-pass');
 
-
-        if (email === "undefined") {
-            console.log("undefinedです");
+            // パスワードの整合性チェック
+            if (!confirmPassword.value) {
+                errMsgConfirmPass.textContent = '※パスワードが入力されていません';
+                confirmPassword.style.backgroundColor = "#FFCFCF";
+                hasError = true;
+            } else if (passFields[0].value !== confirmPassword.value) {
+                errMsgConfirmPass.textContent = '※パスワードが一致しません';
+                confirmPassword.style.backgroundColor = "#FFCFCF";
+                passFields[0].style.backgroundColor = "#FFCFCF";
+                hasError = true;
+            } else {
+                errMsgConfirmPass.textContent = '';
+                confirmPassword.style.backgroundColor = "#F5F6F7";
+            }
         }
 
         errMsgEmail.textContent = '';
@@ -79,24 +66,15 @@ window.addEventListener('DOMContentLoaded', () => {
             errMsgEmail.textContent = '※メールアドレスが入力されていません';
             email.style.backgroundColor = "#FFCFCF";
             hasError = true;
-        }
-       
-        else if(regexp.test(email) != true){
+        } else if (!regexp.test(email.value)) {
             errMsgEmail.textContent = '※メールアドレスの形式が正しくありません';
             email.style.backgroundColor = "#FFCFCF";
+            hasError = true;
+        }
 
-         }
-
-
-
-        // 生年月日の選択フォームのエラーチェック
         const year = document.querySelector('#year');
         const month = document.querySelector('#month');
         const day = document.querySelector('#day');
-
-        if (year === "undefined" || month === "undefined" || day === "undefined" ) {
-            console.log("undefinedです");
-        }
 
         errMsgBirthday.textContent = '';
 
@@ -107,51 +85,45 @@ window.addEventListener('DOMContentLoaded', () => {
             day.style.backgroundColor = "#FFCFCF";
             hasError = true;
         }
-        year.addEventListener('change', function () {
-            resetBackgroundColors();
-        });
-        
-        month.addEventListener('change', function () {
-            resetBackgroundColors();
-        });
-        
-        day.addEventListener('change', function () {
-            resetBackgroundColors();
-        });
-        
-        // クリックされたら背景色をリセットする関数
-        function resetBackgroundColors() {
-            year.style.backgroundColor = "#F5F6F7";
-            month.style.backgroundColor = "#F5F6F7";
-            day.style.backgroundColor = "#F5F6F7";
-        }
 
-                           
-        if (tel === "undefined") {
-            console.log("undefinedです");
-        }
-
-        errMsgTel.textContent = ''
-        if (tel.value) {
-            errMsgTel.textContent.style.display = "none";
-        }
+        errMsgTel.textContent = '';
 
         if (!tel.value) {
-
             errMsgTel.textContent = '※電話番号が入力されていません';
             tel.style.backgroundColor = "#FFCFCF";
             hasError = true;
         }
 
-
         if (hasError) {
             return;
         }
 
+        resetBackgroundColors();
+
         // ここから後続の処理を実行
         // フォーム送信などの処理をここに追加
     }, false);
+
+    // クリックされたら背景色をリセットする関数
+    function resetBackgroundColors() {
+        const year = document.querySelector('#year');
+        const month = document.querySelector('#month');
+        const day = document.querySelector('#day');
+        const email = document.querySelector('input[type="email"]');
+        const passFields = document.querySelectorAll('input[type="password"]');
+        const tel = document.querySelector('input[type="tel"]');
+        const confirmPassword = document.getElementById('confirm_password');
+
+        year.style.backgroundColor = "#F5F6F7";
+        month.style.backgroundColor = "#F5F6F7";
+        day.style.backgroundColor = "#F5F6F7";
+        email.style.backgroundColor = "#F5F6F7";
+
+        passFields.forEach(pass => {
+            pass.style.backgroundColor = "#F5F6F7";
+        });
+
+        tel.style.backgroundColor = "#F5F6F7";
+        confirmPassword.style.backgroundColor = "#F5F6F7";
+    }
 }, false);
-
-
-

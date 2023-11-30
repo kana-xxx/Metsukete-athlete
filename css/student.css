@@ -1220,7 +1220,7 @@ justify-content: flex-end;
 }
 @media all and (max-width: 599px) {
 	#main {
-		padding-top: 9.5rem;
+		padding-top: 12.5rem;
 		background: transparent;
 	}
 	#main .message .comTtlBox02,
