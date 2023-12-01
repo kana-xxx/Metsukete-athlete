@@ -684,7 +684,7 @@ justify-content: flex-end;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	#main {
-		padding-top: 10.5rem;
+		padding-top: 13.5rem;
 		background-image: url("../img/common/bg05.png");
 		background-size: 152.4rem auto;
 		background-position: left 66.8% top -21rem;
@@ -694,7 +694,6 @@ justify-content: flex-end;
 	}
 	#main .pageTitle {
 		margin-bottom: 2.6rem;
-		display: none;
 	}
 	#main .top-content-box {
 		margin-bottom: 1.8rem;
@@ -786,7 +785,10 @@ justify-content: flex-end;
 		margin-left: auto;
 	}
 	#main .pageTitle {
-		margin-bottom: 5rem;
+		margin:0 auto 5rem;
+		padding: 0;
+    max-width: 86.33%;
+		
 	}
 	#main .textList {
 		margin: -1.2rem 0 1.2rem;
@@ -1218,7 +1220,7 @@ justify-content: flex-end;
 }
 @media all and (max-width: 599px) {
 	#main {
-		padding-top: 9.5rem;
+		padding-top: 12.5rem;
 		background: transparent;
 	}
 	#main .message .comTtlBox02,
@@ -1288,7 +1290,6 @@ justify-content: flex-end;
 }
 	#main .pageTitle {
 		margin-bottom: 2.6rem;
-		display: none;
 	}
 	#main .textList {
 		margin: -1.2rem 0 1.2rem;
@@ -1715,3 +1716,4 @@ justify-content: flex-end;
 		margin-left: auto;
 	}
 }
+
