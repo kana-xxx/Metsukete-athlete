@@ -2253,9 +2253,7 @@
 .comListBox02 .listBody li .status.status.state-favo {
 	opacity: 0;
 }
-.comListBox02 .listBody li .status.status.state-favo .favo-page{
-display: none;
-} 
+
 .comListBox02 .listBody li .statusPho {
 display: none;
 }
