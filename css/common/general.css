@@ -473,7 +473,7 @@
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.headLine03 {
 		margin-bottom: 1.5rem;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 }
 @media all and (max-width: 599px) {
@@ -2202,6 +2202,9 @@
 	align-items: center;
 	justify-content: center;
 }
+.comListBox02 .listBody li .favorite-txt {
+	color: #005792;
+}
 .comListBox02 .listBody li .ttl img {
 	width: 3.2rem;
 }
@@ -2231,11 +2234,14 @@
 	text-overflow: ellipsis;
 	transition: all 0.3s;
 }
-.comListBox02 .listBody li .ttl .txt.favorite {
+.comListBox02 .listBody li .ttl .txt-favorite {
+	max-width: 34rem;
+	line-height: 1.7;
 	color: #005792;
 		overflow: visible;
-		white-space: nowrap;
-		text-overflow: inherit;
+		white-space: wrap;
+		text-overflow: clip;  
+		overflow-wrap: break-word;
 }
 .comListBox02 .listBody li .status {
 	box-sizing: border-box;
@@ -2247,6 +2253,9 @@
 .comListBox02 .listBody li .status.status.state-favo {
 	opacity: 0;
 }
+.comListBox02 .listBody li .status.status.state-favo .favo-page{
+display: none;
+} 
 .comListBox02 .listBody li .statusPho {
 display: none;
 }
@@ -2397,7 +2406,7 @@ align-items: center;
 		flex: 2;
 	}
 	.comListBox02 .listHead .item03 {
-		width: 43.5%;
+		width: 36.5%;
 	}
 	.comListBox02 .listHead .item04 {
 		padding-right: 3%;
@@ -2446,6 +2455,7 @@ align-items: center;
 		/* width: 40%; */
 		flex: 2;
 		font-size: 0.8rem;
+		column-gap: 2.5rem;
 
 
 	}
@@ -2465,15 +2475,30 @@ align-items: center;
 	}
 	.comListBox02 .listBody li .ttl {
 		padding-left: 0;
-		width: 43.5%;
+		width: 36.5%;
 		font-size: 1rem;
+	}
+
+	.comListBox02 .listBody li .ttl.favorite {
+		width: 45.5%;
 	}
 	.comListBox02 .listBody li .ttl::before {
 		width: 2.4rem;
 		height: 2.4rem;
 	}
-	.comListBox02 .listBody li .ttl .txt {
+	.comListBox02 .listBody li .ttl .txt,
+	.comListBox02 .listBody li .ttl .txt-favorite
+	 {
 		max-width: 18.9rem;
+		font-size: 1.25rem;
+		line-height: 1.6;
+	}
+	.comListBox02 .listBody li .ttl .txt-favorite.favorite-page {
+		max-width: 40rem;
+	}
+	.comListBox02 .listBody li .ttl .txt.favorite {
+		overflow-wrap: break-word;
+		white-space: wrap;
 	}
 	.comListBox02 .listBody li .status,
 	.comListBox02 .listBody li .status-wrapper .status {
@@ -2516,7 +2541,7 @@ align-items: center;
 		   right: 0%;
 		   z-index: 2;
 	   }
-	   .favoriteIcon {
+	   .favoriteIcon { 
 		width: 2rem;
 	   }
 	   .comListBox02 .listBody li .category .favoriteIcon {
@@ -2565,12 +2590,12 @@ align-items: center;
 		margin-top: 0.1rem;
 	}
 	.comListBox02 .listBody li .category .pho {
-		/* width: 10rem; */
+		width: 8rem;
 		position: relative;;
 		flex: 1;
 	}
 	.comListBox02 .listBody li .category .pho a {
-		width: 10rem;
+		width: 8rem;
 	}
 	.comListBox02 .listBody li .category .textBox {
 		flex: 3;
@@ -3388,7 +3413,7 @@ align-items: center;
 	.comInfoBox .imgBox .textBox p {
 		margin-bottom: 2.2rem;
 		font-size: 1rem;
-		line-height: 2.4;
+		line-height: 1.7;
 	}
 }
 @media all and (max-width: 599px) {
@@ -3441,7 +3466,7 @@ align-items: center;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.comLinkList01 li {
-		margin-bottom: 1.1rem;
+		margin-bottom: .6rem;
 	}
 	.comLinkList01 li:last-child {
 		margin-bottom: 0;
