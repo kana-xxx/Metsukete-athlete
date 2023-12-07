@@ -166,7 +166,7 @@ a[href^="tel:"] {
 		font-size: 1rem;
 	}
 	#main {
-		padding-top: 12.5rem;
+		padding-top: 13.5rem;
 		min-height: calc(100vh - 12.8rem);
 	}
 }
@@ -1822,7 +1822,9 @@ display: inline;
 		display: block;
 	}
 	#gFooter {
-		padding: 8.7rem 3.8rem 2.6rem;
+		padding: 1rem 3.8rem 2.6rem;
+		height: 80px;
+		align-items: flex-start;
 	}
 	#gFooter .fLinkList {
 		margin-bottom: 0;
@@ -1940,7 +1942,9 @@ display: inline;
 		display: block;
 	}
 	#gFooter {
-		padding: 8.7rem 3.8rem 2.6rem;
+		padding: 1rem 3.8rem 2.6rem;
+		align-items: flex-start;
+		height: 80px;
 	}
 	#gFooter .fLinkList {
 		margin-bottom: 0;
