@@ -22,9 +22,7 @@ settings
 #main {
 	background: url("../img/common/bg04.png") no-repeat left 79.8% top -28.9rem / 260rem auto;
 }
-#main .pageTitle {
-	margin-bottom: 11.4rem;
-}
+
 #main .User-detal {
 	display: none;
 }
@@ -692,9 +690,6 @@ justify-content: flex-end;
 	#main .results.taco {
 		padding: 2.2rem 2.5rem 3.2rem;
 	}
-	#main .pageTitle {
-		margin-bottom: 2.6rem;
-	}
 	#main .top-content-box {
 		margin-bottom: 1.8rem;
 		margin-right: 0;
@@ -785,8 +780,6 @@ justify-content: flex-end;
 		margin-left: auto;
 	}
 	#main .pageTitle {
-		margin:0 auto 5rem;
-		padding: 0;
     max-width: 86.33%;
 		
 	}
@@ -1288,9 +1281,7 @@ justify-content: flex-end;
 	width: 1.2rem;
 	margin-left: 0;
 }
-	#main .pageTitle {
-		margin-bottom: 2.6rem;
-	}
+
 	#main .textList {
 		margin: -1.2rem 0 1.2rem;
 		justify-content: space-between;

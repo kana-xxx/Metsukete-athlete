@@ -2,6 +2,11 @@
 /*------------------------------------------------------------
 	汎用スタイル
 ------------------------------------------------------------*/
+/* 確認のため一旦非表示 */
+.fixBox .boxStyle03 ,
+.fixBox .boxStyle02 {
+	display: none;
+}
 /* clearfix */
 .clearfix:after {
 	content: "";
@@ -312,7 +317,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 	}
 	.pageTitle h2 {
 		margin: 0;
@@ -320,6 +325,10 @@
 	}
 	.pageTitle .subTtl {
 		font-size: 1rem;
+		height: 2rem;
+	}
+	.pageTitle .subTtl p {
+		margin-right: 0;
 	}
 	.pageTitle .searchBox {
 		display: none;
@@ -1334,7 +1343,7 @@
 	comTabList
 ------------------------------------------------------------*/
 .comTabList {
-	margin: -2rem 0 6.1rem;
+	margin: 0rem 0 6.1rem;
 }
 .comTabList.categoryTab {
 	justify-content: space-between;
@@ -1424,7 +1433,7 @@
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.comTabList {
-		margin: -0.8rem 0 1rem;
+		margin: 0rem 0 1rem;
 	}
 	.comTabList.mb01 {
 		margin-bottom: 1.4rem;
@@ -1483,13 +1492,13 @@
 	}
 	.comTabList li a {
 		padding: 1.6rem 0.5rem 1.6rem;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		border-radius: 0.5rem;
 	}
 }
 @media all and (max-width: 599px) {
 	.comTabList {
-		margin: -1rem 0 1.3rem;
+		margin: 0rem 0 1.3rem;
 	}
 	.comTabList.categoryTab {
 		row-gap: 1rem;
@@ -2024,7 +2033,7 @@
 	comListBox02
 ------------------------------------------------------------*/
 .comListBox02 {
-	margin-bottom: 5.2rem;
+	margin-bottom: 3.2rem;
 	border-radius: 1.4rem;
 	background: #fff;
 	box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.04);
@@ -2062,6 +2071,9 @@
 }
 .comListBox02 .listHead .item03 {
 	width: 37.5%;
+}
+.comListBox02 .listHead .item03.message-page {
+	width: 50%;
 }
 .comListBox02 .listHead .item04 {
 	padding-right: 8.4%;
@@ -2202,6 +2214,9 @@
 	align-items: center;
 	justify-content: center;
 }
+.comListBox02 .listBody li .ttl.message-page {
+	width: 50%;
+}
 .comListBox02 .listBody li .ttl.favorite {
 justify-content: flex-start;
 padding-left: 15.4rem;
@@ -2238,6 +2253,9 @@ padding-left: 15.4rem;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	transition: all 0.3s;
+}
+.comListBox02 .listBody li .ttl.message-page .txt {
+	max-width: 60rem;
 }
 .comListBox02 .listBody li .ttl .txt-favorite {
 	max-width: 34rem;
@@ -2277,8 +2295,32 @@ display: none;
 	color: #fff;
 	font-size: 1.4rem;
 	border-radius: .8rem;
-	border: 0.2rem solid #005792;
-	background: #005792;
+	border: 0.2rem solid #A3A3A3;
+	background: #A3A3A3;
+}
+
+.comListBox02 .listBody li .notice-badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.comListBox02 .listBody li .notice-badge.read {
+	opacity: 0;
+}
+.comListBox02 .listBody li .notice-badge span{
+	background-color: #FE1211;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	color: #FFF;
+	text-align: center;
+}
+
+.comListBox02 .listBody li .status01 span {
+	border-color: #005792;
+	background-color: #005792;
 }
 .comListBox02 .listBody li .status02 span {
 	border-color: #A3A3A3;
@@ -2393,7 +2435,7 @@ align-items: center;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.comListBox02 {
-		margin-bottom: 2.5rem;
+		margin-bottom: 1rem;
 		border-radius: 1rem;
 	}
 	.comListBox02 .listHead {
@@ -2413,6 +2455,9 @@ align-items: center;
 	}
 	.comListBox02 .listHead .item03 {
 		width: 36.5%;
+	}
+	.comListBox02 .listHead .item03.message-page {
+		width: 60%;
 	}
 	.comListBox02 .listHead .item04 {
 		padding-right: 3%;
@@ -2458,7 +2503,7 @@ align-items: center;
 	}
 	.comListBox02 .listBody li .category {
 		padding-left: 4%;
-		/* width: 40%; */
+		width: 40%;
 		flex: 2;
 		font-size: 0.8rem;
 		column-gap: 2.5rem;
@@ -2487,7 +2532,7 @@ align-items: center;
 	}
 
 	.comListBox02 .listBody li .ttl.favorite {
-		width: 45.5%;
+		width: 60.5%;
 		padding-left: 5rem;
 	}
 	.comListBox02 .listBody li .ttl::before {
@@ -2502,7 +2547,7 @@ align-items: center;
 		line-height: 1.6;
 	}
 	.comListBox02 .listBody li .ttl .txt-favorite.favorite-page {
-		max-width: 40rem;
+		max-width: rem;
 	}
 	.comListBox02 .listBody li .ttl .txt.favorite {
 		overflow-wrap: break-word;
@@ -2524,6 +2569,10 @@ align-items: center;
 		max-width: 6.2rem;
 		font-size: 0.9rem;
 		border-radius: 0.5rem;
+		border: 0.15rem solid transparent;
+	}
+	.comListBox02 .listBody li .status03 span {
+		border-color: #005792;
 	}
 	.comListBox02 .listBody li .clickBtn a {
 		width: 4.4rem;
@@ -2611,10 +2660,19 @@ align-items: center;
 	.comListBox02 .listBody li .status.state-favo {
 		opacity: 0;
 	} 
+	.comListBox02 .listBody li .ttl.message-page{
+		width: 60%;
+	}
+	.comListBox02 .listBody li .ttl.message-page .txt {
+		width: 33rem;
+	}
+	.comListBox02 .listBody li .notice-badge {
+		flex: 1;
+	}
 }
 @media all and (max-width: 599px) {
 	.comListBox02 {
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		border-radius: 1rem;
 	}
 	.comListBox02 .listHead {
@@ -2624,7 +2682,7 @@ align-items: center;
 		padding-bottom: 0;
 	}
 	.comListBox02 .listBody li {
-		padding: 1.5rem 1.5rem 1.5rem 1.7rem;
+		padding: 1.5rem 1.5rem 1.5rem 2.5rem;
 		flex-wrap: wrap;
 		position: relative;
 	}
@@ -2671,7 +2729,7 @@ align-items: center;
 		justify-content:space-between;
 	}
 	.comListBox02 .listBody li .category .pho {
-		width: 7rem;
+		width: 6.3rem;
 	}
 	.comListBox02 .listBody li .category .status-wrapper {
 		display: flex;
@@ -2699,7 +2757,7 @@ align-items: center;
 	}
 
 	.comListBox02 .listBody li .category .textBox {
-		padding-left: 1rem;
+		padding-left: 0;
 		display: flex;
 		flex-direction: column;
 		width: 50%;
@@ -2717,21 +2775,9 @@ align-items: center;
 		position: relative;
 	}
 	.comListBox02 .listBody li .category .stat-messagePhone .offer-listImg img {
-				/* ごちゃごちゃしているので表示を一旦削除 */
 		display: none;
 	}
 	.comListBox02 .listBody li .category .stat-messagePhone .offer-listImg.noread::before {
-		content: '';
-		display: block;
-		width: .7rem;
-		height: .7rem;
-		background: #FE1211;
-		border-radius: 50%;
-		position: absolute;
-		top: 3%;
-		right: -3%;
-		z-index: 2;
-		/* ごちゃごちゃしているので表示を一旦削除 */
 		display: none;
 	}
  p {
@@ -2739,8 +2785,8 @@ align-items: center;
 		font-size: 1.2rem;
 	}
 	.comListBox02 .listBody li .category .textBox .sml {
-		margin-top: 0.2rem;
-		font-size: 1.1rem;
+		margin-top: 0;
+		font-size: 1rem;
 	}
 	.comListBox02 .listBody li .ttl {
 		display: none;
@@ -2750,12 +2796,18 @@ align-items: center;
 		line-height: 1.5;
 		box-sizing: border-box;
 	}
+	/* メッセージページのスマホ表示変更部分*/
+
 	.comListBox02 .listBody li .ttl.favorite {
 		padding-left: 0;
 	}
 	.comListBox02 .listBody li .ttl::before {
 		display: none;
 	}
+	.comListBox02 .listBody li .category .textBox.message-page {
+		width: 61%;
+	}
+
 	.comListBox02 .listBody li .ttl .txt {
 		max-width: 100%;
 		/* max-width: inherit; */
@@ -2783,6 +2835,7 @@ align-items: center;
 		width: 4.7rem;
 		font-size: 1rem;
 		border-radius: 0.5rem;
+		border: 0.1rem solid #A3A3A3;
 	}
 	.comListBox02 .listBody li .statusPho span {
 		display: block;
@@ -2796,6 +2849,22 @@ align-items: center;
 		border-radius: 0.5rem;
 		border-color: #005792;
 		background-color: #005792;
+		
+	}
+	.comListBox02 .listBody li .notice-badge.phone span {
+		padding: 0;
+		background-color: #FE1211;
+		border-radius: 50%;
+		width: 2.2rem;
+		height: 2.2rem;
+		line-height: 2.2rem;
+		font-size: 1.1rem;
+		color: #FFF;
+		text-align: center;
+		border: none;
+	}
+	.comListBox02 .listBody li .notice-badge.phone.read span {
+		display: none;
 	}
 	.comListBox02 .listBody li .status-wrapper .status02 span {
 		border-color: #A3A3A3;
@@ -2852,6 +2921,14 @@ align-items: center;
 		margin-top: .7rem;
 	  }
 
+	  /* メッセージ一覧ページのスマホ表示 */
+	  .comListBox02 .listBody li .category .textBox .ttl.phone.message-page{
+		display: block;
+	  }
+	  .comListBox02 .listBody li .ttl.message-page .txt {
+		width: 20rem;
+	}
+
 	  	/* お気に入りされた企業一覧  タブレット*/
 	#container .comListBox02 .favorite-wrapper {
 		display: grid;
@@ -2884,6 +2961,7 @@ align-items: center;
 	.comListBox02.favorite {
 		padding: 3.1rem 5.5% 3.8rem;
 	}
+
 
 }
 /*------------------------------------------------------------
@@ -2998,6 +3076,58 @@ align-items: center;
 	}
 
 }
+/*------------------------------------------------------------
+displayCount
+------------------------------------------------------------*/
+.displayCount {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap: 2rem;
+	height: 3rem;
+	margin-bottom: 2rem;
+
+}
+.displayCount p{
+font-weight: 400;
+
+}
+
+.displayCount ul {
+	display: flex;
+	align-items: center;
+}
+.displayCount li {
+	position: relative;
+	cursor: pointer;
+}
+.displayCount li:hover {
+	opacity: .7;
+}
+
+.displayCount li span {
+	margin: 0 1rem;
+	font-weight: 400;
+}
+.displayCount li .select {
+	font-weight: 700;
+}
+.displayCount li::after {
+	content: '';
+	display: block;
+	background: #343434;
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0%;
+}
+.displayCount li:last-child::after {
+	display: none;
+}
+
+
+
 /*------------------------------------------------------------
 	comPageNavi
 ------------------------------------------------------------*/
@@ -3137,6 +3267,16 @@ align-items: center;
 	.comPageNavi.pageNavi01 .results p {
 		margin-left: 0;
 	}
+	/* タブレット　ページの表示件数 */
+	.displayCount {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		column-gap: 1.5rem;
+		height: 3rem;
+		margin-bottom: 1rem;
+	
+	}
 }
 @media all and (max-width: 599px) {
 	.comPageNavi {
@@ -3177,6 +3317,23 @@ align-items: center;
 	.comPageNavi.pageNavi01 .results {
 		margin-top: 0;
 		width: auto;
+	}
+	.displayCount {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		column-gap: .5rem;
+		height: 1.5rem;
+		margin-bottom: 2rem;
+		font-size: 1.1rem;
+	
+	}
+	.displayCount li span {
+		margin: 0 .8rem;
+	}
+	.displayCount p {
+		font-size: 1.1rem;
+		margin-right: .8rem;
 	}
 }
 /*------------------------------------------------------------
@@ -3256,6 +3413,21 @@ align-items: center;
 	align-items: center;
 	column-gap: 1rem;
 }
+.comLinkBox01 .btnList li .hpLink {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 1rem 3rem;
+    border: solid 1.5px #292929;
+	background: #FFF;
+	color: #292929;
+	
+
+}
+.comLinkBox01 .btnList li .hpLink:hover {
+	background: #E8EAEC;
+}
 /* グラデーションボタン */
 .comLinkBox01 .btnList  li .bgGradation {
     background: linear-gradient(70deg, #005792 0%, #91C0E0 50%, #005792 100% , #91C0E0 200%);
@@ -3324,9 +3496,16 @@ align-items: center;
 		column-gap: 1rem;
 
 	}
+	.comLinkBox01 .btnList li .hpLink {
+		padding: 0.6rem 2rem 0.6rem 2rem;
+		align-items: center;
+		justify-content: center;
+		border: solid 1.3px #292929;
+	}
 	.comLinkBox01 .company-logo {
 		flex: 1;
 	}
+
 }
 @media all and (max-width: 599px) {
 	.comLinkBox01 {
@@ -3356,12 +3535,17 @@ align-items: center;
 	.comLinkBox01 .btnList li a {
 		padding: 0.8rem 3rem 0.9rem 3rem;
 		font-size: 1.2rem;
-		border-radius: 0.9rem;
+		border-radius: 0.6rem;
 		background-size: 0.85rem auto;
 		background-position: left 1.4rem center;
 	}
+
 	.comLinkBox01 .btnList.hpLink li a {
 		column-gap: .5rem;
+	}
+	.comLinkBox01 .btnList li .hpLink {
+		padding: .45rem 1rem;
+		border: solid 1.2px #292929;
 	}
 	.comLinkBox01 .btnList li .bgGradation {
 		padding: 0.7rem 1.4rem 0.8rem;
@@ -3423,8 +3607,9 @@ align-items: center;
 .comInfoBox .imgBox .textBox p {
 	margin-bottom: 3.8rem;
 	font-size: 1.7rem;
-	color: #A3A3A3;
+	color: #202020;
 	line-height: 1.94;
+	font-weight: 400;
 }
 @media all and (min-width: 1025px) {
 	.comInfoBox .imgBox .photoBox a:hover img {
@@ -3445,11 +3630,11 @@ align-items: center;
 		border-radius: 1rem;
 	}
 	.comInfoBox .imgBox .textBox {
-		width: calc(100% - 20.6rem);
+		width:100%;
 	}
 	.comInfoBox .imgBox .textBox p {
 		margin-bottom: 2.2rem;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		line-height: 1.7;
 	}
 }
@@ -3474,7 +3659,7 @@ align-items: center;
 	}
 	.comInfoBox .imgBox .textBox p {
 		margin-bottom: 2.5rem;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		line-height: 1.7;
 	}
 }
@@ -3618,11 +3803,11 @@ align-items: center;
 		margin-bottom: 0;
 	}
 	.comTextList02 li .text01 {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 	.comTextList02 li .text02 {
 		margin-top: 0;
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 	.comTextList02 li .text02 .icon {
 		width: 2rem;
@@ -3649,7 +3834,8 @@ align-items: center;
 	margin-bottom: 2.5rem;
 	line-height: 1.941;
 	font-size: 1.7rem;
-	color: #A3A3A3;
+	color:#202020;
+	font-weight: 400;
 }
 .comPrBox p:last-child {
 	margin-bottom: 0;
@@ -3666,8 +3852,8 @@ align-items: center;
 	.comPrBox p {
 		margin-bottom: 1rem;
 		text-align: justify;
-		line-height: 2.4;
-		font-size: 1rem;
+		line-height: 1.7;
+		font-size: 1.3rem;
 	}
 	.comPrBox p:last-child {
 		margin-bottom: 0;
@@ -3707,23 +3893,24 @@ align-items: center;
 .comRecruitBox .txtDl dt {
 	padding: 2rem 0 2.5rem 3rem;
 	box-sizing: border-box;
-	width: 12.6rem;
+	width: 15.6rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	text-align: center;
-	font-size: 1.4rem;
-	color: #343434;
+	font-size: 1.7rem;
+	color: #A3A3A3;;
 	font-weight: 700;
 	border-bottom: 0.1rem solid #E5E5E5;
 }
 .comRecruitBox .txtDl dd {
 	padding: 2rem 3rem 2.5rem;
 	box-sizing: border-box;
-	width: calc(100% - 12.6rem);
-	font-size: 1.4rem;
-	color: #A3A3A3;
+	width: calc(100% - 15.6rem);
+	font-size: 1.7rem;
+	color: #202020;
 	border-bottom: 0.1rem solid #E5E5E5;
+	font-weight: 400;
 }
 .comRecruitBox .txtDl dt:last-of-type, .comRecruitBox .txtDl dd:last-of-type {
 	border-bottom: none;
@@ -3749,14 +3936,15 @@ align-items: center;
 	}
 	.comRecruitBox .txtDl dt {
 		padding: 1.7rem 1rem 1.9rem;
-		width: 9.2rem;
-		font-size: 1rem;
+		width: 12.2rem;
+		font-size: 1.3rem;
 		line-height: 1.7;
+		justify-content: flex-start;
 	}
 	.comRecruitBox .txtDl dd {
 		padding: 1.7rem 0 1.9rem 0.4rem;
-		width: calc(100% - 9.2rem);
-		font-size: 1rem;
+		width: calc(100% - 12.2rem);
+		font-size: 1.3rem;
 		line-height: 1.7;
 	}
 	.comRecruitBox.recruit01 {
@@ -3787,6 +3975,7 @@ align-items: center;
 		box-sizing: border-box;
 		width: 9.6rem;
 		font-size: 1.2rem;
+		justify-content: flex-start;
 	}
 	.comRecruitBox .txtDl dd {
 		padding: 2rem 0.5rem 2rem 0;
@@ -5057,7 +5246,7 @@ display: none;
 		border-radius: 1rem;
 	}
 	.fixBox {
-		margin-bottom: 3.5rem;
+		margin-bottom: 1rem;
 	}
 	.comLinkBox02 .leftBox {
 		max-width: inherit;
@@ -5106,9 +5295,13 @@ display: none;
 		border-radius: 0.5rem;
 		background-size: 1rem auto;
 		background-position: left 0.8rem center;
+		border: solid 1.3px transparent;
 	}
 	.comLinkBox02 .btnList li .message {
 		padding: 0.6rem 1.6rem 0.6rem 2rem;
+		align-items: center;
+		justify-content: center;
+
 	}
 	.comLinkBox02 .btnList .btn02 a {
 		background-position: left 0.9rem center;
@@ -5149,7 +5342,7 @@ display: none;
 		border-radius: 1rem;
 	}
 	.fixBox {
-		margin-bottom: 2.5rem;
+		margin-bottom: 1.3rem;
 		height: auto;
 	}
 	.comLinkBox02 .leftBox {
@@ -5311,6 +5504,9 @@ display: none;
 }
 .comLinkBox02 .btnList li .stateBtn.meet img{
 	width: 2rem;
+}
+.comLinkBox02 .btnList li a {
+	border: solid 1.2px transparent;
 }
 }
 /*------------------------------------------------------------
