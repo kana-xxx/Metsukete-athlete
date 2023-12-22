@@ -290,7 +290,8 @@ a[href^="tel:"] {
   
   /* モーダルと背景の指定 */
   #gHeader .modal-outer,
-  #gHeader .modal-outer-sp{
+  #gHeader .modal-outer-sp,
+  .notice-modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -334,8 +335,13 @@ a[href^="tel:"] {
 	height: auto;
 	width: 90%;
 	overflow: hidden;
+	display: none;
+	z-index: 1100;
   }
-  
+  #gHeader .modal-container.notice.is-active{
+	display: block;
+  }
+
   /* モーダルを閉じるボタンの指定 　 */
   .notice-modal-close{
 	cursor: pointer;

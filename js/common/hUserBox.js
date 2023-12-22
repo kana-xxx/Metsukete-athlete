@@ -1,5 +1,6 @@
 //要素を取得
-const noticeModal = document.querySelector('.modal-outer'),
+const noticeModal = document.querySelector('.notice-modal'),
+    noticeList = document.querySelector('.modal-container.notice'),
       hUserBoxOuter = document.querySelector('.hUserBoxOuter'),
       modalBtn = document.querySelector('.modal-open'),
       modalBtnSp = document.querySelector('.modal-openSp'),
@@ -17,6 +18,7 @@ const noticeModal = document.querySelector('.modal-outer'),
 
 function modalOpen() {
     noticeModal.classList.toggle('is-active'); 
+    noticeList.classList.toggle('is-active'); 
     normalBell.classList.toggle('is-active');
     openBell.classList.toggle('is-active');
     Footer.classList.toggle('is-active');
@@ -45,6 +47,7 @@ function modalOpenUser() {
 //「閉じるボタン」をクリックしてモーダルを閉じる
 function modalClose() {
     noticeModal.classList.remove('is-active');
+    noticeList.classList.toggle('is-active'); 
     normalBell.classList.remove('is-active');
     openBell.classList.remove('is-active');
     hUserBoxList.classList.remove('is-active');
@@ -52,20 +55,24 @@ function modalClose() {
     Footer.classList.remove('is-active');
 }
 noticeClose.addEventListener('click', modalClose);
+hUserBoxOuter.addEventListener('click', modalClose);
+noticeModal.addEventListener('click', modalClose);
+
 
 // モーダルの外側をクリックしてモーダルを閉じる
-function modalOut(e) {
-    if (e.target == noticeModal) {
-        modalClose(); // モーダルを閉じる処理を呼び出す
-    }
-}
+// function modalOut(e) {
+//     if (e.target === noticeModal) {
+//         modalClose(); // モーダルを閉じる処理を呼び出す
+//     }
+// }
+// noticeModal.addEventListener('click', modalOut);
 
-noticeModal.addEventListener('click', modalOut);
+// function modalOutUser(e) {
+//     if (e.target == hUserBoxOuter) {
+//         modalClose(); // モーダルを閉じる処理を呼び出す
+//     }
+// }
 
-function modalOutUser(e) {
-    if (e.target == hUserBoxOuter) {
-        modalClose(); // モーダルを閉じる処理を呼び出す
-    }
-}
 
-hUserBoxOuter.addEventListener('click', modalOutUser);
+
+
