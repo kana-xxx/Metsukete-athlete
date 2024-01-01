@@ -86,7 +86,7 @@
 	<div class="modal-container notice">
 	  
 	  <!-- モーダル内部のコンテンツ -->
-	  <div class="modal-content notice js-modal">
+	  <div class="modal-content notice js-modal" >
 		<div class="notice-headlineBox">
 				<!-- モーダルを閉じるボタン -->
 		<div class="notice-modal-close" data-modal="data-notice"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
@@ -200,7 +200,8 @@
   </div>
 
 <div class="modalBox" id="data-user">
-	<ul class="subList js-modal">
+
+	<ul class="subList js-modal" >
 		<li class="User-detail hUserBox">
 			<a href="#">
 				<div class="userImg">
@@ -304,7 +305,7 @@
     <img src="../image/common/header-icon-blueBubble.svg" alt="ページタイトルの吹き出しアイコン">
     <h2>メッセージ</h2>
     </div>
-    <div class="subTtl">  <p>運動 太郎さんに現在●件の<br class="br-sp">新着メッセージが届いています</p></div>
+    <div class="subTtl">  <p>運動 太郎さんに現在●件の新着メッセージが届いています</p></div>
 <div class="backBtn"><a href="http://dev.metsukete.jp/student/company/index"></a></div>
 				            </div>
 
@@ -315,15 +316,15 @@
                     
 <div class="comListBox02">
     <div class="listHead">
-        <p class="item01 message-page">日時</p>
-        <p class="item02 message-page">企業名</p>
+        <p class="item01">日時</p>
+        <p class="item02">企業名</p>
         <p class="item03 message-page">企業からのメッセージ</p>
     </div>
     <div class="listBody">
         <ul>
             <li>
-                <p class="time"><span>2023-10-27 10:43</span></p>
-                <div class="category message-page">
+                <p class="time">2023-10-27 10:43<br class="ipad"></p>
+                <div class="category">
                     <div class="pho">
                         
                         <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/company-Noimage.svg" alt=""></a></div>
@@ -366,7 +367,7 @@
             </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category message-page">
+                    <div class="category">
                         <div class="pho">
                             
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/company-Noimage.svg" alt=""></a></div>
@@ -409,7 +410,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category message-page">
+                    <div class="category">
                         <div class="pho">
                             
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/common/logo.svg" alt=""></a></div>
@@ -452,7 +453,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category message-page">
+                    <div class="category">
                         <div class="pho">
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
                         <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
@@ -495,7 +496,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category message-page">
+                    <div class="category">
                         <div class="pho">
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
                         <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
@@ -538,7 +539,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category message-page">
+                    <div class="category">
                         <div class="pho">
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
                         <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
@@ -630,8 +631,12 @@
     <script src="http://dev.metsukete.jp/js/ofi.min.js"></script>
     <script src="http://dev.metsukete.jp/js/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
-    <script src="../js/common/category message-page-tab.js"></script>
+    <!-- <script src="../js/common/hUserBox.js"></script> -->
+
+    <script src="../js/common/category-tab.js"></script>
+    <script src="../js/common/modal-open.js"></script>
     <script src="../js/common/head-modal.js"></script>
+    <!-- <script src="../js/common/hamburgerMenu.js"></script> -->
 
 
 </body>
