@@ -2,11 +2,6 @@
 /*------------------------------------------------------------
 	汎用スタイル
 ------------------------------------------------------------*/
-/* 確認のため一旦非表示 */
-.fixBox .boxStyle03 ,
-.fixBox .boxStyle02 {
-	display: none;
-}
 /* clearfix */
 .clearfix:after {
 	content: "";
@@ -326,6 +321,7 @@
 	.pageTitle .subTtl {
 		font-size: 1rem;
 		height: 2rem;
+		letter-spacing: .1rem;
 	}
 	.pageTitle .subTtl p {
 		margin-right: 0;
@@ -478,6 +474,9 @@
 	margin-bottom: 2.3rem;
 	color: #202020;
 	font-size: 2.1rem;
+}
+.headLine03.attention {
+	color:#FF0000;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.headLine03 {
@@ -2066,17 +2065,25 @@
 .comListBox02 .listHead .item01 {
 	width: 18.4%;
 }
+.comListBox02 .listHead .item01.message-page {
+	width: 15.4%;
+}
 .comListBox02 .listHead .item02 {
 	width: 20.3%;
+}
+.comListBox02 .listHead .item02.message-page {
+	width: 18%;
+	padding-left: 0.5rem;
+    padding-right: 1rem;
 }
 .comListBox02 .listHead .item03 {
 	width: 37.5%;
 }
 .comListBox02 .listHead .item03.message-page {
-	width: 50%;
+	width: 48%;
 }
 .comListBox02 .listHead .item04 {
-	padding-right: 8.4%;
+	padding-right: 0;
 	flex: 1;
 }
 .comListBox02 .listBody {
@@ -2101,19 +2108,17 @@
 .comListBox02 .listBody li:last-child::after {
 	display: none;
 }
-.comListBox02 .listBody li p {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	box-sizing: border-box;
-}
+
 .comListBox02 .listBody li .time{
-	padding-left: 3%;
-	padding-right: 1rem;
-	width: 18.4%;
+	width: 15.4%;
 	color: #A3A3A3;
 	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
 }
+
 .comListBox02 .favorite-content .time {
 	padding-left: 3%;
 	padding-right: 1rem;
@@ -2135,7 +2140,7 @@
 	column-gap: 1.3rem;
 }
 .comListBox02 .listBody li .category .pho {
-	width: 16rem;
+	width: 12rem;
 	position: relative;
 }
 
@@ -2167,7 +2172,7 @@
 	width: 3.8rem;
 	position: absolute;
 	bottom: -5%;
-	right: -10%;
+	right: -24%;
 	z-index: 2;
 	font-size: 1.2rem;
 }
@@ -2212,7 +2217,7 @@
 	display: flex;
 	column-gap: 1.5rem;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .comListBox02 .listBody li .ttl.message-page {
 	width: 50%;
@@ -2226,7 +2231,7 @@ padding-left: 15.4rem;
 	color: #005792;
 }
 .comListBox02 .listBody li .ttl img {
-	width: 3.2rem;
+	width: 3.1rem;
 }
 .comListBox02 .listBody li .ttl .offer-listImg {
 	position: relative;
@@ -2248,14 +2253,14 @@ padding-left: 15.4rem;
 }
 .comListBox02 .listBody li .ttl .txt {
 	display: inline-block;
-	max-width: 34rem;
+	max-width: 55rem;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	transition: all 0.3s;
 }
 .comListBox02 .listBody li .ttl.message-page .txt {
-	max-width: 60rem;
+	max-width: 70rem;
 }
 .comListBox02 .listBody li .ttl .txt-favorite {
 	max-width: 34rem;
@@ -2272,7 +2277,7 @@ padding-left: 15.4rem;
 }
 .comListBox02 .listBody li .status {
 	box-sizing: border-box;
-	padding-right: 7.5%;
+	padding-right: 0;
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -2303,6 +2308,7 @@ display: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 11%;
 	
 }
 .comListBox02 .listBody li .notice-badge.read {
@@ -2449,15 +2455,25 @@ align-items: center;
 		width: 18%;
 		display: none;
 	}
+
 	.comListBox02 .listHead .item02 {
 		padding-left: 4%;
 		flex: 2;
+	}
+	.comListBox02 .listHead .item02.message-page {
+		width: 50%;
+		flex: auto;
+	}
+
+	.comListBox02 .listHead .item03.message-page {
+		width: 30%;
 	}
 	.comListBox02 .listHead .item03 {
 		width: 36.5%;
 	}
 	.comListBox02 .listHead .item03.message-page {
-		width: 60%;
+		width: 66%;
+		margin-right: 4%;
 	}
 	.comListBox02 .listHead .item04 {
 		padding-right: 3%;
@@ -2468,6 +2484,7 @@ align-items: center;
 	.comListBox02 .listBody li {
 		padding: 1.4rem 0 1.5rem;
 		font-size: 0.8rem;
+		justify-content: center;
 	}
 	.comListBox02 .listBody li .ttl a {
 		display: flex;
@@ -2501,12 +2518,23 @@ align-items: center;
 		z-index: 2;
 		font-size: .8rem;
 	}
+
+
 	.comListBox02 .listBody li .category {
-		padding-left: 4%;
+		padding-left: 0%;
+		padding-right: 2%;
 		width: 40%;
-		flex: 2;
 		font-size: 0.8rem;
-		column-gap: 2.5rem;
+		column-gap: 2rem;
+
+
+	}
+
+	.comListBox02 .listBody li .category.message-page {
+		padding-left: 0%;
+		width: 40%;
+		font-size: 0.8rem;
+		column-gap: 2rem;
 
 
 	}
@@ -2542,7 +2570,7 @@ align-items: center;
 	.comListBox02 .listBody li .ttl .txt,
 	.comListBox02 .listBody li .ttl .txt-favorite
 	 {
-		max-width: 18.9rem;
+		max-width: 22.9rem;
 		font-size: 1.25rem;
 		line-height: 1.6;
 	}
@@ -2584,7 +2612,11 @@ align-items: center;
 		border-radius: 0.5rem;
 	}
 	.comListBox02 .listBody li .ttl img {
-		width: 1.7rem;
+		width: 3.3rem;
+	}
+
+	.comListBox02 .listBody li .ttl .offer-listImg {
+		position: relative;
 	}
 	.comListBox02 .listBody li .ttl .offer-listImg.noread::before {
 		content: '';
@@ -2647,27 +2679,39 @@ align-items: center;
 		margin-top: 0.1rem;
 	}
 	.comListBox02 .listBody li .category .pho {
-		width: 8rem;
+		width: 6rem;
 		position: relative;;
 		flex: 1;
 	}
 	.comListBox02 .listBody li .category .pho a {
-		width: 8rem;
+		width: 6rem;
 	}
 	.comListBox02 .listBody li .category .textBox {
-		flex: 3;
+		width: calc(100% - 5rem);
 	}
 	.comListBox02 .listBody li .status.state-favo {
 		opacity: 0;
 	} 
 	.comListBox02 .listBody li .ttl.message-page{
-		width: 60%;
+		width: 45%;
 	}
 	.comListBox02 .listBody li .ttl.message-page .txt {
-		width: 33rem;
+		width: 29rem;
 	}
 	.comListBox02 .listBody li .notice-badge {
-		flex: 1;
+		width: 7%;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.comListBox02 .listBody li .notice-badge span {
+		background-color: #FE1211;
+		border-radius: 50%;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+		color: #FFF;
+		text-align: center;
+		font-size: 1rem;
 	}
 }
 @media all and (max-width: 599px) {
@@ -2721,7 +2765,7 @@ align-items: center;
 		content: "";
 	}
 	.comListBox02 .listBody li .category {
-		padding: 0.3rem 1rem 0 0rem;
+		padding: 0.3rem 0 0 0;
 		width: 100%;
 		font-size: 1rem;
 		display: flex;
@@ -2768,6 +2812,12 @@ align-items: center;
 		font-size: 1.2rem;
 		line-height: 1.3;
 	}
+	.comListBox02 .listBody li .category .textBox p:first-of-type {
+		font-size: 1.4rem;
+	}
+	.comListBox02 .listBody li .category .textBox p .phone-text {
+		color: #A3A3A3;
+	}
 	.comListBox02 .listBody li .category .textBox .sml  {
 		font-size: 1rem;
 	} 
@@ -2787,6 +2837,7 @@ align-items: center;
 	.comListBox02 .listBody li .category .textBox .sml {
 		margin-top: 0;
 		font-size: 1rem;
+		display: none;
 	}
 	.comListBox02 .listBody li .ttl {
 		display: none;
@@ -2807,6 +2858,7 @@ align-items: center;
 	.comListBox02 .listBody li .category .textBox.message-page {
 		width: 61%;
 	}
+
 
 	.comListBox02 .listBody li .ttl .txt {
 		max-width: 100%;
@@ -2926,7 +2978,7 @@ align-items: center;
 		display: block;
 	  }
 	  .comListBox02 .listBody li .ttl.message-page .txt {
-		width: 20rem;
+		width: 17rem;
 	}
 
 	  	/* お気に入りされた企業一覧  タブレット*/
@@ -2962,7 +3014,12 @@ align-items: center;
 		padding: 3.1rem 5.5% 3.8rem;
 	}
 
-
+	.comListBox02 .listBody li .notice-badge.pc-tab {
+		display: none;
+	}
+	.comListBox02 .listBody li .notice-badge {
+		width: 5rem;
+	}
 }
 /*------------------------------------------------------------
 	comListUl01
@@ -3667,7 +3724,7 @@ font-weight: 400;
 	comLinkList01
 ------------------------------------------------------------*/
 .comLinkList01 li {
-	margin-bottom: 1.1rem;
+	margin-bottom: 0;
 }
 .comLinkList01 li:last-child {
 	margin-bottom: 0;
@@ -3681,6 +3738,18 @@ font-weight: 400;
 	box-sizing: border-box;
 	color: #005792;
 }
+li .uploadResult a {
+	margin-left: 2rem;
+	padding-left: 3rem;
+	margin-bottom: 1.3rem;
+	display: inline-block;
+	font-size: 1.4rem;
+	background: url("/image/common/icon-fileDownload.svg")no-repeat top 0.3rem left 0.3rem;
+	background-size: 1.2rem;
+	box-sizing: border-box;
+	color: #005792;
+}
+
 @media all and (min-width: 1025px) {
 	.comLinkList01 li a:hover {
 		opacity: .7;
@@ -3688,13 +3757,14 @@ font-weight: 400;
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.comLinkList01 li {
-		margin-bottom: .6rem;
+		margin-bottom: 0;
 	}
 	.comLinkList01 li:last-child {
 		margin-bottom: 0;
 	}
 	.comLinkList01 li a {
 		padding-left: 1.9rem;
+		margin-bottom: 0;
 		font-size: 1rem;
 		background-size: 0.9rem auto;
 		background-position: top 0.3rem left 0.1rem;
@@ -3702,7 +3772,7 @@ font-weight: 400;
 }
 @media all and (max-width: 599px) {
 	.comLinkList01 li {
-		margin-bottom: 0.9rem;
+		margin-bottom: 0;
 	}
 	.comLinkList01 li:last-child {
 		margin-bottom: 0;
@@ -4055,11 +4125,17 @@ font-weight: 400;
 .comMessageBox .innerBox {
 	padding: 0 5.4rem 0 3rem;
 }
+.comMessageBox .companymessage .itemBox {
+	margin-bottom: 5.1rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
 .comMessageBox .itemBox {
 	margin-bottom: 5.1rem;
 	display: flex;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 .comMessageBox .nameBox {
 	margin-top: 0.6rem;
@@ -4067,6 +4143,11 @@ font-weight: 400;
 	order: 1;
 	display: flex;
 	align-items: center;
+}
+.comMessageBox .companymessage .itemBox .nameBox {
+	padding-left: 0.5rem;
+    margin-top: 0;
+    order: 0;
 }
 .comMessageBox .nameBox .photo {
 	width: 5.7rem;
@@ -4098,27 +4179,33 @@ font-weight: 400;
 }
 .comMessageBox .detailBox {
 	box-sizing: border-box;
-	width: 75.45%;
+	width: 70.45%;
 }
 .comMessageBox .detailBox .subBox {
-	padding: 4.9rem 5.3rem 6rem;
+	padding: 2rem 2.3rem;
 	border-radius: 2.7rem;
 	position: relative;
-	background: #FFFFFF;
-	border: 0.1rem solid #E5E5E5;
+	background:#F3F5F6;
 }
-.comMessageBox .detailBox .subBox::before {
+.comMessageBox .companymessage .itemBox .detailBox .subBox {
+	padding: 2rem 2.3rem;
+	border-radius: 2.7rem;
+	position: relative;
+	background:#E9F3F9;
+	border: 0.15rem solid #E9F3F9;
+}
+.comMessageBox .companymessage .itemBox .detailBox .subBox::before {
 	width: 2.1rem;
 	height: 2.3rem;
 	position: absolute;
-	right: -2rem;
+	left: -2rem;
 	top: 2.8rem;
-	background: url("../../img/common/bg02.png") no-repeat right center / auto 100%;
+	background: url("/image/common/message-bubbleBg-blue.png") no-repeat right center / auto 100%;
 	content: "";
 }
 .comMessageBox .detailBox .subBox p {
 	margin-bottom: 2.3rem;
-	line-height: 2.0625;
+	line-height: 1.5;
 }
 .comMessageBox .detailBox .subBox p:last-child {
 	margin-bottom: 0;
@@ -4126,13 +4213,30 @@ font-weight: 400;
 .comMessageBox .detailBox .btmBox {
 	margin: 1.7rem 1.4rem 0.4rem 0.4rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 1.5rem;
 }
-.comMessageBox .detailBox .btmBox .time {
+.comMessageBox .detailBox .btmBox .time,
+.comMessageBox .detailBox .btmBox .read,
+.comMessageBox .detailBox .btmBox .messageEdit {
 	max-width: 50%;
 	font-size: 1.4rem;
 	font-weight: 500;
 	color: #A3A3A3;
+}
+.comMessageBox .detailBox .btmBox .messageEdit {
+	background: none;
+	border: none;
+	margin-left: 2rem;
+	padding-top: .3rem;
+	color: #343434;
+	cursor: pointer;
+	transition: all .3s ease;
+	font-weight: 600;
+}
+.comMessageBox .detailBox .btmBox .messageEdit:hover {
+	opacity: .7;
 }
 .comMessageBox .detailBox .btmBox .time .mark {
 	margin-left: 2.8rem;
@@ -4151,32 +4255,45 @@ font-weight: 400;
 	display: inline-block;
 	font-size: 1.4rem;
 }
-.comMessageBox .itemBox:nth-child(2n) .nameBox {
+.comMessageBox .detailBox .subBox::before {
+	width: 2.7rem;
+	height: 2.7rem;
+	position: absolute;
+	left: auto;
+	right: -2.2rem;
+	top: 2rem;
+	background: url("/image/common/message-bubbleBg-white.png") no-repeat left center / auto 100%;
+	content: "";
+}
+
+/* .companymessageのタグで企業と学生をかき分けているため、2個目のメッセージコンテンツの色を変える必要がないため非表示 */
+/* .comMessageBox .itemBox:nth-child(2n) .nameBox {
 	padding-left: 0.5rem;
 	margin-top: 0;
-	order: 0;
-}
-.comMessageBox .itemBox:nth-child(2n) .nameBox .textBox {
+	order: 1;
+} */
+/* .comMessageBox .itemBox:nth-child(2n) .nameBox .textBox {
 	padding-left: 1.5rem;
-}
-.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox {
-	padding: 3.5rem 5.3rem 6rem;
-	background: #F8F8F8;
-	border-color: #F8F8F8;
-}
-.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox::before {
+} */
+/* .comMessageBox .itemBox:nth-child(2n) .detailBox .subBox {
+	padding: 4.9rem 5.3rem 6rem;
+	background: #FFF;
+	border-color: #E5E5E5;
+} */
+/* .comMessageBox .itemBox:nth-child(2n) .detailBox .subBox::before {
 	width: 2.1rem;
 	height: 2.4rem;
 	position: absolute;
-	right: auto;
-	left: -2.1rem;
+	left: auto;
+	right: -1.25rem;
 	top: 2rem;
-	background: url("../../img/common/bg03.png") no-repeat left center / auto 100%;
+	background: url("/image/common/message-bubbleBg-white.png") no-repeat left center / auto 100%;
 	content: "";
-}
-.comMessageBox .itemBox:last-child {
+} */
+
+/* .comMessageBox .itemBox:last-child {
 	margin-bottom: 0;
-}
+} */
 @media all and (min-width: 1025px) {
 	.comMessageBox .nameBox .photo a:hover img {
 		transform: translate(-50%, -50%) scale(1.1);
@@ -4191,7 +4308,7 @@ font-weight: 400;
 @media all and (min-width: 600px) and (max-width: 1024px) {
 	.comMessageBox {
 		margin-bottom: 1.9rem;
-		padding: 2.5rem 1.6rem 2rem 3rem;
+		padding: 2.5rem 1.6rem 2.5rem 3rem;
 		border-radius: 1rem;
 	}
 	.comMessageBox .headLine03 {
@@ -4205,13 +4322,12 @@ font-weight: 400;
 	}
 	.comMessageBox .nameBox {
 		margin-top: 0;
-		width: 10rem;
-		display: block;
-		text-align: center;
+		width: 26%;
+		display: flex;
+		align-items: center;
 	}
 	.comMessageBox .nameBox .photo {
 		margin: 0 auto 0.6rem;
-		width: 4.9rem;
 	}
 	.comMessageBox .nameBox .textBox {
 		padding-left: 0;
@@ -4223,11 +4339,16 @@ font-weight: 400;
 		font-size: 0.8rem;
 	}
 	.comMessageBox .detailBox {
-		width: calc(100% - 11.1rem);
+		width: 65%;
+		margin-right: 2rem;
+	}
+	.comMessageBox .companymessage .itemBox .detailBox .subBox {
+		border-radius: 2rem;
+		padding: 1rem 1rem 1rem 1.4rem;
 	}
 	.comMessageBox .detailBox .subBox {
-		padding: 1.8rem 2.1rem 2.1rem 2.6rem;
-		border-radius: 1rem;
+		padding: 1rem 1rem 1rem 1.4rem;
+		border-radius: 2rem;
 	}
 	.comMessageBox .detailBox .subBox::before {
 		width: 1.5rem;
@@ -4236,8 +4357,8 @@ font-weight: 400;
 		top: 2.8rem;
 	}
 	.comMessageBox .detailBox .subBox p {
-		margin-bottom: 1.5rem;
-		line-height: 2.4;
+		margin-bottom: 1rem;
+		line-height: 1.5;
 	}
 	.comMessageBox .detailBox .subBox p:last-child {
 		margin-bottom: 0;
@@ -4245,7 +4366,9 @@ font-weight: 400;
 	.comMessageBox .detailBox .btmBox {
 		margin: 1.2rem 0.6rem 0 0;
 	}
-	.comMessageBox .detailBox .btmBox .time {
+	.comMessageBox .detailBox .btmBox .time,
+	.comMessageBox .detailBox .btmBox .read,
+	.comMessageBox .detailBox .btmBox .messageEdit  {
 		font-size: 1rem;
 	}
 	.comMessageBox .detailBox .btmBox .time .mark {
@@ -4267,17 +4390,7 @@ font-weight: 400;
 	.comMessageBox .itemBox:nth-child(2n) .nameBox .textBox {
 		padding-left: 0;
 	}
-	.comMessageBox .itemBox:nth-child(2n) .detailBox {
-		margin-right: 1.9rem;
-	}
-	.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox {
-		padding: 2rem 2.2rem 3.6rem 2.5rem;
-	}
-	.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox::before {
-		right: auto;
-		left: -1.8rem;
-		top: 3.7rem;
-	}
+
 	.comMessageBox .itemBox:nth-child(2n) .detailBox .btmBox {
 		margin-left: 1.5rem;
 	}
@@ -4286,6 +4399,36 @@ font-weight: 400;
 	}
 	.comMessageBox .itemBox:last-child {
 		margin-bottom: 0;
+		column-gap: 3rem;
+	}
+	.comMessageBox .companymessage .itemBox {
+		margin-bottom: 4rem;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.comMessageBox .companymessage .itemBox .detailBox .subBox::before {
+		width: 1.3rem;
+		height: 1.6rem;
+		position: absolute;
+		left: -1.3rem;
+		top: 2.8rem;
+		background: url("/image/common/message-bubbleBg-blue.png") no-repeat right center / auto 100%;
+		content: "";
+	}
+	.comMessageBox .detailBox .subBox::before {
+		width: 1.7rem;
+		height: 1.7rem;
+		position: absolute;
+		left: auto;
+		right: -1.5rem;
+		top: 2rem;
+		background: url("/image/common/message-bubbleBg-white.png") no-repeat left center / auto 100%;
+		content: "";
+	}
+	.comMessageBox .detailBox .btmBox .messageEdit {
+		margin-left: 0;
+		padding-top: 0;
 	}
 }
 @media all and (max-width: 599px) {
@@ -4296,14 +4439,16 @@ font-weight: 400;
 	}
 	.comMessageBox .headLine03 {
 		margin-bottom: 3rem;
+		font-weight: 700;
 	}
 	.comMessageBox .innerBox {
 		padding: 0 1.4rem 0 0;
 	}
 	.comMessageBox .itemBox {
 		margin-bottom: 4rem;
-		margin-right: 1.3rem;
-		display: block;
+		margin-left: 4rem;
+		display: flex;
+		justify-content: flex-end;
 	}
 	.comMessageBox .nameBox {
 		margin: 0 0 1.2rem;
@@ -4325,24 +4470,39 @@ font-weight: 400;
 		width: auto;
 	}
 	.comMessageBox .detailBox .subBox {
-		padding: 1.3rem 1rem 1.4rem 1.5rem;
-		border-radius: 1rem;
+		padding: 1rem 1rem 1.2rem 1.2rem;
+		border-radius: 1.5rem;
 	}
 	.comMessageBox .detailBox .subBox::before {
 		display: none;
 	}
 	.comMessageBox .detailBox .subBox p {
-		margin-bottom: 1.5rem;
-		line-height: 2;
+		margin-bottom: 1.1rem;
+		margin-right: 0;
+		line-height: 1.5;
 	}
 	.comMessageBox .detailBox .subBox p:last-child {
 		margin-bottom: 0;
 	}
+	.comMessageBox .detailBox .btmBox .messageEdit {
+		padding-top: 0;
+	}
 	.comMessageBox .detailBox .btmBox {
-		margin: 1.1rem 0.3rem 0 0;
+		column-gap: .9rem;
+	}
+	.comMessageBox .detailBox .btmBox {
+		margin: 1rem 0.3rem 0 .5rem;
+	}
+	.comMessageBox .detailBox .btmBox .time,
+	.comMessageBox .detailBox .btmBox .read,
+	.comMessageBox .detailBox .btmBox .messageEdit  {
+		font-size: 1rem;
 	}
 	.comMessageBox .detailBox .btmBox .time {
-		font-size: 1rem;
+		margin-right: 0;
+	}
+	.comMessageBox .detailBox .btmBox .read {
+		margin-right: 0;
 	}
 	.comMessageBox .detailBox .btmBox .time .mark {
 		margin-top: 0.2rem;
@@ -4363,16 +4523,205 @@ font-weight: 400;
 	.comMessageBox .itemBox:nth-child(2n) .nameBox .textBox {
 		padding-left: 1.4rem;
 	}
-	.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox {
-		padding: 1.1rem 1.6rem;
-	}
 	.comMessageBox .itemBox:nth-child(2n) .detailBox .subBox::before {
 		display: none;
 	}
-	.comMessageBox .itemBox:last-child {
-		margin-bottom: 0;
+	.comMessageBox .companymessage .itemBox {
+		margin-bottom: 3rem;
+		flex-direction: column;
+		margin-right: 4rem;
+		margin-left: 0;
+	}
+	.comMessageBox .detailBox .btmBox .messageEdit {
+		margin: 0;
+		margin-left: 0;
+		padding: 0;
+	}
+	.comMessageBox .companymessage .itemBox .detailBox .subBox {
+	padding: 1rem 1rem 1.2rem 1.2rem;
+    border-radius: 1.5rem;
 	}
 }
+
+/*------------------------------------------------------------
+	unread-bar
+------------------------------------------------------------*/
+.unread-bar {
+	background: #CCCCCC;
+	text-align: center;
+	color: #FFF;
+	border-radius: 5rem;
+	width: 100%;
+	padding: .5rem;
+	border: none;
+	margin-bottom: 3rem;
+}
+/*------------------------------------------------------------
+	modal-editor
+------------------------------------------------------------*/
+.modal-editor,
+.modal-profile {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,15%);
+display: none;
+z-index: 1000;
+cursor: pointer;
+}
+.modal-outer  {
+	display: none;
+}
+
+.modal-editor.is-active,
+.modal-profile.is-active {
+	display: block;
+}
+
+.editor-container .inner {
+    margin: 0 2.8rem;
+}
+.editor-container .select-outer {
+    max-width: 40%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.modal-headlineBox {
+	display: none;
+}
+.modal-editor .editor-container {
+	width: 70%;
+	background: #FFF;
+    border-radius: 1rem;
+    padding: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.editor-container textarea {
+    box-sizing: border-box;
+    margin-bottom: .7rem;
+    padding: 2rem 2.2rem;
+    width: 100%;
+    height: 18.2rem;
+    color: #A3A3A3;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    border: 0.1rem solid #A3A3A3;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    resize: vertical;
+}
+
+.editor-container .comLinkList01 {
+    margin-bottom: 4.7rem;
+}
+.editor-container textarea + .comLinkList01 {
+    margin-top: 0;
+}
+.editor-container .fileUpload {
+	display: flex;
+	align-items: center;
+}
+.editor-container .fileUpload label input[type="file"] {
+	display: none;
+}
+.editor-container .fileUpload label input[type="file"] ~ span {
+    color: #005792;
+    margin-right: 1.5rem;
+    padding: 0.7rem 1rem 0.8rem;
+    width: 17rem;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    border: 0.15rem solid #005792;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+	margin-left: 2rem;
+}
+.editor-container .note {
+	box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #A3A3A3;
+}
+.editor-container .submit {
+margin-top: -2.3rem;
+    display: flex;
+    justify-content: center;
+}
+.editor-container .submit li {
+	margin: 2.3rem 0.6rem 0;
+    width: 40rem;
+}
+
+.editor-container .submit li input {
+    padding: 0;
+    width: 100%;
+    height: 7.5rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    border: 0.1rem solid #343434;
+    background: #343434;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0.3s;
+}
+
+.editor-container .comLinkList01 li .del {
+    margin-left: 2rem;
+    padding-left: 0;
+    font-size: 1.2rem;
+    color: #A3A3A3;
+    background: none;
+	text-align: left;
+}
+@media all and (max-width: 1024px) {
+	.editor-container textarea {
+		margin-bottom: .5rem;
+	}
+}
+@media all and (max-width: 599px) {
+	.editor-container textarea {
+		margin-bottom: .5rem;
+	}
+	.modal-editor .editor-container {
+		width: 100%;
+		height: 100vh;
+		background: #FFF;
+		border-radius: 1rem;
+		padding: 5rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* メッセージ編集用レイアウト */
+	.modal-editor .editor-container .inner {
+		margin: 4rem 2.8rem;
+	}
+
+	.modal-editor .editor-container .fileUpload {
+		padding-top: 0;
+		display: block;
+	}
+}
+
 /*------------------------------------------------------------
 	popBox
 ------------------------------------------------------------*/
@@ -4395,15 +4744,17 @@ font-weight: 400;
 }
 .popBox {
 	margin: 0 auto;
-	padding: 5.8rem 6.8rem 6.9rem;
+	padding: 5.8rem 6.8rem 5.8rem;
 	width: 100%;
-	max-width: 130.4rem;
+	max-width: 100.4rem;
 	border-radius: 1.4rem;
 	background: #fff;
 	box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
 	box-sizing: border-box;
-	display: none;
-	position: relative;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	z-index: 100;
 }
 .popBox .name {
@@ -4411,10 +4762,10 @@ font-weight: 400;
 	font-size: 2.4rem;
 }
 .popBox .companyName {
-	margin: 0.5rem 0 0 3.7rem;
+	margin: 0 0 0 3.7rem;
 	display: inline-block;
 	vertical-align: top;
-	color: #37AAD6;
+	color:#005792;
 	font-size: 2rem;
 }
 .popBox .imgBox {
@@ -4422,23 +4773,50 @@ font-weight: 400;
 	justify-content: space-between;
 	align-items: flex-start;
 }
+
+
 .popBox .imgBox .photoBox {
-	width: 32.9%;
+	width: calc(20% - 1.5rem);
 	overflow: hidden;
 	border-radius: 1.6rem;
 }
+
 .popBox .imgBox .photoBox img {
 	width: 100%;
 }
 .popBox .imgBox .textBox {
 	margin-top: -0.5rem;
-	width: 62.6%;
+	width: calc(80% - 1.5rem);
 }
 .popBox .imgBox .textBox p {
-	margin-bottom: 3.3rem;
+	margin-bottom: 0;
 	font-size: 1.7rem;
 	color: #A3A3A3;
 	line-height: 1.94;
+}
+/* 企業採用担当のモーダルウィンドウ */
+.modal-profile .popBox {
+	width: 80%;
+}
+.modal-profile .popBox .imgBox {
+	align-items: center;
+}
+.modal-profile .popBox .imgBox  .photoBox {
+	width: calc(40% - 1.5rem);
+}
+.modal-profile .popBox .imgBox .textBox {
+	margin-top: -0.5rem;
+	width: calc(60% - 1.5rem);
+}
+.popBox .imgBox p.name {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 1.5rem;
+	margin-bottom: 1rem;
+}
+.popBox .imgBox p.name:first-of-type {
+	color:#202020;
 }
 .popBox .imgBox .textBox p:last-child {
 	margin-bottom: 0;
@@ -4469,7 +4847,7 @@ font-weight: 400;
 		border-radius: 1rem;
 	}
 	.popBox .imgBox .textBox p {
-		margin-bottom: 1.5rem;
+		margin-bottom: 0;
 		font-size: 1.2rem;
 	}
 	.popBox .imgBox .textBox p:last-child {
@@ -4486,7 +4864,7 @@ font-weight: 400;
 	}
 	.popBox {
 		margin: 0;
-		padding: 3rem 2rem;
+		padding: 2rem 2rem;
 		max-width: inherit;
 		border-radius: 1rem;
 	}
@@ -4522,7 +4900,106 @@ font-weight: 400;
 	.popBox .imgBox .textBox p:last-child {
 		margin-bottom: 0;
 	}
+
+
 }
+/*------------------------------------------------------------
+	採用担当モーダルウィンドウ　スマホ
+------------------------------------------------------------*/
+@media all and (max-width: 599px) {
+.modal-outer.profile {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,50%);
+    overflow: auto;
+    opacity: 0;
+	display: none;
+    transition: .3s;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.modal-outer.profile.is-active {
+	opacity: 1;
+	display: block;
+}
+.modal-profile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,15%);
+	display: none;
+	z-index: 10;
+	cursor: pointer;
+	}
+.modal-profile.sp .popBox {
+	width: 100%;
+	height: 100vh;
+	position: initial;
+	top: 0;
+	left: 0;
+	transform: translate(0);
+	padding: 2rem;
+	border-radius: 0;
+	margin-top: 2rem;
+
+}
+.modal-profile.sp {
+	display: none;
+}
+.modal-profile.sp.is-active {
+	display: block;
+}
+
+/* 採用担当者モーダルポップウィンドウ内のレイアウト */
+.modal-outer.sp .popBox .imgBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.modal-outer.sp .modal-profile .popBox .imgBox {
+	align-items: center;
+}
+.modal-outer.sp .modal-profile .popBox .imgBox .photoBox {
+	width: calc(80% - 3rem);
+}
+.modal-outer.sp .modal-profile .popBox .imgBox .textBox {
+    margin-top: -0.5rem;
+    width: calc(100% - 3rem);
+}
+
+.modal-outer.sp .popBox .imgBox p.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+    column-gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.modal-outer.sp .popBox .companyName  {
+    margin: 0;
+    font-size: 1.5rem;
+	margin-bottom: .5rem;
+}
+.modal-outer.sp .popBox .imgBox .name:first-of-type {
+    font-size:2rem;
+}
+.modal-outer.sp .popBox .imgBox .textBox p {
+    margin-bottom: 1.5rem;
+	margin-right: 0;
+    font-size: 1rem;
+}
+
+}
+
+
+
 /*------------------------------------------------------------
 	comLinkList03
 ------------------------------------------------------------*/
@@ -4633,6 +5110,20 @@ font-weight: 400;
 	margin-bottom: 1rem;
 	font-size: 1.4rem;
 }
+
+/* メッセージページ　
+　　ー　オファー未承認時のCSS */
+.comMessageEditBox.attention {
+	padding: 6rem 4%;
+} 
+ .comMessageEditBox.attention p {
+	display: block;
+} 
+.comMessageEditBox.attention .headLine03 {
+	margin-bottom: 2.2rem;
+}
+
+
 .comMessageEditBox .note {
 	box-sizing: border-box;
 	margin-bottom: 1.4rem;
@@ -4663,7 +5154,7 @@ font-weight: 400;
 }
 .comMessageEditBox textarea {
 	box-sizing: border-box;
-	margin-bottom: 2.1rem;
+	margin-bottom: .7rem;
 	padding: 2rem 2.2rem;
 	width: 100%;
 	height: 18.2rem;
@@ -4690,7 +5181,7 @@ font-weight: 400;
 	background: #F8F8F8;
 }
 .comMessageEditBox textarea + .comLinkList01 {
-	margin-top: 1.2rem;
+	margin-top: 0;
 }
 .comMessageEditBox .comLinkList01 {
 	margin-bottom: 4.7rem;
@@ -4707,9 +5198,10 @@ font-weight: 400;
 	font-size: 1.2rem;
 	color: #A3A3A3;
 	background: none;
+	font-weight: 500;
 }
 .comMessageEditBox .comLinkList01 li .uploadResult {
-	display: none;
+	display: block;
 }
 .comMessageEditBox .comLinkList01 li .uploadResult.on {
 	display: block;
@@ -4719,19 +5211,22 @@ font-weight: 400;
 }
 .comMessageEditBox .fileUpload {
 	display: flex;
+	align-items: center;
 }
 .comMessageEditBox .fileUpload label input[type="file"] {
 	display: none;
 }
 .comMessageEditBox .fileUpload label input[type="file"] ~ span {
+	color: #005792;
 	margin-right: 1.5rem;
-	padding: 0.7rem 0.5rem 0.8rem;
-	width: 15rem;
+	margin-left: 2rem;
+	padding: 0.7rem 1rem 0.8rem;
+	width: 17rem;
 	display: block;
 	text-align: center;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	border-radius: 1rem;
-	border: 0.1rem solid #707070;
+	border: 0.15rem solid #005792;
 	box-sizing: border-box;
 	cursor: pointer;
 	transition: 0.3s;
@@ -4739,7 +5234,7 @@ font-weight: 400;
 .comMessageEditBox .fileUpload .note {
 	margin: 0;
 	padding-top: 0.8rem;
-	width: calc(100% - 15rem);
+	width: calc(100% - 17rem);
 }
 .comMessageEditBox .submit {
 	margin-top: -2.3rem;
@@ -4751,16 +5246,16 @@ font-weight: 400;
 }
 .comMessageEditBox .submit li {
 	margin: 2.3rem 0.6rem 0;
-	width: 30rem;
+	width: 40rem;
 }
 .comMessageEditBox .submit li input {
 	padding: 0;
 	width: 100%;
-	height: 6rem;
+	height: 7.5rem;
 	cursor: pointer;
 	color: #fff;
 	border-radius: 1.2rem;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 	text-align: center;
 	border: 0.1rem solid #343434;
@@ -4783,8 +5278,7 @@ font-weight: 400;
 		color: #555;
 	}
 	.comMessageEditBox .fileUpload label input[type="file"] ~ span:hover {
-		background: #222;
-		color: #fff;
+		background: #EFF6FB;
 	}
 	.comMessageEditBox .submit li input:hover {
 		background-color: #fff;
@@ -4809,7 +5303,7 @@ font-weight: 400;
 		margin: 0;
 	}
 	.comMessageEditBox p {
-		margin-bottom: 1.7rem;
+		margin-bottom: 0rem;
 		font-size: 1rem;
 	}
 	.comMessageEditBox .note {
@@ -4830,7 +5324,7 @@ font-weight: 400;
 		border-radius: 1rem;
 	}
 	.comMessageEditBox textarea {
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		padding: 1.8rem 1.9rem;
 		height: 13.2rem;
 		font-size: 0.9rem;
@@ -4861,6 +5355,7 @@ font-weight: 400;
 	}
 	.comMessageEditBox .comLinkList01 li a {
 		padding-left: 1.7rem;
+		margin-bottom: 0rem;
 	}
 	.comMessageEditBox .comLinkList01 li .del {
 		margin-left: 0.8rem;
@@ -4872,10 +5367,11 @@ font-weight: 400;
 	}
 	.comMessageEditBox .fileUpload label input[type="file"] ~ span {
 		margin-right: 1rem;
-		padding: 0.4rem 0.5rem 0.5rem;
-		width: 11rem;
+		padding: 0.4rem 0.7rem 0.5rem;
+		width: 12rem;
 		text-align: center;
 		font-size: 1rem;
+		border-radius: .5rem;
 	}
 	.comMessageEditBox .fileUpload .note {
 		margin-top: -0.2rem;
@@ -4891,15 +5387,62 @@ font-weight: 400;
 	}
 	.comMessageEditBox .submit li {
 		margin: 1rem 0.3rem 0;
-		width: 15rem;
+		width: 25rem;
 	}
 	.comMessageEditBox .submit li input {
-		height: 3rem;
+		height: 4rem;
 		border-radius: 0.5rem;
 		font-size: 1rem;
 	}
 	.comMessageEditBox .submit01 li input {
 		font-size: 1rem;
+	}
+	.comMessageEditBox.attention {
+		padding: 2.6rem 4%;
+	}
+	.comMessageEditBox.attention .headLine03 {
+		margin-bottom: 1.5rem;
+	}
+	/* メッセージ編集用レイアウト */
+	.modal-editor .editor-container .submit li {
+		margin: 1rem 0.3rem 0;
+		width: 23rem;
+	}
+	.modal-editor .editor-container .submit li input{
+		height: 4rem;
+		border-radius: 0.5rem;
+    	font-size: 1rem;
+	}
+	.modal-editor .editor-container .fileUpload {
+		padding-top: 1rem;
+		margin-right: 1rem;
+	}
+	.modal-editor .editor-container .fileUpload label input[type="file"] ~ span {
+		margin-right: 1rem;
+		padding: 0.4rem 0.7rem 0.5rem;
+		width: 12rem;
+		text-align: center;
+		font-size: 1rem;
+		border-radius: .5rem;
+	}
+	.modal-editor .editor-container .note {
+		margin-top: -0.2rem;
+		width: calc(100% - 9rem);
+		padding-top: 0;
+		font-size: 1rem;
+	}	
+	.modal-editor .editor-container textarea {
+		margin-bottom: 1.5rem;
+	}
+	.modal-editor .editor-container textarea + .comLinkList01 {
+		margin-top: 0;
+		margin-bottom: 3.2rem;
+	}
+	.modal-editor .editor-container .comLinkList01 li .del {
+		margin-left: 0.8rem;
+		padding-left: 0;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 }
 @media all and (max-width: 599px) {
@@ -4932,11 +5475,11 @@ font-weight: 400;
 		font-size: 1.2rem;
 	}
 	.comMessageEditBox textarea {
-		margin-bottom: 1.6rem;
+		margin-bottom: .5rem;
 		padding: 1.5rem 1.9rem;
 		height: 13.2rem;
 		font-size: 0.9rem;
-		border-radius: 0.5rem;
+		border-radius: 1rem;
 	}
 	.comMessageEditBox p + textarea {
 		margin-top: 0;
@@ -4951,13 +5494,16 @@ font-weight: 400;
 		margin-top: 0;
 	}
 	.comMessageEditBox .comLinkList01 li {
-		margin-bottom: 0.9rem;
+		margin-bottom: 0rem;
 	}
 	.comMessageEditBox .comLinkList01 li:last-child {
 		margin-bottom: 0;
 	}
 	.comMessageEditBox .comLinkList01 li a {
 		padding-bottom: 0.2rem;
+		margin-bottom: .5rem;
+		margin-left: .2rem;
+		font-size: 1.1rem;
 	}
 	.comMessageEditBox .comLinkList01 li .del {
 		margin-left: 1.5rem;
@@ -4965,13 +5511,15 @@ font-weight: 400;
 		color: #A3A3A3;
 	}
 	.comMessageEditBox .fileUpload {
-		padding-top: 0.9rem;
+		padding-top: 0rem;
 		display: block;
 	}
 	.comMessageEditBox .fileUpload label input[type="file"] ~ span {
-		padding: 0.4rem 0.2rem 0.5rem;
+		padding: 0.4rem 0rem 0.5rem;
+		margin-left: .2rem;
 		width: 12rem;
 		font-size: 1rem;
+		border-radius: .6rem;
 	}
 	.comMessageEditBox .note {
 		margin-bottom: 1.5em;
@@ -5002,6 +5550,41 @@ font-weight: 400;
 	}
 	.comMessageEditBox .submit01 li input {
 		font-size: 1.2rem;
+	}
+	.comMessageEditBox.attention {
+		text-align: center;
+		padding: 2.5rem 4%;
+	}
+	/* メッセージ編集用レイアウト */
+	.modal-editor .editor-container .fileUpload label input[type="file"] ~ span {
+		padding: 0.4rem 0rem 0.5rem;
+		margin-left: .2rem;
+		width: 12rem;
+		font-size: 1rem;
+		border-radius: .6rem;
+	}
+	.modal-editor .editor-container .note {
+		margin: 0;
+		padding-top: 0.8rem;
+		width: 100%
+	}
+	.modal-editor .comLinkList01 li a {
+		padding-bottom: 0.2rem;
+		margin-bottom: .5rem;
+		margin-left: .2rem;
+		font-size: 1.1rem;
+	}
+	.modal-editor .editor-container textarea + .comLinkList01 {
+		margin-top: 0;
+	}
+	.modal-editor .editor-container .comLinkList01 {
+		margin-bottom: 2.7rem;
+	}
+	.modal-editor .editor-container .comLinkList01 li .del {
+		margin-left: 1.5rem;
+		font-size: 1rem;
+		color: #A3A3A3;
+		font-size: 500;
 	}
 }
 /*------------------------------------------------------------
@@ -5399,17 +5982,18 @@ display: none;
 		display: none;
 	}
 	.comLinkBox02 .btnList li a ,
-	.comLinkBox02 .btnList.multi li .message-resp {
+	#main .comLinkBox02 .btnList.multi li .message-resp {
 		padding: 0.48rem 1rem;
 		font-size: 1.2rem;
 		border-radius: 0.5rem;
 		background-position: left 1.3rem center;
 		background-size: 1rem auto;
 	}
-	.comLinkBox02 .btnList.multi li .message-resp {
+	#main .comLinkBox02 .btnList.multi li .message-resp {
 		display: flex;
 		column-gap: .45rem;
 		border-radius: .7rem;
+		margin-bottom: 0;
 	}
 	.comLinkBox02 .btnList .btn02 a {
 		background-position: left 1.3rem center;
@@ -6062,6 +6646,165 @@ display: none;
 		font-size: 1.2rem;
 	}
 }
+
+
+/*------------------------------------------------------------
+	select
+------------------------------------------------------------*/
+.selectBox  {
+	margin-bottom: 3rem;
+}
+.select-outer {
+	max-width: 20%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.selectBox select {
+	width: 100%;
+	height: 5rem;
+	line-height: 5rem;
+	background: #F5F6F7;
+	border-radius: 5rem;
+	padding: 0 3rem ;
+	font-size: 1.5rem;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+}
+.select-outer::after {
+	content: "";
+	display: inline-block;
+	background: url('/image/common/select-down-icon-gray.svg') no-repeat;
+	width: 1.3rem;
+	height: 1.3rem;
+	background-size: contain;
+	background-position: center center;
+	position: absolute;
+	top: 50%;
+	right: 3.3%;
+	transform: translate(-50%, -50%);
+
+}
+
+@media all and (min-width: 600px) and (max-width: 1024px) {
+	.select-outer {
+		max-width: 38%;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+	.selectBox select {
+		width: 100%;
+		height: 3.5rem;
+		line-height: 3.5rem;
+		background: #F5F6F7;
+		border-radius: 5rem;
+		padding: 0 3rem ;
+		font-size: 1.1rem;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		appearance: none;
+		color: #343434;
+	
+	}
+	.modal-editor .select-outer {
+		max-width: 55%;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+	.select-outer::after {
+		content: "";
+		display: inline-block;
+		background: url('/image/common/select-down-icon-gray.svg') no-repeat;
+		width: 1rem;
+		height: 1rem;
+		background-size: contain;
+		background-position: center center;
+		position: absolute;
+		top: 50%;
+		right: 4%;
+		transform: translate(-50%, -50%);
+	
+	}
+}
+
+@media all and (max-width: 599px) {
+.select-outer {
+	max-width: 80%;
+	overflow: hidden;
+	position: relative;
+}
+.selectBox {
+	margin-bottom: 1.2rem;
+}
+.selectBox select {
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	background: #F5F6F7;
+	border-radius: 5rem;
+	padding: 0 2.5rem ;
+	font-size: 1.1rem;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+	color: #343434;
+
+}
+.select-outer::after {
+	content: "";
+	display: inline-block;
+	background: url('/image/common/select-down-icon-gray.svg') no-repeat;
+	width: .8rem;
+	height: .8rem;
+	background-size: contain;
+	background-position: center center;
+	position: absolute;
+	top: 50%;
+	right: 3.3%;
+	transform: translate(-50%, -50%);
+
+}
+
+/* メッセージ編集モーダル用のレイアウト */
+.modal-editor  .editor-container .select-outer {
+    max-width: 80%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.modal-editor .selectBox select {
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	background: #F5F6F7;
+	border-radius: 5rem;
+	padding: 0 2.5rem ;
+	font-size: 1.1rem;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+}
+}
+	
 /*------------------------------------------------------------
 	comContsBox
 ------------------------------------------------------------*/
@@ -11019,3 +11762,121 @@ display: none;
   }
   
   
+/*--------------------------------------------- 
+グラデーションボタン
+--------------------------------------------- */
+
+.submit li.bgGradation input {
+	background: linear-gradient(70deg, #005792 0%, #91C0E0 50%, #005792 100% , #91C0E0 200%);
+	background-position: 0% 50%;
+	background-size: 200% auto;
+	color: #FFF;
+	border: none;
+  }
+ .submit li.bgGradation input:hover {
+	background-position: 100% 50%;
+	color: #FFF;
+  }
+
+
+  @media screen and (min-width: 1024px) {
+  .submit li.bgGradation input {
+    background: linear-gradient(70deg, #005792 0%, #91C0E0 50%, #005792 100% , #91C0E0 200%);
+    background-position: 0% 50%;
+    background-size: 200% auto;
+    transition: all .35s ease-out;
+  }
+  .submit li.bgGradation input:hover {
+    background-position: 100% 50%;
+  }
+  }
+
+  @media all and (max-width: 599px) {
+	.comMessageEditBox .submit li.bgGradation {
+		margin: 1.2rem 0.6rem 0;
+		width: calc(100% - 1.2rem);
+	}
+	.comMessageEditBox .submit li.bgGradation input {
+		height: 4rem;
+		border-radius: .8rem;
+	}
+
+	/* メッセージ編集用レイアウト */
+	.modal-editor .editor-container .submit li{
+		margin: 2.3rem 0 0;
+		width: 100%;
+
+	}
+	.modal-editor .editor-container .submit li input {
+		height: 4rem;
+		border-radius: .8rem;
+		font-size: 1.2rem;
+
+	}
+
+}
+
+
+/*--------------------------------------------- 
+全画面モダールウィンドウ（主にスマホ）
+--------------------------------------------- */
+@media all and (max-width: 599px) {
+.modal-container.profile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		background: #FFF;
+		z-index: 200;
+	}
+.modal-content { 
+	background: #fff;
+    text-align: left;
+    line-height: 1.8;
+    display: block;
+}
+.modal-headlineBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04);
+    background: #FFF;
+    padding: 0.2rem 2.5rem 0.1rem 2.5rem;
+}
+.modal-close {
+    display: block;
+    flex: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+.modal-headLine {
+    background: #FFF;
+    padding: 0;
+    line-height: auto;
+    color: #202020;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: auto;
+    flex: 1;
+	height: 6rem;
+	line-height: 6rem;
+}
+
+.modal-headlineBox::after {
+    content: '';
+    display: block;
+    flex: 1;
+}
+
+#gHeader .notice-modal.is-active, 
+#gHeader .notice-modal-sp.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+}

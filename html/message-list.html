@@ -48,7 +48,7 @@
     <div id="container">
 		<header id="gHeader">
 			<div class="noticeSp-box">
-			<div class="icon bell modal-openSp" data-target="data-notice"><img class="bellUsuallySP click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-grayBell.svg" alt="" class="bellOpenSp"><span class="bell-notice"></span></div></div>
+			<div class="icon bell modal-openSp head-modalOpen" data-modal="data-notice"><img class="bellUsuallySP click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-grayBell.svg" alt="" class="bellOpenSp"><span class="bell-notice"></span></div></div>
 			<div class="hBox">
     <h1><a href="http://dev.metsukete.jp/student/mypage"><img src="../image/common/logo.svg" alt="Metsukete ミツケテ"></a></h1>
     <nav id="gNavi">
@@ -62,16 +62,16 @@
     </nav>
 </div>
 <div class="responsive-headerMenu">
-<div class="menu-box">
+<div class="menu-box head-modalOpen" data-modal="data-user">
 <div class="menu on"><span></span><span></span><span></span></div>
 </div>
 <div class="notice-user-box">
-<div class="icon bell modal-open" data-target="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
+<div class="icon bell head-modalOpen-sp" data-modal="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
 
 
 
 
-<div class="hUserBox " data-target="data-user">
+<div class="hUserBox head-modalOpen" data-modal="data-user">
 	<!-- <a href="javascript:;"> -->
 		<a href="#">
         <div class="userImg"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
@@ -82,14 +82,14 @@
 
 </div>
 </div>
-<div class="modal notice-modal modal-outer">
+<div class="modalBox" id="data-notice">
 	<div class="modal-container notice">
 	  
 	  <!-- モーダル内部のコンテンツ -->
-	  <div class="modal-content notice js-modal" id="data-notice">
+	  <div class="modal-content notice js-modal">
 		<div class="notice-headlineBox">
 				<!-- モーダルを閉じるボタン -->
-		<div class="modal-close notice-modal-close"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
+		<div class="notice-modal-close" data-modal="data-notice"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
 		<div class="headLine-notice">お知らせ</div>
 	
 	</div>
@@ -199,9 +199,8 @@
 	</div>
   </div>
 
-<div class="hUserBox-list" >
-	<div class="hUserBoxOuter"></div>
-	<ul class="subList js-modal" id="data-user">
+<div class="modalBox" id="data-user">
+	<ul class="subList js-modal">
 		<li class="User-detail hUserBox">
 			<a href="#">
 				<div class="userImg">
@@ -301,14 +300,12 @@
         <main id="main" role="main">
             <!-- ページタイトル -->
             <div class="pageTitle">
-                <!-- マイページ -->
 					<div class="ttlBox">
     <img src="../image/common/header-icon-blueBubble.svg" alt="ページタイトルの吹き出しアイコン">
     <h2>メッセージ</h2>
     </div>
-    <div class="subTtl">  <p>運動 太郎さんに現在●件の新着メッセージが届いています</p></div>
+    <div class="subTtl">  <p>運動 太郎さんに現在●件の<br class="br-sp">新着メッセージが届いています</p></div>
 <div class="backBtn"><a href="http://dev.metsukete.jp/student/company/index"></a></div>
-				<!-- 承認 -->
 				            </div>
 
             <!-- メインボックス -->
@@ -318,15 +315,15 @@
                     
 <div class="comListBox02">
     <div class="listHead">
-        <p class="item01">日時</p>
-        <p class="item02">企業名</p>
+        <p class="item01 message-page">日時</p>
+        <p class="item02 message-page">企業名</p>
         <p class="item03 message-page">企業からのメッセージ</p>
     </div>
     <div class="listBody">
         <ul>
             <li>
-                <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                <div class="category">
+                <p class="time"><span>2023-10-27 10:43</span></p>
+                <div class="category message-page">
                     <div class="pho">
                         
                         <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/company-Noimage.svg" alt=""></a></div>
@@ -352,10 +349,10 @@
                                         <p class="ttl message-page">
                                             <span class="offer-listImg">
                                             <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                            <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span>    <span class="time resp">2023-10-27 10:43</span></a></p>
+                                            <a href="http://dev.metsukete.jp/student/company/messages/3" ><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span>    <span class="time resp">2023-10-27 10:43</span></a></p>
             
                                           
-                                            <div class="notice-badge pc">
+                                            <div class="notice-badge pc-tab">
                                                 <span>1</span></div>
 
 
@@ -369,7 +366,7 @@
             </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category">
+                    <div class="category message-page">
                         <div class="pho">
                             
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/company-Noimage.svg" alt=""></a></div>
@@ -395,10 +392,10 @@
                                             <p class="ttl message-page">
                                                 <span class="offer-listImg">
                                                 <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span>    <span class="time resp">2023-10-27 10:43</span></a></p>
+                                                <a href="http://dev.metsukete.jp/student/company/messages/3"><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span>    <span class="time resp">2023-10-27 10:43</span></a></p>
                 
                                               
-                                                <div class="notice-badge pc">
+                                                <div class="notice-badge pc-tab">
                                                     <span>1</span></div>
 
 
@@ -412,7 +409,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category">
+                    <div class="category message-page">
                         <div class="pho">
                             
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/common/logo.svg" alt=""></a></div>
@@ -438,10 +435,10 @@
                                             <p class="ttl message-page">
                                                 <span class="offer-listImg noread">
                                                 <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
+                                                <a href="http://dev.metsukete.jp/student/company/messages/3"><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
                     
 
-                                                <div class="notice-badge pc">
+                                                <div class="notice-badge pc-tab">
                                                     <span>1</span></div>
 
 
@@ -455,7 +452,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category">
+                    <div class="category message-page">
                         <div class="pho">
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
                         <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
@@ -481,52 +478,9 @@
                                             <p class="ttl message-page">
                                                 <span class="offer-listImg noread">
                                                     <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                    <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
+                                                    <a href="http://dev.metsukete.jp/student/company/messages/3"><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
 
-                                                <div class="notice-badge pc read">
-                                                    <span>1</span></div>
-                    
-
-                                        <!-- <div class="clickBtn"><a href="#"></a></div> -->
-                    <div class="hideBox">
-                        <ul>
-                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
-                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
-                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
-                                                    </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category">
-                        <div class="pho">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
-                        <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
-                        <div class="textBox message-page">
-                            <a href="http://dev.metsukete.jp/student/company/profile/4">
-                                <p>Metsukete株式会社</p>
-                                <p class="sml">広告・マスコミ業界</p>
-                            </a>
-                            <p class="ttl phone message-page"><a class="phone-text" href="http://dev.metsukete.jp/student/company/messages/3" ><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span></a></p>
-                        </div>
-                        <div class="status-wrapper">
-                            <p class="time phone">2023-10-27 10:43</p>
-                            <div class="stat-messagePhone">     
-                                <div class="offer-listImg noread">
-                                <img src="../image/common/icon-left-lineBubble.svg" alt=""></div>
-                                <div class="notice-badge phone">
-                                    <span>1</span></div>
-                          </div>
-                      </div>
-                    </div>
-                    
-                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
-                                            <p class="ttl message-page">
-                                                <span class="offer-listImg noread">
-                                                    <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                    <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
-
-                                                <div class="notice-badge pc read">
+                                                <div class="notice-badge pc-tab read">
                                                     <span>1</span></div>
                     
 
@@ -541,7 +495,7 @@
                 </li>
                 <li>
                     <p class="time">2023-10-27 10:43<br class="ipad"></p>
-                    <div class="category">
+                    <div class="category message-page">
                         <div class="pho">
                             <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
                         <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
@@ -567,9 +521,51 @@
                                             <p class="ttl message-page">
                                                 <span class="offer-listImg noread">
                                                     <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
-                                                    <a href="http://dev.metsukete.jp/student/company/messages/3" class="txt"><span>はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
+                                                    <a href="http://dev.metsukete.jp/student/company/messages/3"><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
 
-                                                <div class="notice-badge pc read">
+                                                <div class="notice-badge pc-tab read">
+                                                    <span>1</span></div>
+                    
+
+                                        <!-- <div class="clickBtn"><a href="#"></a></div> -->
+                    <div class="hideBox">
+                        <ul>
+                            <li><a href="http://dev.metsukete.jp/student/company/profile/4">企業情報</a></li>
+                            <!-- お気に入り・会いたいの時はメッセージの表記出ない -->
+                                                            <li><a href="http://dev.metsukete.jp/student/company/messages/3">メッセージ</a></li>
+                                                    </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="time">2023-10-27 10:43<br class="ipad"></p>
+                    <div class="category message-page">
+                        <div class="pho">
+                            <a href="http://dev.metsukete.jp/student/company/profile/4" class="objectImg"><img src="../image/top-page/TR_400px.png" alt=""></a>
+                        <img  class="favoriteIcon" src="../image/common/icon-favorite.svg"></div>
+                        <div class="textBox message-page">
+                            <a href="http://dev.metsukete.jp/student/company/profile/4">
+                                <p>Metsukete株式会社</p>
+                                <p class="sml">広告・マスコミ業界</p>
+                            </a>
+                        </div>
+                        <div class="status-wrapper">
+                            <p class="time phone">2023-10-27 10:43</p>
+                            <div class="stat-messagePhone">     
+                                <div class="offer-listImg noread">
+                                <img src="../image/common/icon-left-lineBubble.svg" alt=""></div>
+                                <div class="notice-badge phone">
+                                    <span>1</span></div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <!-- お気に入り・会いたいの時はメッセージ見れない -->
+                                            <p class="ttl message-page">
+                                                <span class="offer-listImg noread">
+                                                    <img src="../image/common/company-offer-bubble-line.svg" alt=""></span>
+                                                    <a href="http://dev.metsukete.jp/student/company/messages/3" ><span class="txt">はじめまして、株式会社サンプルの鈴木と申しますはじめまして、株式会社サンプルの鈴木と申します</span><span class="time resp">2023-10-27 10:43</span></a></p>
+
+                                                <div class="notice-badge pc-tabb read">
                                                     <span>1</span></div>
                     
 
@@ -585,6 +581,14 @@
                     </ul>
     </div>
 </div>
+<div class="displayCount">
+    <p>表示件数</p>
+        <ul>
+            <li class="paging"><span class="select">10件</span></li>
+            <li class="paging"><span>50件</span></li>
+            <li class="paging"><span>100件</span></li>
+        </ul>
+    </div>
 <div class="comPageNavi">
     <ul class="pagination">
         <li class="prev"><a href="#"><span class="prevBtn"><img class="prevOrigin" src="../image/common/modal-pageNation-back.svg" alt=""><img class="prevHover" src="../image/common/page-nation-prevHover.svg" alt="ページネーション前へホバーボタン"></span></a></li>
@@ -626,43 +630,11 @@
     <script src="http://dev.metsukete.jp/js/ofi.min.js"></script>
     <script src="http://dev.metsukete.jp/js/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
-    <script src="../js/common/hUserBox.js"></script>
-	<script src="../js/common/hamburgerMenu.js"></script>
-    <script src="../js/common/category-tab.js"></script>
+    <script src="../js/common/category message-page-tab.js"></script>
+    <script src="../js/common/head-modal.js"></script>
 
-    <script>
-        window.setTimeout(() => {
-            $(".error").slideUp();
-            $(".alert").slideUp();
-        }, 5000);
-    </script>
 
-    <!-- オファー辞退 -->
-    <script>
-        $("#decline_button").click(function() {
-            if (confirm("本当に辞退しますか？")) {
-                /*　OKの時の処理 */
-                $(".output").text("OKを押しました。");
-            } else {
-                /* キャンセルの時の処理 */
-                $(".output").text("キャンセルを押しました。");
-
-                //  処理と止める　※これをしないとボタンの処理が行われる。
-                return false;
-            }
-        });
-    </script>
-
-    <!-- メッセージテンプレート ※メッセージ送信時-->
-    <script>
-        $('[name=msg_template]').change(function() {
-            // 選択されているvalue属性値を取り出す
-            var val = $('[name=msg_template]').val();
-            console.log(val);
-            var text = val;
-            $('.style01').val(text);
-        });
-    </script>
 </body>
 
 </html>
+
