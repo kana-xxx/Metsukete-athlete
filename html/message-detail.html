@@ -48,7 +48,7 @@
     <div id="container">
 		<header id="gHeader">
 			<div class="noticeSp-box">
-			<div class="icon bell modal-openSp" data-target="data-notice"><img class="bellUsuallySP click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-grayBell.svg" alt="" class="bellOpenSp"><span class="bell-notice"></span></div></div>
+			<div class="icon bell modal-openSp head-modalOpen" data-modal="data-notice"><img class="bellUsuallySP click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-grayBell.svg" alt="" class="bellOpenSp"><span class="bell-notice"></span></div></div>
 			<div class="hBox">
     <h1><a href="http://dev.metsukete.jp/student/mypage"><img src="../image/common/logo.svg" alt="Metsukete ミツケテ"></a></h1>
     <nav id="gNavi">
@@ -62,16 +62,16 @@
     </nav>
 </div>
 <div class="responsive-headerMenu">
-<div class="menu-box">
+<div class="menu-box head-modalOpen" data-modal="data-user">
 <div class="menu on"><span></span><span></span><span></span></div>
 </div>
 <div class="notice-user-box">
-<div class="icon bell modal-open" data-target="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
+<div class="icon bell head-modalOpen-sp" data-modal="data-notice"><img class="bellUsually click" src="../image/common/header-icon-grayBell.svg" alt=""><img src="../image/common/header-icon-blueBell.svg" alt="" class="hover"><img src="../image/common/header-icon-blueBell.svg" alt="" class="bellOpen"><span class="bell-notice"></span></div>
 
 
 
 
-<div class="hUserBox " data-target="data-user">
+<div class="hUserBox head-modalOpen" data-modal="data-user">
 	<!-- <a href="javascript:;"> -->
 		<a href="#">
         <div class="userImg"><span class="objectImg"><img src="http://dev.metsukete.jp/storage/img/student/avatar/user_img01.png" alt=""></span></div>
@@ -82,14 +82,14 @@
 
 </div>
 </div>
-<div class="modal notice-modal">  </div>
+<div class="modalBox" id="data-notice">
 	<div class="modal-container notice">
 	  
 	  <!-- モーダル内部のコンテンツ -->
-	  <div class="modal-content notice js-modal" id="data-notice">
+	  <div class="modal-content notice js-modal">
 		<div class="notice-headlineBox">
 				<!-- モーダルを閉じるボタン -->
-		<div class="modal-close notice-modal-close"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
+		<div class="notice-modal-close" data-modal="data-notice"><img src="../image/common/modal-back-arrow.svg" alt="前の画面に戻るボタン"></div>
 		<div class="headLine-notice">お知らせ</div>
 	
 	</div>
@@ -197,11 +197,10 @@
 		  </ul>
 	  </div>
 	</div>
+</div>
 
-
-<div class="hUserBox-list" >
-	<div class="hUserBoxOuter"></div>
-	<ul class="subList js-modal" id="data-user">
+<div class="modalBox" id="data-user">
+	<ul class="subList js-modal">
 		<li class="User-detail hUserBox">
 			<a href="#">
 				<div class="userImg">
@@ -696,11 +695,10 @@
     <script src="http://dev.metsukete.jp/js/ofi.min.js"></script>
     <script src="http://dev.metsukete.jp/js/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
-    <script src="../js/common/hUserBox.js"></script>
-	<script src="../js/common/hamburgerMenu.js"></script>
     <script src="../js/common/category-tab.js"></script>
     <script src="../js/message/message-editor.js"></script>
     <script src="../js/message/profile-popup.js"></script>
+    <script src="../js/common/head-modal.js"></script>
 
 
 
